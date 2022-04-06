@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
 const Schema = new mongoose.Schema(
-
 	{
 		fName: {
 			type: String,
