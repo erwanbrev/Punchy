@@ -1,0 +1,39 @@
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap";
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bgMenu: #f26f63;
+  --textMenu: #fafafa;
+}
+
+.leftMenu {
+  min-height: 100vh;
+  width: 20%;
+  background-color: var(--bgMenu);
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.leftMenu a {
+  color: var(--textMenu);
+  text-decoration: none;
+}
+
+#logo {
+  margin-bottom: 98%;
+}
+
+.nameNav {
+  font-family: Open Sans, sans-serif;
+}
+
+.nameNav:not(:last-child) {
+  margin-bottom: 30%;
+}
+
+/*# sourceMappingURL=index.798621a0.css.map */
