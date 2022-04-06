@@ -1,14 +1,26 @@
-import React from 'react';
-import * as ReactDOMClient from 'react-dom/client';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Menu } from "./Menu"
+import { Index } from "./layout";
+// import { Menu } from "./Menu";
 
-let root = ReactDOMClient.createRoot(document.getElementById('root'))
+const Main = () => {
+    return (
+        
+        <BrowserRouter>
+        <Routes>
+            {/* les chemin d'accès des pages + le composent qui va avec */}
+            <Route path="/" element={<Index/>}>
+                
+                <Route element={<Menu/>} />
+                
+            </Route>
+                {/* <Route path="/register" element={<Register/>}></Route>
+                <Route path="/login" element={<Login/>}></Route>             */}
+        </Routes>
+        </BrowserRouter>
 
-root.render(
-  <BrowserRouter>
-    
-  </BrowserRouter>,
-);
+    )
+}
+
+ReactDOM.render(<Main />, document.getElementById("root"))
