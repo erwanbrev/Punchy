@@ -1046,7 +1046,7 @@ $RefreshReg$(_c, "Main");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./components/menu":"5vAev","./Layout":"le5g7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../public/assets/css/main.css":"aVGHF"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./components/menu":"5vAev","./Layout":"le5g7","../public/assets/css/main.css":"aVGHF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -26823,12 +26823,11 @@ const Navbar = ()=>{
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     id: "logo",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                        src: "{logo}",
-                        alt: "logo"
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                        children: "Punchy"
                     }, void 0, false, {
                         fileName: "src/components/menu.jsx",
-                        lineNumber: 11,
+                        lineNumber: 12,
                         columnNumber: 21
                     }, undefined)
                 }, void 0, false, {
@@ -26837,39 +26836,30 @@ const Navbar = ()=>{
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "cont-Nav",
                     children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: "/",
-                            className: "nameNav",
-                            children: [
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                    src: "#",
-                                    alt: "logo-home"
-                                }, void 0, false, {
-                                    fileName: "src/components/menu.jsx",
-                                    lineNumber: 14,
-                                    columnNumber: 54
-                                }, undefined),
-                                "Home"
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/menu.jsx",
-                            lineNumber: 14,
-                            columnNumber: 21
-                        }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/event",
                             className: "nameNav",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                    src: "#",
+                                    src: require('../../public/assets/img/svg/evenement.svg'),
                                     alt: "logo-event"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
                                     lineNumber: 15,
                                     columnNumber: 59
                                 }, undefined),
-                                "\xc9v\xe8nement"
+                                " ",
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                    id: "event",
+                                    children: "\xc9v\xe8nement"
+                                }, void 0, false, {
+                                    fileName: "src/components/menu.jsx",
+                                    lineNumber: 16,
+                                    columnNumber: 104
+                                }, undefined),
+                                " "
                             ]
                         }, void 0, true, {
                             fileName: "src/components/menu.jsx",
@@ -26881,18 +26871,18 @@ const Navbar = ()=>{
                             className: "nameNav",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                    src: "#",
+                                    src: require('../../public/assets/img/svg/covoit.svg'),
                                     alt: "logo-covoit"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
-                                    lineNumber: 16,
+                                    lineNumber: 17,
                                     columnNumber: 60
                                 }, undefined),
                                 "Covoiturage"
                             ]
                         }, void 0, true, {
                             fileName: "src/components/menu.jsx",
-                            lineNumber: 16,
+                            lineNumber: 17,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
@@ -26900,24 +26890,43 @@ const Navbar = ()=>{
                             className: "nameNav",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                    src: "#",
+                                    src: require('../../public/assets/img/svg/itineraire.svg'),
                                     alt: "logo-geoloc"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
-                                    lineNumber: 17,
+                                    lineNumber: 18,
                                     columnNumber: 60
                                 }, undefined),
                                 "Location"
                             ]
                         }, void 0, true, {
                             fileName: "src/components/menu.jsx",
-                            lineNumber: 17,
+                            lineNumber: 18,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/amis",
+                            className: "nameNav",
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                    src: require('../../public/assets/img/svg/nb_personnes.svg'),
+                                    alt: "logo-geoloc"
+                                }, void 0, false, {
+                                    fileName: "src/components/menu.jsx",
+                                    lineNumber: 19,
+                                    columnNumber: 58
+                                }, undefined),
+                                "Location"
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/menu.jsx",
+                            lineNumber: 19,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/menu.jsx",
-                    lineNumber: 13,
+                    lineNumber: 14,
                     columnNumber: 17
                 }, undefined)
             ]
@@ -26941,7 +26950,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6Q2Cv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/evenement.svg":"1Opye","../../public/assets/img/svg/covoit.svg":"bOGwN","../../public/assets/img/svg/itineraire.svg":"f6l9K","../../public/assets/img/svg/nb_personnes.svg":"5v5zd"}],"6Q2Cv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsManifest = require("./iconsManifest");
@@ -27314,7 +27323,53 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"le5g7":[function(require,module,exports) {
+},{"react-refresh/runtime":"786KC"}],"1Opye":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "evenement.ba92f782.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"bOGwN":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "covoit.fc8f2d7e.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"f6l9K":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "itineraire.0b0e28e2.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"5v5zd":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "nb_personnes.f32fa33d.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"le5g7":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$19a2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

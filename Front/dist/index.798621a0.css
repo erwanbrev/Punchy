@@ -1,4 +1,3 @@
-@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap";
 *, :before, :after {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +14,7 @@
   width: 20%;
   background-color: var(--bgMenu);
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   display: flex;
 }
 
@@ -24,16 +23,31 @@
   text-decoration: none;
 }
 
-#logo {
-  margin-bottom: 98%;
+.cont-Nav {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.cont-Nav img {
+  width: 30%;
 }
 
 .nameNav {
+  align-items: center;
   font-family: Open Sans, sans-serif;
+  display: flex;
 }
 
-.nameNav:not(:last-child) {
-  margin-bottom: 30%;
+#event {
+  margin-top: 6%;
+}
+
+#logo {
+  text-align: center;
+  margin: 10%;
+  font-family: Lobster, cursive;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=index.798621a0.css.map */

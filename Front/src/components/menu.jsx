@@ -8,13 +8,15 @@ export const Navbar = () => {
         <div>
             <nav className="leftMenu">
                 <div id="logo">
-                    <img src="{logo}" alt="logo" />
+                    {/* <img src="{logo}" alt="logo" /> */}
+                    <h1>Punchy</h1>
                 </div>
-                <div>
-                    <Link to="/" className="nameNav"><img src="#" alt="logo-home" />Home</Link>
-                    <Link to="/event" className="nameNav"><img src="#" alt="logo-event" />Évènement</Link>
-                    <Link to="/covoit" className="nameNav"><img src="#" alt="logo-covoit" />Covoiturage</Link>
-                    <Link to="/geoloc" className="nameNav"><img src="#" alt="logo-geoloc" />Location</Link>
+                <div className="cont-Nav">
+                    <Link to="/event" className="nameNav"><img
+                        src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /> <span id="event">Évènement</span> </Link>
+                    <Link to="/covoit" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" />Covoiturage</Link>
+                    <Link to="/geoloc" className="nameNav"><img src={require('../../public/assets/img/svg/itineraire.svg')} alt="logo-geoloc" />Location</Link>
+                    <Link to="/amis" className="nameNav"><img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="logo-geoloc" />Location</Link>
                 </div>
             </nav>
         </div>
