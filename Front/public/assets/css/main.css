@@ -10,6 +10,8 @@
 :root {
     --bgMenu: #F26F63;
     --textMenu: #FAFAFA;
+    --linear-one: #EE8C78;
+    --linear-two: #434C9B;
 }
 
 /*? organisation du menu laterale gauche */
@@ -17,8 +19,7 @@
     display: flex;
     min-height: 100vh;
     width: 20%;
-    background-color: var(--bgMenu);
-    justify-content: start;
+    background: linear-gradient(var(--linear-one), var(--linear-two));
     flex-direction: column;
 }
 
@@ -28,30 +29,44 @@
 }
 
 /* ? conteneur des boutons de navigation */
-.cont-Nav {
+.cont-Nav,
+.min-compte {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 4% 24%;
 }
 
-.cont-Nav img {
-    width: 30%;
+.cont-Nav {
+    margin-bottom: 80%;
 }
 
-.nameNav {
+.cont-Nav img,
+.min-compte img {
+    width: 20%;
+}
+
+.nameNav:not(:last-child) {
+    margin-bottom: 20%;
+}
+
+.nameNav,
+.min-compte a {
     display: flex;
     font-family: 'Open Sans', sans-serif;
     align-items: center;
 }
 
-/* ?retouche du nom evenement */
-#event {
-    margin-top: 6%;
+/* ?retouche du nom evenement + pseudo */
+.event {
+    margin-top: 3%;
 }
+
+/* ? */
 
 #logo {
     margin: 10%;
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 1.4rem;
+    color: var(--textMenu);
 }
