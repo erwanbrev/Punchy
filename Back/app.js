@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const auth = require('./routes/auth');
 const user = require('./routes/user');
+const event = require('./routes/event');
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -17,6 +18,7 @@ app.use(morgan('dev'));
 
 app.use('/auth', auth);
 app.use('/user', user);
+app.use('/event', event);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

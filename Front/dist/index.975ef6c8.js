@@ -26852,7 +26852,7 @@ const Navbar = ()=>{
                                 }, undefined),
                                 " ",
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                                    className: "event",
+                                    id: "event",
                                     children: "\xc9v\xe8nement"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
@@ -26910,13 +26910,13 @@ const Navbar = ()=>{
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                                     src: require('../../public/assets/img/svg/nb_personnes.svg'),
-                                    alt: "logo-amis"
+                                    alt: "logo-geoloc"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
                                     lineNumber: 19,
                                     columnNumber: 58
                                 }, undefined),
-                                "Amis"
+                                "Location"
                             ]
                         }, void 0, true, {
                             fileName: "src/components/menu.jsx",
@@ -26927,39 +26927,6 @@ const Navbar = ()=>{
                 }, void 0, true, {
                     fileName: "src/components/menu.jsx",
                     lineNumber: 14,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    className: "min-compte",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                        to: "/compte",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                src: require('../../public/assets/img/svg/nb_personnes.svg'),
-                                alt: "min-compte"
-                            }, void 0, false, {
-                                fileName: "src/components/menu.jsx",
-                                lineNumber: 23,
-                                columnNumber: 25
-                            }, undefined),
-                            " ",
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                                className: "event",
-                                children: "Pseudo"
-                            }, void 0, false, {
-                                fileName: "src/components/menu.jsx",
-                                lineNumber: 23,
-                                columnNumber: 112
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/menu.jsx",
-                        lineNumber: 22,
-                        columnNumber: 21
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/menu.jsx",
-                    lineNumber: 21,
                     columnNumber: 17
                 }, undefined)
             ]

@@ -7,15 +7,14 @@
 :root {
   --bgMenu: #f26f63;
   --textMenu: #fafafa;
-  --linear-one: #ee8c78;
-  --linear-two: #434c9b;
 }
 
 .leftMenu {
   min-height: 100vh;
   width: 20%;
-  background: linear-gradient(var(--linear-one), var(--linear-two) );
+  background-color: var(--bgMenu);
   flex-direction: column;
+  justify-content: start;
   display: flex;
 }
 
@@ -24,37 +23,28 @@
   text-decoration: none;
 }
 
-.cont-Nav, .min-compte {
+.cont-Nav {
   flex-direction: column;
-  margin: 4% 24%;
+  align-items: center;
   display: flex;
 }
 
-.cont-Nav {
-  margin-bottom: 80%;
+.cont-Nav img {
+  width: 30%;
 }
 
-.cont-Nav img, .min-compte img {
-  width: 20%;
-}
-
-.nameNav:not(:last-child) {
-  margin-bottom: 20%;
-}
-
-.nameNav, .min-compte a {
+.nameNav {
   align-items: center;
   font-family: Open Sans, sans-serif;
   display: flex;
 }
 
-.event {
-  margin-top: 3%;
+#event {
+  margin-top: 6%;
 }
 
 #logo {
   text-align: center;
-  color: var(--textMenu);
   margin: 10%;
   font-family: Lobster, cursive;
   font-size: 1.4rem;
