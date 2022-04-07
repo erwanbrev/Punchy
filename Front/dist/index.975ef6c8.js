@@ -26826,8 +26826,6 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactIcons = require("react-icons");
 var _reactRouterDom = require("react-router-dom");
-var _logoSvg = require("../../public/assets/img/svg/logo.svg");
-var _logoSvgDefault = parcelHelpers.interopDefault(_logoSvg);
 const Navbar = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
@@ -26836,7 +26834,7 @@ const Navbar = ()=>{
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     id: "logo-mobile",
                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                        src: "{logo}",
+                        src: require('../../public/assets/img/svg/logo.svg'),
                         alt: "logo-mobile"
                     }, void 0, false, {
                         fileName: "src/components/menu.jsx",
@@ -26859,7 +26857,7 @@ const Navbar = ()=>{
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                         id: "logo",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            src: "{logo}",
+                            src: require('../../public/assets/img/svg/logo.svg'),
                             alt: "logo"
                         }, void 0, false, {
                             fileName: "src/components/menu.jsx",
@@ -26952,7 +26950,7 @@ const Navbar = ()=>{
                                         lineNumber: 25,
                                         columnNumber: 58
                                     }, undefined),
-                                    "Location"
+                                    "Amis"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/menu.jsx",
@@ -26963,6 +26961,32 @@ const Navbar = ()=>{
                     }, void 0, true, {
                         fileName: "src/components/menu.jsx",
                         lineNumber: 20,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "min-compte",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/compte",
+                            className: "nameNav",
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                    src: require('../../public/assets/img/svg/nb_personnes.svg'),
+                                    alt: "min-compte"
+                                }, void 0, false, {
+                                    fileName: "src/components/menu.jsx",
+                                    lineNumber: 29,
+                                    columnNumber: 25
+                                }, undefined),
+                                "Connexion"
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/menu.jsx",
+                            lineNumber: 28,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/menu.jsx",
+                        lineNumber: 27,
                         columnNumber: 17
                     }, undefined)
                 ]
@@ -26985,12 +27009,12 @@ const Navbar = ()=>{
                                     alt: "logo-event"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
-                                    lineNumber: 32,
+                                    lineNumber: 37,
                                     columnNumber: 59
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/menu.jsx",
-                                lineNumber: 32,
+                                lineNumber: 37,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
@@ -27001,12 +27025,12 @@ const Navbar = ()=>{
                                     alt: "logo-covoit"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
-                                    lineNumber: 34,
+                                    lineNumber: 39,
                                     columnNumber: 60
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/menu.jsx",
-                                lineNumber: 34,
+                                lineNumber: 39,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
@@ -27017,12 +27041,12 @@ const Navbar = ()=>{
                                     alt: "logo-geoloc"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
-                                    lineNumber: 35,
+                                    lineNumber: 40,
                                     columnNumber: 60
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/menu.jsx",
-                                lineNumber: 35,
+                                lineNumber: 40,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
@@ -27033,18 +27057,18 @@ const Navbar = ()=>{
                                     alt: "logo-amis"
                                 }, void 0, false, {
                                     fileName: "src/components/menu.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 41,
                                     columnNumber: 58
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/menu.jsx",
-                                lineNumber: 36,
+                                lineNumber: 41,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/menu.jsx",
-                        lineNumber: 31,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27056,23 +27080,23 @@ const Navbar = ()=>{
                                 alt: "min-compte"
                             }, void 0, false, {
                                 fileName: "src/components/menu.jsx",
-                                lineNumber: 40,
+                                lineNumber: 45,
                                 columnNumber: 25
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/menu.jsx",
-                            lineNumber: 39,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/menu.jsx",
-                        lineNumber: 38,
+                        lineNumber: 43,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/menu.jsx",
-                lineNumber: 30,
+                lineNumber: 35,
                 columnNumber: 13
             }, undefined)
         ]
