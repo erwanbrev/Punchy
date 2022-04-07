@@ -13,17 +13,17 @@ router.get('/', async (req, res) => {
 	const response = [];
 	housings.forEach(({ description, localisation, surface, type, available, rent, furnished, bedroomNumber, bathroomNumber, garden, terrace }) => {
 		response.push({
-			description: description,
-			localisation: localisation,
-			surface: surface,
-			type: type,
-			available: available,
-			rent: rent,
-			furnished: furnished,
-			bedroomNumber: bedroomNumber,
-			bathroomNumber: bathroomNumber,
-			garden: garden,
-			terrace: terrace
+			description,
+			localisation,
+			surface,
+			type,
+			available,
+			rent,
+			furnished,
+			bedroomNumber,
+			bathroomNumber,
+			garden,
+			terrace
 		});
 	});
 

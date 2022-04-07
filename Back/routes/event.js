@@ -13,14 +13,14 @@ router.get('/', async (req, res) => {
 	const response = [];
 	events.forEach(({ category, title, description, localisation, price, startDate, endDate, pictures }) => {
 		response.push({
-			category: category,
-			title: title,
-			description: description,
-			localisation: localisation,
-			price: price,
-			startDate: startDate,
-			endDate: endDate,
-			pictures: pictures
+			category,
+			title,
+			description,
+			localisation,
+			price,
+			startDate,
+			endDate,
+			pictures
 		});
 	});
 
