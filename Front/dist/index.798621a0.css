@@ -6,15 +6,17 @@
 
 :root {
   --bgMenu: #f26f63;
+  --bgHeaderMobile: #faf1f0;
   --textMenu: #fafafa;
+  --textBlack: #0e0e0e;
   --linear-one: #ee8c78;
   --linear-two: #434c9b;
 }
 
 .leftMenu {
-  min-height: 100vh;
-  width: 20%;
-  background: linear-gradient(var(--linear-one), var(--linear-two) );
+  height: 100vh;
+  width: 16%;
+  background: linear-gradient(var(--linear-two), var(--linear-one) );
   flex-direction: column;
   display: flex;
 }
@@ -24,22 +26,26 @@
   text-decoration: none;
 }
 
+.bottomMenu {
+  display: none;
+}
+
 .cont-Nav, .min-compte {
   flex-direction: column;
-  margin: 4% 24%;
+  margin-left: 19%;
   display: flex;
 }
 
 .cont-Nav {
-  margin-bottom: 80%;
+  margin-bottom: 110%;
 }
 
 .cont-Nav img, .min-compte img {
-  width: 20%;
+  width: 24%;
 }
 
 .nameNav:not(:last-child) {
-  margin-bottom: 20%;
+  margin-bottom: 5%;
 }
 
 .nameNav, .min-compte a {
@@ -48,16 +54,79 @@
   display: flex;
 }
 
+#copy {
+  height: 10vh;
+  background: var(--bgHeaderMobile);
+  width: 84%;
+  z-index: 4;
+  border: 1px solid #00f;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  display: flex;
+  position: absolute;
+  right: 0%;
+}
+
 .event {
   margin-top: 3%;
 }
 
-#logo {
+#logo, #logo-mobile, #copy {
   text-align: center;
-  color: var(--textMenu);
   margin: 10%;
   font-family: Lobster, cursive;
+}
+
+#logo {
+  color: var(--textMenu);
   font-size: 1.4rem;
+}
+
+#logo-mobile {
+  display: none;
+}
+
+@media screen and (min-height: 730px) {
+  .cont-Nav {
+    margin-bottom: 160%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-head {
+    background: var(--bgHeaderMobile);
+    height: 7vh;
+    width: 100%;
+    z-index: 100;
+    border: 1px solid red;
+    display: flex;
+    position: relative;
+  }
+
+  .leftMenu {
+    display: none;
+  }
+
+  .bottomMenu {
+    height: 14vh;
+    width: 100%;
+    background: linear-gradient(var(--linear-one), var(--linear-two) );
+    border: 1px solid red;
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #logo-mobile {
+    color: #0e0e0e;
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.798621a0.css.map */
