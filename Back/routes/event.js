@@ -8,6 +8,24 @@ const authorize = require('./../middlewares/authorize');
 
 const sendMail = require('./../nodemailer/mail');
 
+router.get('/', async (req, res) => {
+	const events = await Event.find({ validated: true });
+	const response = [];
+	events.forEach(({ category, title, description, localisation, price, startDate, endDate, pictures }) => {
+		response.push({
+			category: category,
+			title: title,
+			description: description,
+			localisation: localisation,
+			price: price,
+			startDate: startDate,
+			endDate: endDate,
+			pictures: pictures
+		});
+	});
+
+	return res.status(200).send(response);
+});
 router.post('/', authorize, async (req, res) => {
 	const schema = require('../schemas/event');
 	const { error } = schema.validate(req.body);
