@@ -6,7 +6,7 @@ const Event = require('./../models/Event');
 
 const authorize = require('./../middlewares/authorize');
 
-const sendMail = require('./../nodemailer/mail');
+const { sendMailEvent } = require('./../nodemailer/mail');
 
 router.get('/', async (req, res) => {
 	const events = await Event.find({ validated: true });
@@ -47,7 +47,7 @@ router.post('/', authorize, async (req, res) => {
 
 		const eventData = await event.save();
 
-		await sendMail(eventData);
+		await sendMailEvent(eventData);
 
 		return res.status(201).send(_.pick(eventData, ['category', 'title', 'pictures', 'description', 'localisation', 'price', 'startDate', 'endDate']));
 	} catch (err) {

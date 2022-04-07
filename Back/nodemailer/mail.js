@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const sendMail = async event => {
+const sendMailEvent = async event => {
 	const transporter = nodemailer.createTransport({
 		host: 'smtp.gmail.com',
 		type: 'login',
@@ -73,4 +73,4 @@ const sendMail = async event => {
 	});
 };
 
-module.exports = sendMail;
+module.exports = { sendMailEvent };
