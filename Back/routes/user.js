@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const _ = require('lodash');
+const axios = require('axios');
+const sharp = require('sharp');
 
 const User = require('./../models/User');
 
@@ -22,6 +24,19 @@ router.post('/signup', async (req, res) => {
 
 		const salt = await bcrypt.genSalt(10);
 		const hash = await bcrypt.hash(req.body.password, salt);
+
+		if (!req.body.profilePicture) {
+			const {
+				data: { drinks }
+			} = await axios('https://www.thecocktaildb.com/api/json/v1/1/random.php');
+
+			const { data } = await axios(drinks[0].strDrinkThumb, {
+				responseType: 'arraybuffer'
+			});
+
+			const a = await sharp(data).webp({ quality: 20, alphaQuality: 1 }).resize(200, 200).toBuffer();
+			req.body.profilePicture = 'data:image/png;base64, ' + a.toString('base64');
+		}
 
 		const user = new User({
 			fName: req.body.fName,
