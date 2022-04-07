@@ -60,6 +60,22 @@ router.post('/signup', async (req, res) => {
 	}
 });
 
+router.get('/search', authorize, async (req, res) => {
+	const schema = require('../schemas/searchFriend');
+	const { error } = schema.validate(req.query);
+	if (error) {
+		return res.status(400).send(error.details[0].message);
+	}
+
+	const users = await User.find(req.query);
+	const response = [];
+	users.forEach(({ fName, lName, school, profilePicture }) => {
+		response.push({ fName, lName, school, profilePicture });
+	});
+
+	return res.status(200).send(response);
+});
+
 router.get('/me', authorize, async (req, res) => {
 	try {
 		const user = await User.findOne(req.user);
