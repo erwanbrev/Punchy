@@ -30,14 +30,11 @@
   display: none;
 }
 
-.cont-Nav, .min-compte {
+.cont-Nav {
   flex-direction: column;
+  margin-bottom: 110%;
   margin-left: 19%;
   display: flex;
-}
-
-.cont-Nav {
-  margin-bottom: 110%;
 }
 
 .cont-Nav img, .min-compte img {
@@ -48,7 +45,7 @@
   margin-bottom: 5%;
 }
 
-.nameNav, .min-compte a {
+.nameNav {
   align-items: center;
   font-family: Open Sans, sans-serif;
   display: flex;
