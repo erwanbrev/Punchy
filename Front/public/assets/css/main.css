@@ -42,7 +42,7 @@
 }
 
 .cont-Nav {
-    margin-bottom: 85%;
+    margin-bottom: 110%;
 }
 
 .cont-Nav img,
@@ -51,7 +51,7 @@
 }
 
 .nameNav:not(:last-child) {
-    margin-bottom: 4%;
+    margin-bottom: 5%;
 }
 
 .nameNav {
@@ -60,22 +60,18 @@
     align-items: center;
 }
 
-.min-compte {
-    margin-left: 19%;
-}
-
 #copy {
     font-size: 1.2rem;
+    border: 1px solid blue;
     height: 10vh;
     background: var(--bgHeaderMobile);
     width: 84%;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 0%;
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lobster', cursive;
 }
 
 /* ?retouche du nom evenement + pseudo */
@@ -87,29 +83,30 @@
 
 /* !logo */
 #logo,
-#logo-mobile {
+#logo-mobile,
+#copy {
     margin: 10%;
     text-align: center;
     font-family: 'Lobster', cursive;
 }
 
 #logo {
-    display: block;
-    margin: auto;
-    width: 100%;
+    font-size: 1.4rem;
+    color: var(--textMenu);
 }
 
 #logo-mobile {
     display: none;
 }
 
-/* @media screen and (min-height: 730px) {
+@media screen and (min-height: 730px) {
     .cont-Nav {
-        margin-bottom: 140%;
+        margin-bottom: 160%;
     }
-} */
+}
 
 @media screen and (max-width: 600px) {
+
     .mobile-head {
         background: var(--bgHeaderMobile);
         display: flex;
@@ -117,6 +114,7 @@
         width: 100%;
         border: 1px solid red;
         position: relative;
+        z-index: 100;
     }
 
     /*? organisation du menu laterale gauche, horizontalement en bas de l'ecran */
@@ -140,6 +138,9 @@
     }
 
     #logo-mobile {
-        display: block;
+        font-size: 1rem;
+        /* color: var(--textBlack); */
+        color: #0E0E0E;
     }
+
 }

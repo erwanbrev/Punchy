@@ -32,7 +32,7 @@
 
 .cont-Nav {
   flex-direction: column;
-  margin-bottom: 85%;
+  margin-bottom: 110%;
   margin-left: 19%;
   display: flex;
 }
@@ -42,7 +42,7 @@
 }
 
 .nameNav:not(:last-child) {
-  margin-bottom: 4%;
+  margin-bottom: 5%;
 }
 
 .nameNav {
@@ -51,42 +51,43 @@
   display: flex;
 }
 
-.min-compte {
-  margin-left: 19%;
-}
-
 #copy {
   height: 10vh;
   background: var(--bgHeaderMobile);
   width: 84%;
+  z-index: 4;
+  border: 1px solid #00f;
   justify-content: center;
   align-items: center;
-  font-family: Lobster, cursive;
   font-size: 1.2rem;
   display: flex;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  right: 0%;
 }
 
 .event {
   margin-top: 3%;
 }
 
-#logo, #logo-mobile {
+#logo, #logo-mobile, #copy {
   text-align: center;
   margin: 10%;
   font-family: Lobster, cursive;
 }
 
 #logo {
-  width: 100%;
-  margin: auto;
-  display: block;
+  color: var(--textMenu);
+  font-size: 1.4rem;
 }
 
 #logo-mobile {
   display: none;
+}
+
+@media screen and (min-height: 730px) {
+  .cont-Nav {
+    margin-bottom: 160%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -94,6 +95,7 @@
     background: var(--bgHeaderMobile);
     height: 7vh;
     width: 100%;
+    z-index: 100;
     border: 1px solid red;
     display: flex;
     position: relative;
@@ -119,7 +121,8 @@
   }
 
   #logo-mobile {
-    display: block;
+    color: #0e0e0e;
+    font-size: 1rem;
   }
 }
 
