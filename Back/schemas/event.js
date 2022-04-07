@@ -7,6 +7,6 @@ module.exports = Joi.object({
 	description: Joi.string().required(),
 	localisation: Joi.string().required(),
 	price: Joi.number().default(0).min(0),
-	startDate: Joi.date().required(),
+	startDate: Joi.date().required().greater('now'),
 	endDate: Joi.date().greater(Joi.ref('startDate'))
 });
