@@ -12,6 +12,5 @@ module.exports = Joi.object({
 	garden: Joi.boolean().required(),
 	terrace: Joi.boolean().required(),
 	pictures: Joi.array().items(Joi.string()),
-	description: Joi.string().required(),
-	user: Joi.string().required()
+	description: Joi.string().required()
 });
