@@ -6,27 +6,24 @@ const Carpooling = require('./../models/Carpooling');
 const authorize = require('./../middlewares/authorize');
 
 router.get('/', async (req, res) => {
-	const carpoolings = await Carpooling.find();
+	const carpoolings = await Carpooling.find({ endTime: { $lte: Date.now() } });
 	const response = [];
-	carpoolings.forEach(
-		({ startLocalisation, endLocalisation, date, startTime, endTime, repeat, peopleNumber, price, driver, event, smoker, carType, carColor }) => {
-			response.push({
-				startLocalisation,
-				endLocalisation,
-				date,
-				startTime,
-				endTime,
-				repeat,
-				peopleNumber,
-				price,
-				driver,
-				event,
-				smoker,
-				carType,
-				carColor
-			});
-		}
-	);
+	carpoolings.forEach(({ startLocalisation, endLocalisation, startTime, endTime, repeat, peopleNumber, price, driver, event, smoker, carType, carColor }) => {
+		response.push({
+			startLocalisation,
+			endLocalisation,
+			startTime,
+			endTime,
+			repeat,
+			peopleNumber,
+			price,
+			driver,
+			event,
+			smoker,
+			carType,
+			carColor
+		});
+	});
 
 	return res.status(200).send(response);
 });
@@ -41,7 +38,6 @@ router.post('/', authorize, async (req, res) => {
 		const carpooling = new Carpooling({
 			startLocalisation: req.body.startLocalisation,
 			endLocalisation: req.body.endLocalisation,
-			date: req.body.date,
 			startTime: req.body.startTime,
 			endTime: req.body.endTime,
 			repeat: req.body.repeat,
@@ -62,7 +58,6 @@ router.post('/', authorize, async (req, res) => {
 				_.pick(carpoolingData, [
 					'startLocalisation',
 					'endLocalisation',
-					'date',
 					'startTime',
 					'endTime',
 					'repeat',

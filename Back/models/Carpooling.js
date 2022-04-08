@@ -10,16 +10,12 @@ const Schema = new mongoose.Schema(
 			type: String,
 			required: true
 		},
-		date: {
+		startTime: {
 			type: Date,
 			required: true
 		},
-		startTime: {
-			type: String,
-			required: true
-		},
 		endTime: {
-			type: String,
+			type: Date,
 			required: true
 		},
 		repeat: {
