@@ -69,11 +69,24 @@ router.get('/search', authorize, async (req, res) => {
 
 	const users = await User.find(req.query);
 	const response = [];
-	users.forEach(({ fName, lName, school, profilePicture }) => {
-		response.push({ fName, lName, school, profilePicture });
-	});
+	users
+		.filter(user => user._id.toString() !== req.user._id)
+		.forEach(({ fName, lName, school, profilePicture, _id }) => {
+			response.push({ fName, lName, school, profilePicture, _id: _id.toString() });
+		});
 
 	return res.status(200).send(response);
+});
+
+router.get('/addFriend', authorize, async (req, res) => {
+	const schema = require('../schemas/addFriend');
+	const { error } = schema.validate(req.query);
+	if (error) {
+		return res.status(400).send(error.details[0].message);
+	}
+
+	const user = await User.findOneAndUpdate(req.user, { $addToSet: { friends: req.query.id } }, { new: true });
+	return res.status(201).send(user);
 });
 
 router.get('/me', authorize, async (req, res) => {
