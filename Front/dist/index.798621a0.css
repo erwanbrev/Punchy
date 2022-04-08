@@ -5,8 +5,6 @@
 }
 
 :root {
-  --bgMenu: #f26f63;
-  --bgHeaderMobile: #faf1f0;
   --textMenu: #fafafa;
   --textBlack: #0e0e0e;
   --linear-one: #ee8c78;
@@ -19,6 +17,7 @@
   background: linear-gradient(var(--linear-two), var(--linear-one) );
   flex-direction: column;
   display: flex;
+  position: fixed;
 }
 
 .leftMenu a {
@@ -32,7 +31,7 @@
 
 .cont-Nav {
   flex-direction: column;
-  margin-bottom: 110%;
+  margin-bottom: 90%;
   margin-left: 19%;
   display: flex;
 }
@@ -42,7 +41,7 @@
 }
 
 .nameNav:not(:last-child) {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .nameNav {
@@ -51,33 +50,36 @@
   display: flex;
 }
 
+.min-compte {
+  margin-left: 19%;
+}
+
 #copy {
   height: 10vh;
   background: var(--bgHeaderMobile);
   width: 84%;
-  z-index: 4;
-  border: 1px solid #00f;
   justify-content: center;
   align-items: center;
+  font-family: Lobster, cursive;
   font-size: 1.2rem;
   display: flex;
   position: absolute;
-  right: 0%;
+  bottom: 0;
+  right: 0;
+}
+
+#copy, .mobile-head {
+  background: #f0eae880;
 }
 
 .event {
   margin-top: 3%;
 }
 
-#logo, #logo-mobile, #copy {
-  text-align: center;
-  margin: 10%;
-  font-family: Lobster, cursive;
-}
-
 #logo {
-  color: var(--textMenu);
-  font-size: 1.4rem;
+  width: 90%;
+  margin: 1% 5%;
+  display: block;
 }
 
 #logo-mobile {
@@ -86,13 +88,12 @@
 
 @media screen and (min-height: 730px) {
   .cont-Nav {
-    margin-bottom: 160%;
+    margin-bottom: 141%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .mobile-head {
-    background: var(--bgHeaderMobile);
     height: 7vh;
     width: 100%;
     z-index: 100;
@@ -121,8 +122,8 @@
   }
 
   #logo-mobile {
-    color: #0e0e0e;
-    font-size: 1rem;
+    margin: 10%;
+    display: block;
   }
 }
 
