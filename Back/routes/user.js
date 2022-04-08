@@ -71,8 +71,8 @@ router.get('/search', authorize, async (req, res) => {
 	const response = [];
 	users
 		.filter(user => user._id.toString() !== req.user._id)
-		.forEach(({ fName, lName, school, profilePicture, _id }) => {
-			response.push({ fName, lName, school, profilePicture, _id: _id.toString() });
+		.forEach(({ fName, lName, school, profilePicture, _id, notationCar }) => {
+			response.push({ fName, lName, school, profilePicture, _id: _id.toString(), notationCar });
 		});
 
 	return res.status(200).send(response);
