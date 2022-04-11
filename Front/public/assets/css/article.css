@@ -63,6 +63,12 @@
     border: 1px solid brown;
 }
 
+.part04-article,
+.part05-article {
+    font-family: 'Futura', 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
 /*? rajout de -2nd dans le nom pour préciser que c'est une modif sur les pages secondaires */
 .article-event-2nd {
     margin: 11.5% 6%;
