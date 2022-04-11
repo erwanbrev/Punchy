@@ -26,8 +26,7 @@ const Main = () => {
                     <Route path="/register" element={<Register />} />
                     <Route element={<Navbar />} />
                 </Route>
-                {/*</Route>
-                <Route path="/login" element={<Login/>}></Route>             */}
+                {/*<Route path="/login" element={<Login/>}></Route>             */}
             </Routes>
         </BrowserRouter>
     )

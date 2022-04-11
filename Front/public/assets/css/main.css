@@ -16,10 +16,16 @@
 
 /* ? definition de la taille du body (espace blanc entre header + footer) */
 .main-container {
-    /* display: flex;
-    flex-direction: row; */
     margin-left: 16vw;
     height: 90vh;
+}
+
+.page-title {
+    display: flex;
+    font-size: 3rem;
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 33vw;
 }
 
 /*? organisation du menu laterale gauche */
@@ -87,7 +93,7 @@
 
 #copy,
 .mobile-head {
-    background: rgba(240, 234, 232, .5);
+    background: rgba(240, 234, 232, .7);
 }
 
 /* ?retouche du nom evenement + connexion */
