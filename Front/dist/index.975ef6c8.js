@@ -27741,6 +27741,7 @@ parcelHelpers.export(exports, "Register", ()=>Register
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _accountCss = require("../account/account.css");
 var _s = $RefreshSig$();
 const Register = ()=>{
     _s();
@@ -27773,22 +27774,34 @@ const Register = ()=>{
         ).catch((err)=>console.log(err)
         );
     };
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "login",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    className: "form",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
-                        onSubmit: handleSubmit,
-                        style: {
-                            display: "flex",
-                            flexDirection: "column"
-                        },
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "container",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "text-center",
+                children: "Register"
+            }, void 0, false, {
+                fileName: "src/components/account/register.jsx",
+                lineNumber: 32,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
+                className: "registration-form",
+                onSubmit: handleSubmit,
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                        className: "col-one-half",
                         children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "label-text",
+                                children: "First Name"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 35,
+                                columnNumber: 17
+                            }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
                                 type: "text",
-                                placeholder: "first name",
                                 required: true,
                                 value: fName,
                                 onChange: (e)=>{
@@ -27796,12 +27809,28 @@ const Register = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/account/register.jsx",
-                                lineNumber: 37,
-                                columnNumber: 13
+                                lineNumber: 36,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account/register.jsx",
+                        lineNumber: 34,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                        className: "col-one-half",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "label-text",
+                                children: "Last Name"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 39,
+                                columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
                                 type: "text",
-                                placeholder: "last name",
                                 required: true,
                                 value: lName,
                                 onChange: (e)=>{
@@ -27809,12 +27838,27 @@ const Register = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/account/register.jsx",
-                                lineNumber: 38,
-                                columnNumber: 13
+                                lineNumber: 40,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account/register.jsx",
+                        lineNumber: 38,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "label-text",
+                                children: "Email"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 43,
+                                columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                type: "email",
-                                placeholder: "email",
+                                type: "text",
                                 required: true,
                                 value: email,
                                 onChange: (e)=>{
@@ -27822,12 +27866,28 @@ const Register = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/account/register.jsx",
-                                lineNumber: 39,
-                                columnNumber: 13
+                                lineNumber: 44,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account/register.jsx",
+                        lineNumber: 42,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                        className: "password",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "label-text",
+                                children: "Password"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 47,
+                                columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
                                 type: "password",
-                                placeholder: "password",
                                 required: true,
                                 value: password,
                                 onChange: (e)=>{
@@ -27835,12 +27895,27 @@ const Register = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/account/register.jsx",
-                                lineNumber: 40,
-                                columnNumber: 13
+                                lineNumber: 48,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account/register.jsx",
+                        lineNumber: 46,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "label-text",
+                                children: "Phone"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 51,
+                                columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
                                 type: "text",
-                                placeholder: "phone",
                                 required: true,
                                 value: phone,
                                 onChange: (e)=>{
@@ -27848,52 +27923,124 @@ const Register = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/account/register.jsx",
-                                lineNumber: 41,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                type: "text",
-                                placeholder: "school",
-                                required: true,
-                                value: school,
-                                onChange: (e)=>{
-                                    setSchool(e.target.value);
-                                }
-                            }, void 0, false, {
-                                fileName: "src/components/account/register.jsx",
-                                lineNumber: 42,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                type: "submit",
-                                children: "Register"
-                            }, void 0, false, {
-                                fileName: "src/components/account/register.jsx",
-                                lineNumber: 43,
-                                columnNumber: 13
+                                lineNumber: 52,
+                                columnNumber: 17
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account/register.jsx",
-                        lineNumber: 36,
+                        lineNumber: 50,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "label-text",
+                                children: "School"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 55,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                                required: true,
+                                value: school,
+                                onChange: (e)=>{
+                                    setSchool(e.target.value);
+                                },
+                                style: {
+                                    width: "100%"
+                                },
+                                children: [
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: "IMTS",
+                                        children: "IMTS"
+                                    }, void 0, false, {
+                                        fileName: "src/components/account/register.jsx",
+                                        lineNumber: 57,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: "IUT Saint Malo",
+                                        children: "IUT Saint Malo"
+                                    }, void 0, false, {
+                                        fileName: "src/components/account/register.jsx",
+                                        lineNumber: 58,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: "Ecole infirmiere",
+                                        children: "Ecole infirmiere"
+                                    }, void 0, false, {
+                                        fileName: "src/components/account/register.jsx",
+                                        lineNumber: 59,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: "Institut du design",
+                                        children: "Institut du design"
+                                    }, void 0, false, {
+                                        fileName: "src/components/account/register.jsx",
+                                        lineNumber: 60,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: "ENSM",
+                                        children: "ENSM"
+                                    }, void 0, false, {
+                                        fileName: "src/components/account/register.jsx",
+                                        lineNumber: 61,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                                        value: "BTS",
+                                        children: "BTS"
+                                    }, void 0, false, {
+                                        fileName: "src/components/account/register.jsx",
+                                        lineNumber: 62,
+                                        columnNumber: 21
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 56,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account/register.jsx",
+                        lineNumber: 54,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "text-center",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            type: "submit",
+                            className: "submit",
+                            name: "register",
+                            children: "Sign Me Up"
+                        }, void 0, false, {
+                            fileName: "src/components/account/register.jsx",
+                            lineNumber: 67,
+                            columnNumber: 17
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/account/register.jsx",
+                        lineNumber: 66,
                         columnNumber: 13
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/account/register.jsx",
-                    lineNumber: 35,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+                ]
+            }, void 0, true, {
                 fileName: "src/components/account/register.jsx",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 9
             }, undefined)
-        }, void 0, false, {
-            fileName: "src/components/account/register.jsx",
-            lineNumber: 32,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false);
+        ]
+    }, void 0, true, {
+        fileName: "src/components/account/register.jsx",
+        lineNumber: 31,
+        columnNumber: 9
+    }, undefined);
 };
 _s(Register, "/puYZsp8+i2rvprs7rbZ+UqkISQ=");
 _c = Register;
@@ -27905,7 +28052,7 @@ $RefreshReg$(_c, "Register");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gAVkI":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../account/account.css":"7CyK2"}],"7CyK2":[function() {},{}],"gAVkI":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5938 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
