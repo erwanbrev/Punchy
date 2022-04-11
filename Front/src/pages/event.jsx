@@ -1,14 +1,22 @@
 import React from "react";
 import { icons } from "react-icons";
+import EventImportant from "../components/evenement/eventimportant";
+import EventPerso from "../components/evenement/EventPerso";
+import "../../public/assets/css/evenement.css"
+import { FaPlusCircle } from 'react-icons/fa';
 
 export const Event = () => {
     return (
         <div className="main-container">
-            <article className="article-event">
-                <h1>Evenements</h1>
-                <h2>Nom Evenement</h2>
-                <img src="" alt="" />
+            <article className="EvenementImportant">
+                <EventImportant />
             </article>
+            <article className="EvenementPerso">
+                <EventPerso />
+            </article>
+            <div className="add">
+                <FaPlusCircle />
+            </div>
         </div>
     )
 }
