@@ -1,5 +1,5 @@
 import React from "react";
-import '../../public/assets/css/account.css';
+// import '../../public/assets/css/account.css';
 import { Authentification } from "./auth";
 import { useNavigate } from "react-router-dom";
 
@@ -33,7 +33,6 @@ export const Login = () => {
         <div className="login">
         <div className="form">
             <form className="login-form" onSubmit={handleSubmit}>
-            <span className="material-icons">lock</span>
             <input type="text" placeholder="first name" onChange={e => setIdentifier(e.target.value)}/>
             <input type="password" placeholder="password" required onChange={e => setPassword(e.target.value)}/>
             <button>login</button>

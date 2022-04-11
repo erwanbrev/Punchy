@@ -1,0 +1,22 @@
+POST http://localhost:5000/user/signup
+Content-Type: application/json
+
+{
+    "fName": "alex",
+    "lName": "test",
+    "email": "alexandre.pro3525@gmail.com",
+    "password": "123456789",
+    "phone": "06 42 42 42 42",
+    "school": "imts"
+    
+}
+
+###
+POST http://localhost:5000/auth/signin
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjRlZjE0MDI3NzYzZmYzOTA5ODNmMTciLCJpYXQiOjE2NDkzNDA3MzYsImV4cCI6MTY0OTk0NTUzNn0.24bxoZ6DpRUs_6IlxDiQq-psHhMz6wYKW7svyVIEnjg
+
+{
+    "email": "alexandre.pro3525@gmail.com",
+    "password": "123456789"
+}
