@@ -1,10 +1,21 @@
-.article-event {
+/* !style défini des articles des pages principales/secondaires */
+.article-event,
+.article-event-2nd {
     position: absolute;
     display: flex;
     flex-direction: column;
     border: 1px blue solid;
-    width: 70%;
-    margin: 11.5% 8% ;
+    margin: 11.5% 12%;
     height: 40vh;
     border-radius: 12px;
+}
+
+/* !taille des articles */
+.article-event {
+    width: 60%;
+}
+
+.article-event-2nd {
+    margin: 11.5% 6%;
+    width: 20%;
 }

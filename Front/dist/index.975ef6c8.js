@@ -27729,7 +27729,7 @@ const Event = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "main-container",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event",
+            className: "article-event-2nd",
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                     children: "Evenements"
@@ -28015,7 +28015,7 @@ const Carpool = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "main-container",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event",
+            className: "article-event-2nd",
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                     children: "Covoiturages"
@@ -28079,7 +28079,7 @@ const Housing = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "main-container",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event",
+            className: "article-event-2nd",
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                     children: "Logements"
@@ -28143,7 +28143,7 @@ const Friends = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "main-container",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event",
+            className: "article-event-2nd",
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                     children: "Amis"

@@ -13,7 +13,6 @@
 
 .main-container {
   height: 90vh;
-  border: 1px solid green;
   margin-left: 16vw;
 }
 
@@ -135,15 +134,23 @@
 
 
 
-.article-event {
-  width: 70%;
+.article-event, .article-event-2nd {
   height: 40vh;
   border: 1px solid #00f;
   border-radius: 12px;
   flex-direction: column;
-  margin: 11.5% 8%;
+  margin: 11.5% 12%;
   display: flex;
   position: absolute;
+}
+
+.article-event {
+  width: 60%;
+}
+
+.article-event-2nd {
+  width: 20%;
+  margin: 11.5% 6%;
 }
 
 /*# sourceMappingURL=index.798621a0.css.map */
