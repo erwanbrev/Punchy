@@ -2,17 +2,17 @@ export class Authentification {
 
     static authenticated = false
 
-    static login = async (first_name, password) => {
+    static login = async (fName, password) => {
         //On prepare la requete
         const request = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             credentials: 'include',
-            body: JSON.stringify({first_name, password})
+            body: JSON.stringify({fName, password})
         }
 
         // requete à l'api
-        const res = await fetch('http://localhost:5000/login', request)
+        const res = await fetch('http://localhost:5000/auth/signin', request)
         if(res.ok) {
             //stocker la response de l'api
             const body = await res.json()

@@ -1,43 +1,50 @@
 import React from "react";
-import './account.css';
-import "../../../public/assets/css/main.css"
+// import '../../public/assets/css/account.css';
+
 
 export const Register = () => {
 
-    const handleSubmit = (first_name, last_name, email, password, tel, school) => {
+    const [fName, setFName] = React.useState('')
+    const [lName, setLName] = React.useState('')
+    const [email, setEmail] = React.useState('')
+    const [password, setPassword] = React.useState('')
+    const [phone, setPhone] = React.useState('')
+    const [school, setSchool] = React.useState('')
 
+    const handleSubmit = e => {
+        e.preventDefault()
         const request = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'include',
-            body: JSON.stringify({ first_name, last_name, email, password, tel, school })
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify({ fName, lName, email, password, phone, school })
         }
-
+        console.log(request);
+    
         // requete à l'api
-        fetch(`http://localhost:5000/register`, request)
-            .then(res => res.json())
-            .catch(err => console.log(err))
+        fetch(`http://localhost:5000/user/signup`, request)
+        .then(res => res.json())
+        .then(content => console.log(content))
+        .catch(err => console.log(err))
     }
 
     return (
-        <>
-            <div>
-                <div class="login">
-                    <div class="form">
-                        <form class="login-form" onSubmit={handleSubmit}>
-                            <span class="material-icons">lock</span>
-                            <input type="text" placeholder="first name" required />
-                            <input type="text" placeholder="last name" required />
-                            <input type="text" placeholder="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-                            <input type="password" placeholder="password" required />
-                            <input type="text" placeholder="tel" required />
-                            <input type="text" placeholder="school" required />
-                            <button>Register</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <Footer />
-        </>
+    <>
+        <div>
+
+        <div className="login">
+        <div className="form">
+            <form onSubmit={handleSubmit} style={{display: "flex", flexDirection: "column"}}>
+            <input type="text" placeholder="first name" required value={fName} onChange={(e) => {setFName(e.target.value)}} />
+            <input type="text" placeholder="last name" required value={lName}  onChange={(e) => {setLName(e.target.value)}} />
+            <input type="email" placeholder="email" required value={email} onChange={(e) => {setEmail(e.target.value)}}/>
+            <input type="password" placeholder="password" required value={password} onChange={(e) => {setPassword(e.target.value)}}/>
+            <input type="text" placeholder="phone" required value={phone} onChange={(e) => {setPhone(e.target.value)}} />
+            <input type="text" placeholder="school" required value={school} onChange={(e) => {setSchool(e.target.value)}} />
+            <button type="submit">Register</button>
+            </form>  
+        </div>
+        </div>
+        </div>
+    </>
     )
 }
