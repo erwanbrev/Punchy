@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-
 *,
 ::before,
 ::after {
@@ -10,18 +8,28 @@
 
 /*? definition des couleurs  */
 :root {
-    --bgMenu: #F26F63;
     --textMenu: #FAFAFA;
+    --textBlack: #0E0E0E;
+    --linear-one: #EE8C78;
+    --linear-two: #434C9B;
+}
+
+/* ? definition de la taille du body (espace blanc entre header + footer) */
+.main-container {
+    /* display: flex;
+    flex-direction: row; */
+    margin-left: 16vw;
+    height: 90vh;
 }
 
 /*? organisation du menu laterale gauche */
 .leftMenu {
     display: flex;
+    height: 100vh;
+    width: 16%;
+    background: linear-gradient(var(--linear-two), var(--linear-one));
     flex-direction: column;
-    min-height: 100vh;
-    width: 20%;
-    background-color: var(--bgMenu);
-    justify-content: center;
+    position: fixed;
 }
 
 .leftMenu a {
@@ -29,14 +37,116 @@
     color: var(--textMenu);
 }
 
-#logo {
-    margin-bottom: 98%;
+.bottomMenu {
+    display: none;
 }
 
-.nameNav {
-    font-family: 'Open Sans', sans-serif;
+/* ? conteneur des boutons de navigation */
+.cont-Nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 19%;
+}
+
+.cont-Nav {
+    margin-bottom: 90%;
+}
+
+.cont-Nav img,
+.min-compte img {
+    width: 24%;
 }
 
 .nameNav:not(:last-child) {
-    margin-bottom: 30%;
+    margin-bottom: 2%;
+}
+
+.nameNav {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+}
+
+.min-compte {
+    margin-left: 19%;
+}
+
+#copy {
+    font-size: 1.2rem;
+    height: 10vh;
+    background: var(--bgHeaderMobile);
+    width: 84%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+}
+
+#copy,
+.mobile-head {
+    background: rgba(240, 234, 232, .5);
+}
+
+/* ?retouche du nom evenement + connexion */
+.event {
+    margin-top: 3%;
+}
+
+/* !logo */
+#logo {
+    display: block;
+    margin: 1% 5%;
+    width: 90%;
+}
+
+#logo-mobile {
+    display: none;
+}
+
+/* ?format plein écran mac os x */
+@media screen and (min-height: 730px) {
+    .cont-Nav {
+        margin-bottom: 141%;
+    }
+}
+
+/*? format mobile */
+@media screen and (max-width: 600px) {
+
+    .mobile-head {
+        display: flex;
+        height: 7vh;
+        width: 100%;
+        border: 1px solid red;
+        position: relative;
+        z-index: 100;
+    }
+
+    /*? organisation du menu laterale gauche, horizontalement en bas de l'ecran */
+    .leftMenu {
+        display: none;
+    }
+
+    .bottomMenu {
+        display: flex;
+        height: 14vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(var(--linear-one), var(--linear-two));
+        flex-direction: row;
+        border: 1px solid red;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #logo-mobile {
+        display: block;
+        margin: 10%;
+    }
 }

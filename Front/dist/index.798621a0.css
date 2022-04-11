@@ -1,4 +1,3 @@
-@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap";
 *, :before, :after {
   box-sizing: border-box;
   margin: 0;
@@ -6,17 +5,24 @@
 }
 
 :root {
-  --bgMenu: #f26f63;
   --textMenu: #fafafa;
+  --textBlack: #0e0e0e;
+  --linear-one: #ee8c78;
+  --linear-two: #434c9b;
+}
+
+.main-container {
+  height: 90vh;
+  margin-left: 16vw;
 }
 
 .leftMenu {
-  min-height: 100vh;
-  width: 20%;
-  background-color: var(--bgMenu);
+  height: 100vh;
+  width: 16%;
+  background: linear-gradient(var(--linear-two), var(--linear-one) );
   flex-direction: column;
-  justify-content: center;
   display: flex;
+  position: fixed;
 }
 
 .leftMenu a {
@@ -24,16 +30,127 @@
   text-decoration: none;
 }
 
-#logo {
-  margin-bottom: 98%;
+.bottomMenu {
+  display: none;
 }
 
-.nameNav {
-  font-family: Open Sans, sans-serif;
+.cont-Nav {
+  flex-direction: column;
+  margin-bottom: 90%;
+  margin-left: 19%;
+  display: flex;
+}
+
+.cont-Nav img, .min-compte img {
+  width: 24%;
 }
 
 .nameNav:not(:last-child) {
-  margin-bottom: 30%;
+  margin-bottom: 2%;
+}
+
+.nameNav {
+  align-items: center;
+  font-family: Open Sans, sans-serif;
+  display: flex;
+}
+
+.min-compte {
+  margin-left: 19%;
+}
+
+#copy {
+  height: 10vh;
+  background: var(--bgHeaderMobile);
+  width: 84%;
+  justify-content: center;
+  align-items: center;
+  font-family: Lobster, cursive;
+  font-size: 1.2rem;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#copy, .mobile-head {
+  background: #f0eae880;
+}
+
+.event {
+  margin-top: 3%;
+}
+
+#logo {
+  width: 90%;
+  margin: 1% 5%;
+  display: block;
+}
+
+#logo-mobile {
+  display: none;
+}
+
+@media screen and (min-height: 730px) {
+  .cont-Nav {
+    margin-bottom: 141%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-head {
+    height: 7vh;
+    width: 100%;
+    z-index: 100;
+    border: 1px solid red;
+    display: flex;
+    position: relative;
+  }
+
+  .leftMenu {
+    display: none;
+  }
+
+  .bottomMenu {
+    height: 14vh;
+    width: 100%;
+    background: linear-gradient(var(--linear-one), var(--linear-two) );
+    border: 1px solid red;
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #logo-mobile {
+    margin: 10%;
+    display: block;
+  }
+}
+
+
+
+.article-event, .article-event-2nd {
+  height: 40vh;
+  border: 1px solid #00f;
+  border-radius: 12px;
+  flex-direction: column;
+  margin: 11.5% 12%;
+  display: flex;
+  position: absolute;
+}
+
+.article-event {
+  width: 60%;
+}
+
+.article-event-2nd {
+  width: 20%;
+  margin: 11.5% 6%;
 }
 
 /*# sourceMappingURL=index.798621a0.css.map */
