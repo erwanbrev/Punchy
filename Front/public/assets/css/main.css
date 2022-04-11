@@ -14,6 +14,13 @@
     --linear-two: #434C9B;
 }
 
+/* ? definition de la taille du body (espace blanc entre header + footer) */
+.main-container {
+    margin-left: 16vw;
+    height: 90vh;
+    border: 1px solid green;
+}
+
 /*? organisation du menu laterale gauche */
 .leftMenu {
     display: flex;
@@ -87,8 +94,6 @@
     margin-top: 3%;
 }
 
-/* ? */
-
 /* !logo */
 #logo {
     display: block;
@@ -99,13 +104,13 @@
 #logo-mobile {
     display: none;
 }
-
+/* ?format plein écran mac os x */
 @media screen and (min-height: 730px) {
     .cont-Nav {
         margin-bottom: 141%;
     }
 }
-
+/*? format mobile */
 @media screen and (max-width: 600px) {
 
     .mobile-head {

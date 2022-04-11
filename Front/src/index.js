@@ -3,20 +3,30 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import "../public/assets/css/main.css"
+import { Event } from "./pages/event";
+import { Carpool } from "./pages/carpooling";
+import { Housing } from "./pages/housing";
+import { Friends } from "./pages/friends";
+import { Register } from "./components/account/register";
+import { Navbar } from "./components/menu";
+import { Article } from "./components/article";
+
 
 const Main = () => {
     return (
-
         <BrowserRouter>
             <Routes>
                 {/* les chemin d'accès des pages + le composent qui va avec */}
-                <Route path="/" element={<Layout />} />
-                <Route path="/event" element={<Layout />} />
-                <Route path="/covoit" element={<Layout />} />
-                <Route path="/geoloc" element={<Layout />} />
-                <Route path="/amis" element={<Layout />} />
-                <Route path="/connexion" element={<Layout />} />
-                {/* <Route path="/register" element={<Register/>}></Route>
+                <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Article />} />
+                    <Route path="/event" element={<Event />} />
+                    <Route path="/carpool" element={<Carpool />} />
+                    <Route path="/housing" element={<Housing />} />
+                    <Route path="/friends" element={<Friends />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route element={<Navbar />} />
+                </Route>
+                {/*</Route>
                 <Route path="/login" element={<Login/>}></Route>             */}
             </Routes>
         </BrowserRouter>

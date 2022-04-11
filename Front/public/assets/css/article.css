@@ -1,0 +1,10 @@
+.article-event {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px blue solid;
+    width: 70%;
+    margin: 11.5% 8% ;
+    height: 40vh;
+    border-radius: 12px;
+}

@@ -1,13 +1,13 @@
-import react from "react";
-import { Article } from "./components/article";
+import React from "react";
+import { Outlet } from "react-router-dom";
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/menu";
 
 export const Layout = () => {
     return (
         <div>
-            <Navbar/>
-            <Article />
+            <Navbar />
+            <Outlet />
             <Footer />
         </div>
     )
