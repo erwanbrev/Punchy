@@ -1001,12 +1001,13 @@ var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _reactRouterDom = require("react-router-dom");
 var _layout = require("./Layout");
+var _register = require("./components/account/register");
+var _login = require("./components/account/login");
 var _mainCss = require("../public/assets/css/main.css");
 var _event = require("./pages/event");
 var _carpooling = require("./pages/carpooling");
 var _housing = require("./pages/housing");
 var _friends = require("./pages/friends");
-var _register = require("./components/account/register");
 var _menu = require("./components/menu");
 var _article = require("./components/article");
 const Main = ()=>{
@@ -1021,7 +1022,7 @@ const Main = ()=>{
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_article.Article, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 21,
+                        lineNumber: 23,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1029,7 +1030,7 @@ const Main = ()=>{
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_event.Event, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 22,
+                        lineNumber: 24,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1037,7 +1038,7 @@ const Main = ()=>{
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_carpooling.Carpool, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 23,
+                        lineNumber: 25,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1045,7 +1046,7 @@ const Main = ()=>{
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_housing.Housing, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 24,
+                        lineNumber: 26,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1053,7 +1054,7 @@ const Main = ()=>{
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_friends.Friends, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 25,
+                        lineNumber: 27,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1061,37 +1062,53 @@ const Main = ()=>{
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_register.Register, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 26,
+                        lineNumber: 28,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_menu.Navbar, {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 27,
+                        lineNumber: 29,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "/login",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_login.Login, {}, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.js",
+                        lineNumber: 30,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "/register",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_register.Register, {}, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.js",
+                        lineNumber: 31,
                         columnNumber: 21
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/index.js",
-                lineNumber: 20,
+                lineNumber: 22,
                 columnNumber: 17
             }, undefined)
         }, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 18,
+            lineNumber: 20,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 17,
+        lineNumber: 19,
         columnNumber: 9
     }, undefined);
 };
 _c = Main;
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Main, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 35,
+    lineNumber: 38,
     columnNumber: 17
 }, undefined), document.getElementById("root"));
 var _c;
@@ -1102,7 +1119,7 @@ $RefreshReg$(_c, "Main");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./Layout":"le5g7","../public/assets/css/main.css":"aVGHF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./pages/event":"95hII","./components/account/register":"fFnus","./components/menu":"5vAev","./components/article":"bXHQ8","./pages/carpooling":"2b2aI","./pages/housing":"kOqf6","./pages/friends":"kUMeh"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./Layout":"le5g7","../public/assets/css/main.css":"aVGHF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./pages/event":"95hII","./components/account/register":"fFnus","./components/menu":"5vAev","./components/article":"bXHQ8","./pages/carpooling":"2b2aI","./pages/housing":"kOqf6","./pages/friends":"kUMeh","./components/account/login":"gAVkI"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -26878,23 +26895,23 @@ const Layout = ()=>{
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_menu.Navbar, {}, void 0, false, {
                 fileName: "src/Layout.jsx",
-                lineNumber: 9,
+                lineNumber: 12,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Outlet, {}, void 0, false, {
                 fileName: "src/Layout.jsx",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_footer.Footer, {}, void 0, false, {
                 fileName: "src/Layout.jsx",
-                lineNumber: 11,
+                lineNumber: 14,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Layout.jsx",
-        lineNumber: 8,
+        lineNumber: 11,
         columnNumber: 9
     }, undefined);
 };
@@ -27821,140 +27838,161 @@ parcelHelpers.export(exports, "Register", ()=>Register
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _accountCss = require("./account.css");
-var _mainCss = require("../../../public/assets/css/main.css");
+var _s = $RefreshSig$();
 const Register = ()=>{
-    const handleSubmit = (first_name, last_name, email, password, tel, school)=>{
+    _s();
+    const [fName, setFName] = _reactDefault.default.useState('');
+    const [lName, setLName] = _reactDefault.default.useState('');
+    const [email, setEmail] = _reactDefault.default.useState('');
+    const [password, setPassword] = _reactDefault.default.useState('');
+    const [phone, setPhone] = _reactDefault.default.useState('');
+    const [school, setSchool] = _reactDefault.default.useState('');
+    const handleSubmit = (e)=>{
+        e.preventDefault();
         const request = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            credentials: 'include',
             body: JSON.stringify({
-                first_name,
-                last_name,
+                fName,
+                lName,
                 email,
                 password,
-                tel,
+                phone,
                 school
             })
         };
+        console.log(request);
         // requete à l'api
-        fetch(`http://localhost:5000/register`, request).then((res)=>res.json()
+        fetch(`http://localhost:5000/user/signup`, request).then((res)=>res.json()
+        ).then((content)=>console.log(content)
         ).catch((err)=>console.log(err)
         );
     };
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "login",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    class: "login",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "form",
-                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
-                            class: "login-form",
-                            onSubmit: handleSubmit,
-                            children: [
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                                    class: "material-icons",
-                                    children: "lock"
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 28,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                    type: "text",
-                                    placeholder: "first name",
-                                    required: true
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 29,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                    type: "text",
-                                    placeholder: "last name",
-                                    required: true
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                    type: "text",
-                                    placeholder: "email",
-                                    required: true,
-                                    pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 31,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                    type: "password",
-                                    placeholder: "password",
-                                    required: true
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 32,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                    type: "text",
-                                    placeholder: "tel",
-                                    required: true
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 33,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                    type: "text",
-                                    placeholder: "school",
-                                    required: true
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 34,
-                                    columnNumber: 29
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                    children: "Register"
-                                }, void 0, false, {
-                                    fileName: "src/components/account/register.jsx",
-                                    lineNumber: 35,
-                                    columnNumber: 29
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/account/register.jsx",
-                            lineNumber: 27,
-                            columnNumber: 25
-                        }, undefined)
-                    }, void 0, false, {
+                    className: "form",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
+                        onSubmit: handleSubmit,
+                        style: {
+                            display: "flex",
+                            flexDirection: "column"
+                        },
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                placeholder: "first name",
+                                required: true,
+                                value: fName,
+                                onChange: (e)=>{
+                                    setFName(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 37,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                placeholder: "last name",
+                                required: true,
+                                value: lName,
+                                onChange: (e)=>{
+                                    setLName(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 38,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "email",
+                                placeholder: "email",
+                                required: true,
+                                value: email,
+                                onChange: (e)=>{
+                                    setEmail(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 39,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "password",
+                                placeholder: "password",
+                                required: true,
+                                value: password,
+                                onChange: (e)=>{
+                                    setPassword(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 40,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                placeholder: "phone",
+                                required: true,
+                                value: phone,
+                                onChange: (e)=>{
+                                    setPhone(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 41,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                placeholder: "school",
+                                required: true,
+                                value: school,
+                                onChange: (e)=>{
+                                    setSchool(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                type: "submit",
+                                children: "Register"
+                            }, void 0, false, {
+                                fileName: "src/components/account/register.jsx",
+                                lineNumber: 43,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/account/register.jsx",
-                        lineNumber: 26,
-                        columnNumber: 21
+                        lineNumber: 36,
+                        columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/account/register.jsx",
-                    lineNumber: 25,
-                    columnNumber: 17
+                    lineNumber: 35,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/account/register.jsx",
-                lineNumber: 24,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Footer, {}, void 0, false, {
-                fileName: "src/components/account/register.jsx",
-                lineNumber: 40,
-                columnNumber: 13
+                lineNumber: 34,
+                columnNumber: 9
             }, undefined)
-        ]
-    }, void 0, true);
+        }, void 0, false, {
+            fileName: "src/components/account/register.jsx",
+            lineNumber: 32,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false);
 };
+_s(Register, "/puYZsp8+i2rvprs7rbZ+UqkISQ=");
 _c = Register;
 var _c;
 $RefreshReg$(_c, "Register");
@@ -27964,7 +28002,7 @@ $RefreshReg$(_c, "Register");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./account.css":"7CyK2","../../../public/assets/css/main.css":"aVGHF"}],"7CyK2":[function() {},{}],"aVGHF":[function() {},{}],"bXHQ8":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bXHQ8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b41e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28349,6 +28387,174 @@ $RefreshReg$(_c, "Friends");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireb241")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"gAVkI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5938 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5938.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Login", ()=>Login
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+// import '../../public/assets/css/account.css';
+var _auth = require("./auth");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const Login = ()=>{
+    _s();
+    // Set les champs nécéssaire a la connexion
+    const [identifier, setIdentifier] = _reactDefault.default.useState('');
+    const [password, setPassword] = _reactDefault.default.useState('');
+    const navigate = _reactRouterDom.useNavigate();
+    // function du submit
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        const res = await _auth.Authentification.login(identifier, password);
+        if (_auth.Authentification.isAuthenticated()) navigate('/', {
+            replace: true
+        });
+    };
+    // React.useEffect(() => {
+    //     if(Authentification.isAuthenticated()) {
+    //         navigate('/', { replace: true })
+    //     }
+    // })
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            style: {
+                background: 'linear-gradient(90deg, #4b6cb7 0%, #182848 100%',
+                height: '100vh'
+            },
+            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "login",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "form",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
+                        className: "login-form",
+                        onSubmit: handleSubmit,
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                placeholder: "first name",
+                                onChange: (e)=>setIdentifier(e.target.value)
+                            }, void 0, false, {
+                                fileName: "src/components/account/login.jsx",
+                                lineNumber: 36,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "password",
+                                placeholder: "password",
+                                required: true,
+                                onChange: (e)=>setPassword(e.target.value)
+                            }, void 0, false, {
+                                fileName: "src/components/account/login.jsx",
+                                lineNumber: 37,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                children: "login"
+                            }, void 0, false, {
+                                fileName: "src/components/account/login.jsx",
+                                lineNumber: 38,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account/login.jsx",
+                        lineNumber: 35,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/account/login.jsx",
+                    lineNumber: 34,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/account/login.jsx",
+                lineNumber: 33,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/account/login.jsx",
+            lineNumber: 31,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false);
+};
+_s(Login, "huaIz9PT5/xifj4XggntKnoxZXY=", false, function() {
+    return [
+        _reactRouterDom.useNavigate
+    ];
+});
+_c = Login;
+var _c;
+$RefreshReg$(_c, "Login");
+
+  $parcel$ReactRefreshHelpers$5938.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./auth":"9xsMv","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xsMv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Authentification", ()=>Authentification
+);
+class Authentification {
+    static authenticated = false;
+    static login = async (fName, password)=>{
+        //On prepare la requete
+        const request = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include',
+            body: JSON.stringify({
+                fName,
+                password
+            })
+        };
+        // requete à l'api
+        const res = await fetch('http://localhost:5000/auth/signin', request);
+        if (res.ok) {
+            //stocker la response de l'api
+            const body = await res.json();
+            //On passe l'authentification a vrai
+            Authentification.authenticated = true;
+            console.log(body);
+            // stocker l'identification de l'utilisateur
+            localStorage.setItem('uid', body.uid);
+        }
+    };
+    // requete à l'api
+    static logout = ()=>{
+        const request = {
+            method: 'GET',
+            headers: {
+                'uid': localStorage.getItem('uid')
+            },
+            credentials: 'include'
+        };
+        return fetch('http://localhost:5000/logout', request).then((res)=>{
+            // on lui dit qu'il est plus connecter
+            Authentification.authenticated = false;
+            // on clear tout les informations de l'utilisateur du localStorage
+            localStorage.clear();
+        });
+    };
+    //function qui renvoie le status de connexion de l'utilisateur
+    static isAuthenticated() {
+        return Authentification.authenticated;
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireb241")
 
 //# sourceMappingURL=index.975ef6c8.js.map
