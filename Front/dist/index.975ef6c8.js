@@ -1119,7 +1119,7 @@ $RefreshReg$(_c, "Main");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./components/menu":"5vAev","./Layout":"le5g7","../public/assets/css/main.css":"aVGHF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/account/register":"fFnus","./components/account/login":"gAVkI","./pages/event":"95hII","./pages/carpooling":"2b2aI","./pages/housing":"kOqf6","./pages/friends":"kUMeh","./components/article":"bXHQ8"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./Layout":"le5g7","../public/assets/css/main.css":"aVGHF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./pages/event":"95hII","./components/account/register":"fFnus","./components/menu":"5vAev","./components/article":"bXHQ8","./pages/carpooling":"2b2aI","./pages/housing":"kOqf6","./pages/friends":"kUMeh","./components/account/login":"gAVkI"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -26873,7 +26873,58 @@ function _renderMatches(matches, parentMatches) {
     return _renderMatches(matches);
 }
 
-},{"history":"iE5Zp","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5vAev":[function(require,module,exports) {
+},{"history":"iE5Zp","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"le5g7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$19a2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$19a2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Layout", ()=>Layout
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _footer = require("./components/footer");
+var _menu = require("./components/menu");
+const Layout = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_menu.Navbar, {}, void 0, false, {
+                fileName: "src/Layout.jsx",
+                lineNumber: 12,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Outlet, {}, void 0, false, {
+                fileName: "src/Layout.jsx",
+                lineNumber: 13,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_footer.Footer, {}, void 0, false, {
+                fileName: "src/Layout.jsx",
+                lineNumber: 14,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Layout.jsx",
+        lineNumber: 11,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Layout;
+var _c;
+$RefreshReg$(_c, "Layout");
+
+  $parcel$ReactRefreshHelpers$19a2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/menu":"5vAev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/footer":"7epzg","react-router-dom":"fdOAw"}],"5vAev":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2958 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27202,7 +27253,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./../../public/assets/img/svg/logo.svg":"aGyt3","../../public/assets/img/svg/evenement.svg":"1Opye","../../public/assets/img/svg/covoit.svg":"bOGwN","../../public/assets/img/svg/itineraire.svg":"f6l9K","../../public/assets/img/svg/nb_personnes.svg":"5v5zd"}],"6Q2Cv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/evenement.svg":"1Opye","../../public/assets/img/svg/covoit.svg":"bOGwN","../../public/assets/img/svg/itineraire.svg":"f6l9K","../../public/assets/img/svg/nb_personnes.svg":"5v5zd","./../../public/assets/img/svg/logo.svg":"aGyt3"}],"6Q2Cv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsManifest = require("./iconsManifest");
@@ -27575,8 +27626,8 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"aGyt3":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "logo.a7df9247.svg" + "?" + Date.now();
+},{"react-refresh/runtime":"786KC"}],"1Opye":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "evenement.ba92f782.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
@@ -27612,10 +27663,7 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"1Opye":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "evenement.ba92f782.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"bOGwN":[function(require,module,exports) {
+},{}],"bOGwN":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "covoit.fc8f2d7e.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"f6l9K":[function(require,module,exports) {
@@ -27624,58 +27672,10 @@ module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "itiner
 },{"./helpers/bundle-url":"lgJ39"}],"5v5zd":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "nb_personnes.f32fa33d.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"le5g7":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$19a2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$19a2.prelude(module);
+},{"./helpers/bundle-url":"lgJ39"}],"aGyt3":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "logo.a7df9247.svg" + "?" + Date.now();
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Layout", ()=>Layout
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _footer = require("./components/footer");
-var _menu = require("./components/menu");
-const Layout = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_menu.Navbar, {}, void 0, false, {
-                fileName: "src/Layout.jsx",
-                lineNumber: 12,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Outlet, {}, void 0, false, {
-                fileName: "src/Layout.jsx",
-                lineNumber: 13,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_footer.Footer, {}, void 0, false, {
-                fileName: "src/Layout.jsx",
-                lineNumber: 14,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Layout.jsx",
-        lineNumber: 11,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Layout;
-var _c;
-$RefreshReg$(_c, "Layout");
-
-  $parcel$ReactRefreshHelpers$19a2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/menu":"5vAev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw","./components/footer":"7epzg"}],"7epzg":[function(require,module,exports) {
+},{"./helpers/bundle-url":"lgJ39"}],"7epzg":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2f6d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27727,7 +27727,104 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aVGHF":[function() {},{}],"fFnus":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aVGHF":[function() {},{}],"95hII":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7d6c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7d6c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Event", ()=>Event
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIcons = require("react-icons");
+var _prixSvg = require("../../public/assets/img/svg/prix.svg");
+var _prixSvgDefault = parcelHelpers.interopDefault(_prixSvg);
+const Event = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "main-container",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "page-title",
+                children: "\xc9v\xe8nement"
+            }, void 0, false, {
+                fileName: "src/pages/event.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event-2nd",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Type d'event"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: "#",
+                        alt: "img-event",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article-2nd",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/pages/event.jsx",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 12,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article-2nd",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/event.jsx",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/event.jsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Event;
+var _c;
+$RefreshReg$(_c, "Event");
+
+  $parcel$ReactRefreshHelpers$7d6c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"1UWgr":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "prix.4adb791d.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"fFnus":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4a9f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28052,7 +28149,397 @@ $RefreshReg$(_c, "Register");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
+<<<<<<< HEAD
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../account/account.css":"7CyK2"}],"7CyK2":[function() {},{}],"gAVkI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5938 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+=======
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bXHQ8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b41e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+>>>>>>> 91db0f083535ddc2a42208a56ca0938672baf7da
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b41e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Article", ()=>Article
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIcons = require("react-icons");
+var _articleCss = require("../../public/assets/css/article.css");
+var _prixSvg = require("../../public/assets/img/svg/prix.svg");
+var _prixSvgDefault = parcelHelpers.interopDefault(_prixSvg);
+const Article = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "main-container",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "page-title",
+                children: "Actualit\xe9s"
+            }, void 0, false, {
+                fileName: "src/components/article.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Type d'Article"
+                    }, void 0, false, {
+                        fileName: "src/components/article.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: "#",
+                        alt: "img-event",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/components/article.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/components/article.jsx",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/article.jsx",
+                        lineNumber: 12,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                        className: "part04-article",
+                        children: "compteur de participant"
+                    }, void 0, false, {
+                        fileName: "src/components/article.jsx",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/components/article.jsx",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/article.jsx",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/article.jsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Article;
+var _c;
+$RefreshReg$(_c, "Article");
+
+  $parcel$ReactRefreshHelpers$b41e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","../../public/assets/css/article.css":"3LQmE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"3LQmE":[function() {},{}],"2b2aI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b282 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b282.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Carpool", ()=>Carpool
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIcons = require("react-icons");
+var _prixSvg = require("../../public/assets/img/svg/prix.svg");
+var _prixSvgDefault = parcelHelpers.interopDefault(_prixSvg);
+const Carpool = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "main-container",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "page-title",
+                children: "Covoiturage"
+            }, void 0, false, {
+                fileName: "src/pages/carpooling.jsx",
+                lineNumber: 7,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event-2nd",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Type de covoit"
+                    }, void 0, false, {
+                        fileName: "src/pages/carpooling.jsx",
+                        lineNumber: 9,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: "#",
+                        alt: "img-carpool",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/pages/carpooling.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article-2nd",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/pages/carpooling.jsx",
+                            lineNumber: 12,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/carpooling.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article-2nd",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/pages/carpooling.jsx",
+                        lineNumber: 14,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/carpooling.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/carpooling.jsx",
+        lineNumber: 6,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Carpool;
+var _c;
+$RefreshReg$(_c, "Carpool");
+
+  $parcel$ReactRefreshHelpers$b282.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"kOqf6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d57c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d57c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Housing", ()=>Housing
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIcons = require("react-icons");
+var _prixSvg = require("../../public/assets/img/svg/prix.svg");
+var _prixSvgDefault = parcelHelpers.interopDefault(_prixSvg);
+const Housing = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "main-container",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "page-title",
+                children: "Logement"
+            }, void 0, false, {
+                fileName: "src/pages/housing.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event-2nd",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Type de logement"
+                    }, void 0, false, {
+                        fileName: "src/pages/housing.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: "#",
+                        alt: "img-logement",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/pages/housing.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article-2nd",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/pages/housing.jsx",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/housing.jsx",
+                        lineNumber: 12,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article-2nd",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/pages/housing.jsx",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/housing.jsx",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/housing.jsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Housing;
+var _c;
+$RefreshReg$(_c, "Housing");
+
+  $parcel$ReactRefreshHelpers$d57c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"kUMeh":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a099 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a099.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Friends", ()=>Friends
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIcons = require("react-icons");
+var _prixSvg = require("../../public/assets/img/svg/prix.svg");
+var _prixSvgDefault = parcelHelpers.interopDefault(_prixSvg);
+const Friends = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "main-container",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "page-title",
+                children: "Amis"
+            }, void 0, false, {
+                fileName: "src/pages/friends.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event-2nd",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Amis"
+                    }, void 0, false, {
+                        fileName: "src/pages/friends.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: "#",
+                        alt: "img-amis",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/pages/friends.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article-2nd",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/pages/friends.jsx",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/friends.jsx",
+                        lineNumber: 12,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article-2nd",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/pages/friends.jsx",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/friends.jsx",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/friends.jsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Friends;
+var _c;
+$RefreshReg$(_c, "Friends");
+
+  $parcel$ReactRefreshHelpers$a099.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"gAVkI":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5938 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28220,327 +28707,6 @@ class Authentification {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"95hII":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7d6c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7d6c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Event", ()=>Event
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactIcons = require("react-icons");
-const Event = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "main-container",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event-2nd",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    children: "Evenements"
-                }, void 0, false, {
-                    fileName: "src/pages/event.jsx",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                    children: "Nom Evenement"
-                }, void 0, false, {
-                    fileName: "src/pages/event.jsx",
-                    lineNumber: 9,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                    src: "",
-                    alt: ""
-                }, void 0, false, {
-                    fileName: "src/pages/event.jsx",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/pages/event.jsx",
-            lineNumber: 7,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/pages/event.jsx",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Event;
-var _c;
-$RefreshReg$(_c, "Event");
-
-  $parcel$ReactRefreshHelpers$7d6c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2b2aI":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b282 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b282.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Carpool", ()=>Carpool
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactIcons = require("react-icons");
-const Carpool = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "main-container",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event-2nd",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    children: "Covoiturages"
-                }, void 0, false, {
-                    fileName: "src/pages/carpooling.jsx",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                    children: "Nom Covoiturage"
-                }, void 0, false, {
-                    fileName: "src/pages/carpooling.jsx",
-                    lineNumber: 9,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                    src: "",
-                    alt: ""
-                }, void 0, false, {
-                    fileName: "src/pages/carpooling.jsx",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/pages/carpooling.jsx",
-            lineNumber: 7,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/pages/carpooling.jsx",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Carpool;
-var _c;
-$RefreshReg$(_c, "Carpool");
-
-  $parcel$ReactRefreshHelpers$b282.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kOqf6":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d57c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d57c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Housing", ()=>Housing
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactIcons = require("react-icons");
-const Housing = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "main-container",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event-2nd",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    children: "Logements"
-                }, void 0, false, {
-                    fileName: "src/pages/housing.jsx",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                    children: "Nom Logement"
-                }, void 0, false, {
-                    fileName: "src/pages/housing.jsx",
-                    lineNumber: 9,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                    src: "",
-                    alt: ""
-                }, void 0, false, {
-                    fileName: "src/pages/housing.jsx",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/pages/housing.jsx",
-            lineNumber: 7,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/pages/housing.jsx",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Housing;
-var _c;
-$RefreshReg$(_c, "Housing");
-
-  $parcel$ReactRefreshHelpers$d57c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kUMeh":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a099 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a099.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Friends", ()=>Friends
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactIcons = require("react-icons");
-const Friends = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "main-container",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event-2nd",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    children: "Amis"
-                }, void 0, false, {
-                    fileName: "src/pages/friends.jsx",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                    children: "Nom Amis"
-                }, void 0, false, {
-                    fileName: "src/pages/friends.jsx",
-                    lineNumber: 9,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                    src: "",
-                    alt: ""
-                }, void 0, false, {
-                    fileName: "src/pages/friends.jsx",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/pages/friends.jsx",
-            lineNumber: 7,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/pages/friends.jsx",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Friends;
-var _c;
-$RefreshReg$(_c, "Friends");
-
-  $parcel$ReactRefreshHelpers$a099.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bXHQ8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b41e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b41e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Article", ()=>Article
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactIcons = require("react-icons");
-var _articleCss = require("../../public/assets/css/article.css");
-const Article = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "main-container",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
-            className: "article-event",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    children: "Article"
-                }, void 0, false, {
-                    fileName: "src/components/article.jsx",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                    children: "Nom Article"
-                }, void 0, false, {
-                    fileName: "src/components/article.jsx",
-                    lineNumber: 9,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                    src: "",
-                    alt: ""
-                }, void 0, false, {
-                    fileName: "src/components/article.jsx",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/article.jsx",
-            lineNumber: 7,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/article.jsx",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Article;
-var _c;
-$RefreshReg$(_c, "Article");
-
-  $parcel$ReactRefreshHelpers$b41e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","../../public/assets/css/article.css":"3LQmE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3LQmE":[function() {},{}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireb241")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireb241")
 
 //# sourceMappingURL=index.975ef6c8.js.map
