@@ -1,0 +1,12 @@
+.button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: var(--linear-one);
+    bottom: 5%;
+    left: 93%;
+}

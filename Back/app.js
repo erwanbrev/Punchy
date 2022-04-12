@@ -24,6 +24,11 @@ app.use('/event', event);
 app.use('/housing', housing);
 app.use('/carpooling', carpooling);
 
+app.get('/upload', (req, res) => {
+	console.log(req.body);
+	return res.status(200).send(req.body);
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
 	console.log(`http://localhost:${PORT}`);
