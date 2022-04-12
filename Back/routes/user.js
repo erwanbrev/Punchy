@@ -67,13 +67,21 @@ router.get('/search', authorize, async (req, res) => {
 		return res.status(400).send(error.details[0].message);
 	}
 
-	const users = await User.find(req.query);
+	const users = (await User.find(req.query)).filter(user => user._id.toString() !== req.user._id);
 	const response = [];
-	users
-		.filter(user => user._id.toString() !== req.user._id)
-		.forEach(({ fName, lName, school, profilePicture, _id, notationCar }) => {
-			response.push({ fName, lName, school, profilePicture, _id: _id.toString(), notationCar });
-		});
+
+	const usersWithNote = [];
+	users.forEach(user => {
+		const obj = JSON.parse(JSON.stringify(user));
+		obj.note = user.notationCar.reduce((prev, current) => prev + current, 0) / user.notationCar.length;
+		usersWithNote.push(obj);
+	});
+
+	const usersSort = usersWithNote.sort((a, b) => b.note - a.note);
+
+	usersSort.forEach(({ fName, lName, school, profilePicture, _id, notationCar, note }) => {
+		response.push({ fName, lName, school, profilePicture, _id: _id.toString(), notationCar, note });
+	});
 
 	return res.status(200).send(response);
 });
