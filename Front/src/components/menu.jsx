@@ -3,6 +3,10 @@ import { icons } from "react-icons";
 import { Link } from "react-router-dom";
 import logo from "./../../public/assets/img/svg/logo.svg";
 
+
+function clickUpper(){
+    
+}
 export const Navbar = () => {
     return (
         <div>
@@ -20,7 +24,7 @@ export const Navbar = () => {
                     <Link to="/" ><img src={logo} alt="logo" /></Link>
                 </div>
                 <div className="cont-Nav">
-                    <Link to="/event" className="nameNav"><img
+                    <Link to="/event" className="nameNav" onClick={clickUpper}><img
                         src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /> <span id="event">Événement</span> </Link>
                     <Link to="/carpool" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" />Covoiturage</Link>
                     <Link to="/housing" className="nameNav"><img src={require('../../public/assets/img/svg/itineraire.svg')} alt="logo-geoloc" />Logement</Link>
