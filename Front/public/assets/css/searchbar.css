@@ -1,0 +1,14 @@
+.cont-search {
+    height: 6vh;
+    width: 80%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.housing-localiz input {
+    display: flex;
+    justify-content: flex-end;
+}
