@@ -22,9 +22,13 @@ export const Register = () => {
     
         // requete à l'api
         fetch(`http://localhost:5000/user/signup`, request)
-        .then(res => res.json())
-        .then(content => console.log(content))
+        .then(res => console.log(res))
         .catch(err => console.log(err))
+    }
+
+    const handleChange = e => {
+        setSchool(e.target.value)
+        console.log(school)
     }
 
     return (
@@ -53,7 +57,7 @@ export const Register = () => {
             </label>
             <label>
                 <span className="label-text">School</span>
-                <select required value={school} onChange={(e) => {setSchool(e.target.value)}}  style={{width: "100%"}}>
+                <select required value={school} onChange={handleChange}  style={{width: "100%"}}>
                     <option value="IMTS">IMTS</option>
                     <option value="IUT Saint Malo">IUT Saint Malo</option>
                     <option value="Ecole infirmiere">Ecole infirmiere</option>

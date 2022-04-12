@@ -29,6 +29,10 @@ const Schema = new mongoose.Schema(
 		},
 		school: {
 			type: String,
+			enum: {
+				values: ['IUT Saint Malo', 'Ecole infirmiere', 'Institut du design', 'IMTS', 'ENSM', 'BTS'],
+				message: '(VALUE) is not allowed'
+			},
 			required: false
 		},
 		profilePicture: {
