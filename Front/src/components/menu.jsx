@@ -1,12 +1,8 @@
 import React from "react";
 import { icons } from "react-icons";
-import { Link } from "react-router-dom";
+import { Link, NavLink, NavNavLink } from "react-router-dom";
 import logo from "./../../public/assets/img/svg/logo.svg";
 
-
-function clickUpper(){
-    
-}
 export const Navbar = () => {
     return (
         <div>
@@ -24,32 +20,38 @@ export const Navbar = () => {
                     <Link to="/" ><img src={logo} alt="logo" /></Link>
                 </div>
                 <div className="cont-Nav">
-                    <Link to="/event" className="nameNav" onClick={clickUpper}><img
-                        src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /> <span id="event">Événement</span> </Link>
-                    <Link to="/carpool" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" />Covoiturage</Link>
-                    <Link to="/housing" className="nameNav"><img src={require('../../public/assets/img/svg/itineraire.svg')} alt="logo-geoloc" />Logement</Link>
-                    <Link to="/friends" className="nameNav"><img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="logo-amis" />Amis</Link>
+                    <NavLink activeclassname="active" to="/event" className="nameNav" ><img
+                        src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /> <span id="event">Événement</span> </NavLink>
+                    <NavLink activeclassname="active" to="/carpool" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" />Covoiturage</NavLink>
+                    <NavLink activeclassname="active" to="/housing" className="nameNav"><img src={require('../../public/assets/img/svg/itineraire.svg')} alt="logo-geoloc" />Logement</NavLink>
+                    <NavLink activeclassname="active" to="/friends" className="nameNav"><img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="logo-amis" />Amis</NavLink>
                 </div>
                 <div className="min-compte">
-                    <Link to="/register" className="nameNav">
+                    <NavLink to="/login" className="nameNav">
+                        <img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="min-login" /> <span className="event">Connexion</span>
+                    </NavLink>
+                    <NavLink to="/register" className="nameNav">
                         <img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="min-inscription" /> <span className="event">Inscription</span>
-                    </Link>
+                    </NavLink>
                 </div>
             </nav >
 
             {/* Version Mobile */}
             <nav className="bottomMenu" >
                 <div className="cont-Nav">
-                    <Link to="/event" className="nameNav"><img
-                        src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /></Link>
-                    <Link to="/covoit" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" /></Link>
-                    <Link to="/geoloc" className="nameNav"><img src={require('../../public/assets/img/svg/itineraire.svg')} alt="logo-geoloc" /></Link>
-                    <Link to="/amis" className="nameNav"><img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="logo-amis" /></Link>
+                    <NavLink activeclassname="active" to="/event" className="nameNav"><img
+                        src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /></NavLink>
+                    <NavLink activeclassname="active" to="/covoit" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" /></NavLink>
+                    <NavLink activeclassname="active" to="/geoloc" className="nameNav"><img src={require('../../public/assets/img/svg/itineraire.svg')} alt="logo-geoloc" /></NavLink>
+                    <NavLink activeclassname="active" to="/amis" className="nameNav"><img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="logo-amis" /></NavLink>
                 </div>
                 <div className="min-compte">
-                    <Link to="/inscription">
+                    <NavLink activeclassname="active" to="/inscription">
                         <img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="min-inscription" />
-                    </Link>
+                    </NavLink>
+                    <NavLink activeclassname="active" to="/connexion">
+                        <img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="min-inscription" />
+                    </NavLink>
                 </div>
             </nav >
         </div>

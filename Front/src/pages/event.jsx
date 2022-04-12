@@ -1,39 +1,125 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { icons } from "react-icons";
+import "../../public/assets/css/evenement.css"
 import euro from "../../public/assets/img/svg/prix.svg"
 import image from "../../public/assets/img/bulles.jpg"
+import { CgEuro } from 'react-icons/cg';
+
 
 export const Event = () => {
+    
+    useEffect(
+        () => {        
+        function popupinfo(){
+            detailevent.classList.toggle('hide');
+        }
+
+        function popupinfoDeux(){
+            detailevent.classList.toggle('hide');
+        }
+
+        function popupinfoTrois(){
+            detailevent.classList.toggle('hide');
+        }
+
+        function popupinfoQuatre(){
+            detailevent.classList.toggle('hide');
+        }
+
+        function popupinfoCinq(){
+            detailevent.classList.toggle('hide');
+        }
+
+        function popupinfoSix(){
+            detailevent.classList.toggle('hide');
+        }
+
+        function popupinfoSept(){
+            detailevent.classList.toggle('hide');
+        }
+
+
+
+        Click.addEventListener('click', popupinfo)
+        ClickDeux.addEventListener('click', popupinfoDeux)
+        ClickTrois.addEventListener('click', popupinfoTrois)
+        ClickQuatre.addEventListener('click', popupinfoQuatre)
+        ClickCinq.addEventListener('click', popupinfoCinq)
+        ClickSix.addEventListener('click', popupinfoSix)
+        ClickSept.addEventListener('click', popupinfoSept)
+        }
+    )
+    
+    let event = {
+        titre: 'Quai des bulles à St Malo',
+        prix: '20.05',
+        datedebut: '15 Janvier 2022',
+        datefin: '21 Janvier 2022',
+        lieu: '11 rue de la république, St Malo 35400'
+    }
+
+    
     return (
-        <div className="main-container">
-            <h1 className="page-title">Évènement</h1>
-            <article className="article-event-2nd">
-                <h2 className="part01-article">Type d'event</h2>
-                <img src={image} alt="img-event" className="part02-article" />
-                <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
-                </div>
-                <h3 className="part05-article-2nd">Je participe</h3>
-            </article>
+        <div>
+            <div className="eventcontainer">
+                <div className="EventImportant">
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="Click" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
 
-            <article className="article-event-2nd">
-                <h2 className="part01-article">Type d'event</h2>
-                <img src={image} alt="img-event" className="part02-article" />
-                <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
-                </div>
-                <h3 className="part05-article-2nd">Je participe</h3>
-            </article>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="ClickDeux" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
 
-            <article className="article-event-2nd">
-                <h2 className="part01-article">Type d'event</h2>
-                <img src={image} alt="img-event" className="part02-article" />
-                <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
-                </div>
-                <h3 className="part05-article-2nd">Je participe</h3>
-            </article>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="ClickTrois" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="ClickQuatre" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
 
-        </div>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="ClickCinq" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="ClickSix" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" id="ClickSept" src={image} alt="" srcset="" />
+                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+                </div>
+            </div>
+            
+            <div className="hide" id="detailevent">
+                <span className="catNom">Nom :</span><span className="detailtitre">{event.titre}</span>
+                <span className="catLieu">Lieu :</span><span className="detaillieu">{event.lieu}</span>
+                <span className="catDebut">Début :</span><span className="detaildebut">{event.datedebut}</span>
+                <span className="catFin">Fin :</span><span className="detailfin">{event.datefin}</span>
+                <span className="catPrix">Prix :</span><span className="detailprix">{event.prix}</span>
+            </div>
+        </div>            
     )
 }

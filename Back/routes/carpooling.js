@@ -8,22 +8,25 @@ const authorize = require('./../middlewares/authorize');
 router.get('/', async (req, res) => {
 	const carpoolings = await Carpooling.find({ endTime: { $lte: Date.now() } });
 	const response = [];
-	carpoolings.forEach(({ startLocalisation, endLocalisation, startTime, endTime, repeat, peopleNumber, price, driver, event, smoker, carType, carColor }) => {
-		response.push({
-			startLocalisation,
-			endLocalisation,
-			startTime,
-			endTime,
-			repeat,
-			peopleNumber,
-			price,
-			driver,
-			event,
-			smoker,
-			carType,
-			carColor
-		});
-	});
+	carpoolings.forEach(
+		({ _id, startLocalisation, endLocalisation, startTime, endTime, repeat, peopleNumber, price, driver, event, smoker, carType, carColor }) => {
+			response.push({
+				id: _id,
+				startLocalisation,
+				endLocalisation,
+				startTime,
+				endTime,
+				repeat,
+				peopleNumber,
+				price,
+				driver,
+				event,
+				smoker,
+				carType,
+				carColor
+			});
+		}
+	);
 
 	return res.status(200).send(response);
 });
@@ -74,6 +77,21 @@ router.post('/', authorize, async (req, res) => {
 		console.log(err.message);
 		return res.status(500).send(err.message);
 	}
+});
+
+router.get('/:id/participate', authorize, async (req, res) => {
+	req.user;
+	const carpooling = await Carpooling.findOneAndUpdate(
+		{ id: { $eq: req.params.id }, driver: { $ne: req.user._id.toString() }, $expr: { $lt: [{ $size: '$participants' }, '$peopleNumber'] } },
+		{ $addToSet: { participants: req.user._id.toString() } },
+		{ new: true }
+	);
+
+	if (!carpooling) {
+		return res.status(404).send('Carpooling not found, already full or you are the driver');
+	}
+
+	return res.status(201).send(carpooling);
 });
 
 module.exports = router;

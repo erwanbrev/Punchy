@@ -33,9 +33,9 @@ export const Login = () => {
         <div className="login">
         <div className="form">
             <form className="login-form" onSubmit={handleSubmit}>
-            <input type="text" placeholder="first name" onChange={e => setIdentifier(e.target.value)}/>
-            <input type="password" placeholder="password" required onChange={e => setPassword(e.target.value)}/>
-            <button>login</button>
+                <input type="text" placeholder="first name" onChange={e => setIdentifier(e.target.value)}/>
+                <input type="password" placeholder="password" required onChange={e => setPassword(e.target.value)}/>
+                <button>login</button>
             </form>  
         </div>
         </div>

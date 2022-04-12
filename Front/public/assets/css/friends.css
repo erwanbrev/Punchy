@@ -2,7 +2,10 @@
     display:flex;
     flex-direction: column;
     align-items: center;  
-    font-family: 'Futura PT';
+    font-family: 'Futura PT', 'Open Sans', sans-serif;
+    margin-left:5rem;
+    font-size: 16px;
+    font-weight: 400;
     
 }
 
@@ -20,7 +23,7 @@
     background-color: #B8BDEF;
     height:2rem;
     margin:2rem;
-    border:#424C9B 1px solid;
+    border:var(--linear-two) 1px solid;
     padding:1.2rem 2rem;
     border-radius: 50rem;
     color:white;
@@ -29,20 +32,21 @@
 select{
     border-radius: 50rem;
     padding:0.2rem;
-    border: px #424C9B solid;
+    border: 1px var(--linear-two) solid;
     
 }
 
 .friendBlock{
-    padding:1rem;
-    border:0.2rem #B8BDEF solid;
+    padding:0.5rem;
+    border:0.3rem #ffffff solid;
     border-radius: 0.5rem;
     display:flex;
     justify-content: center;
     align-items: center;
     background-color: #E5E0FF;
-    color: #424C9B;
+    color: var(--linear-two);
     margin:1rem;
+    width:27rem;
     box-shadow: 0.3rem 0.3rem 1rem  grey;
 
 }
@@ -64,11 +68,11 @@ form img{
 
 #researchBar button{
     border-radius: 100px;
-    background-color: #424C9B;
+    background-color: var(--linear-two);
 }
 #filterBar button{
     border-radius: 100px;
-    background-color: #424C9B;
+    background-color: var(--linear-two);
 }
 
 #listFriends{
@@ -116,9 +120,21 @@ form img{
     border: #B8BDEF 2px solid;
     margin:1rem;
     width:10rem;
+    font-weight: 600;
 }
 
 #profileButton:hover{
     cursor:pointer;
     background-color: #E5E0FF;
+}
+
+.infosList li{
+    padding:0.7rem;
+    display:flex;
+    align-items: center;
+    gap:0.7rem;
+}
+
+.schoolName{
+    font-size:90%;
 }

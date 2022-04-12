@@ -19,7 +19,8 @@
     outline: 5px solid #FFF;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
-    font-family: 'Futura PT';
+    font-family: 'Futura', 'Open Sans', sans-serif;
+    font-weight: 400;
     color: var(--linear-two);
     cursor: pointer;
 }
