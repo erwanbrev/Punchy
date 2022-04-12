@@ -1,39 +1,70 @@
 import React from "react";
 import { icons } from "react-icons";
+import "../../public/assets/css/evenement.css"
 import euro from "../../public/assets/img/svg/prix.svg"
 import image from "../../public/assets/img/bulles.jpg"
 
 export const Event = () => {
+
+    let event = {
+        titre: 'Quai des bulles à St Malo',
+        prix: '20.05',
+    }
+
     return (
-        <div className="main-container">
-            <h1 className="page-title">Évènement</h1>
-            <article className="article-event-2nd">
-                <h2 className="part01-article">Type d'event</h2>
-                <img src={image} alt="img-event" className="part02-article" />
-                <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
-                </div>
-                <h3 className="part05-article-2nd">Je participe</h3>
-            </article>
+        <div>
+            <div className="eventcontainer">
+                <div className="EventImportant">
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
 
-            <article className="article-event-2nd">
-                <h2 className="part01-article">Type d'event</h2>
-                <img src={image} alt="img-event" className="part02-article" />
-                <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
-                </div>
-                <h3 className="part05-article-2nd">Je participe</h3>
-            </article>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
 
-            <article className="article-event-2nd">
-                <h2 className="part01-article">Type d'event</h2>
-                <img src={image} alt="img-event" className="part02-article" />
-                <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
-                </div>
-                <h3 className="part05-article-2nd">Je participe</h3>
-            </article>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
 
-        </div>
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+
+                    <article className="evenement">
+                        <span className="titre">{event.titre}</span>
+                        <img className="image" src={image} alt="" srcset="" />
+                        <span className="prix">{event.prix}</span>
+                        <span className="participation">Je participe !</span>
+                    </article>
+
+                </div>
+            </div>
+        </div>            
     )
 }
