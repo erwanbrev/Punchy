@@ -85,6 +85,16 @@
     margin-left: 19%;
 }
 
+/* ! nav button more higher onClick */
+.active {
+    font-size: 1.2rem;
+    margin-left: -1rem;
+}
+
+.active img {
+    width: 28%;
+}
+
 #copy {
     display: flex;
     align-items: center;
