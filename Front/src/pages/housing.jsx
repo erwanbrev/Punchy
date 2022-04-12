@@ -1,11 +1,12 @@
 import React from "react";
 import { IoLogoEuro } from "react-icons/io5";
-
+import { Searchbar } from "../components/searchbar";
 
 export const Housing = () => {
     return (
         <div className="main-container">
             <h1 className="page-title">Logement</h1>
+            <Searchbar />
             <article className="article-event-2nd">
                 <h2 className="part01-article">Type de logement</h2>
                 <img src="#" alt="img-logement" className="part02-article" />
