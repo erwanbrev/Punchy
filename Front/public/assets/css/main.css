@@ -62,12 +62,19 @@
     display: flex;
     flex-direction: column;
     margin-left: 19%;
-    margin-bottom: 82%;
+}
+
+.cont-Nav {
+    margin-bottom: 90%;
 }
 
 .cont-Nav img,
 .min-compte img {
     width: 24%;
+}
+
+.nameNav:not(:last-child) {
+    margin-bottom: 2%;
 }
 
 .nameNav {
@@ -77,32 +84,23 @@
     font-weight: 400;
 }
 
-.nameNav:not(:last-child) {
-    margin-bottom: 2%;
-}
-
-/** Btn de nav grossis lors d'un changement de page */
-.active {
-    font-size: 1.2rem;
-    margin-left: -1rem;
-}
-
-.active img {
-    width: 28%;
-}
-
 .min-compte {
     margin-left: 19%;
 }
 
 #copy {
+    font-size: 1.2rem;
+    height: 10vh;
+    width: 84%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     height: 10vh;
-    /* width: 84vw; */
-    width: 84%;
+    width: 84vw;
     position: absolute;
     z-index: 4;
     right: 0;
@@ -110,7 +108,7 @@
 
 #copy,
 .mobile-head {
-    background: #e5e0ff;
+    background: rgba(240, 234, 232, .7);
 }
 
 /* ?retouche du nom evenement + connexion */
@@ -129,14 +127,14 @@
     display: none;
 }
 
-/* !format plein écran mac os x */
+/* ?format plein écran mac os x */
 @media screen and (min-height: 730px) {
     .cont-Nav {
-        margin-bottom: 130%;
+        margin-bottom: 141%;
     }
 }
 
-/*! format mobile */
+/*? format mobile */
 @media screen and (max-width: 600px) {
 
     .mobile-head {
