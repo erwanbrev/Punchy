@@ -7,6 +7,7 @@
     padding: 50px 10px;
     margin-left: 13rem;
     flex-wrap: wrap;
+    margin-bottom: 5rem;
 }
 
 .articleCar {
@@ -19,7 +20,8 @@
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
     font-family: 'Futura PT';
-    color: var(--linear-two)
+    color: var(--linear-two);
+    cursor: pointer;
 }
 
 .articleCar .imgCar {
