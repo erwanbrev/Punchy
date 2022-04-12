@@ -5,6 +5,7 @@ import line from "../../public/assets/img/svg/line.svg";
 import user from "../../public/assets/img/user.png"
 import { IoStar, IoLogoEuro, IoTimeOutline } from "react-icons/io5";
 import { BouttonPlus } from "../components/buttonAdd";
+import { AddPunchy } from "../components/addPunchy";
 
 export const Carpool = () => {
 
