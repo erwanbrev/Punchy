@@ -65,7 +65,7 @@ export const Event = () => {
     
     let event = {
         titre: 'Quai des bulles à St Malo',
-        prix: '20.05',
+        prix: '20',
         datedebut: '15 Janvier 2022',
         datefin: '21 Janvier 2022',
         lieu: '11 rue de la république, St Malo 35400'
@@ -80,49 +80,49 @@ export const Event = () => {
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="Click" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="ClickDeux" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="ClickTrois" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <p className="participation">Je participe !</p>
                     </article>
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="ClickQuatre" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="ClickCinq" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="ClickSix" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
                         <span className="titre">{event.titre}</span>
                         <img className="image" id="ClickSept" src={image} alt="" srcset="" />
                         <span className="prix"> <CgEuro />{event.prix}</span>
-                        <span className="participation">Je participe !</span>
+                        <p className="participation">Je participe !</p>
                     </article>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export const Event = () => {
                 <span className="catLieu">Lieu :</span><span className="detaillieu">{event.lieu}</span>
                 <span className="catDebut">Début :</span><span className="detaildebut">{event.datedebut}</span>
                 <span className="catFin">Fin :</span><span className="detailfin">{event.datefin}</span>
-                <span className="catPrix">Prix :</span><span className="detailprix">{event.prix}</span>
+                <span className="catPrix">Prix :</span><span className="detailprix">{event.prix} €</span>
             </div>
         </div>            
     )
