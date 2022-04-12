@@ -20,6 +20,13 @@
     height: 90vh;
 }
 
+.main-container,
+.page-title,
+#copy {
+    font-family: 'Lobster', 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
 .page-title {
     display: flex;
     font-size: 3rem;
@@ -69,8 +76,9 @@
 
 .nameNav {
     display: flex;
-    font-family: 'Open Sans', sans-serif;
     align-items: center;
+    font-family: 'Futura', 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .min-compte {
@@ -80,7 +88,6 @@
 #copy {
     font-size: 1.2rem;
     height: 10vh;
-    background: var(--bgHeaderMobile);
     width: 84%;
     position: absolute;
     right: 0;
@@ -88,7 +95,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lobster', cursive;
 }
 
 #copy,
