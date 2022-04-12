@@ -27744,6 +27744,8 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactIcons = require("react-icons");
 var _prixSvg = require("../../public/assets/img/svg/prix.svg");
 var _prixSvgDefault = parcelHelpers.interopDefault(_prixSvg);
+var _bullesJpg = require("../../public/assets/img/bulles.jpg");
+var _bullesJpgDefault = parcelHelpers.interopDefault(_bullesJpg);
 const Event = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "main-container",
@@ -27753,7 +27755,7 @@ const Event = ()=>{
                 children: "\xc9v\xe8nement"
             }, void 0, false, {
                 fileName: "src/pages/event.jsx",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
@@ -27764,16 +27766,16 @@ const Event = ()=>{
                         children: "Type d'event"
                     }, void 0, false, {
                         fileName: "src/pages/event.jsx",
-                        lineNumber: 10,
+                        lineNumber: 11,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                        src: "#",
+                        src: _bullesJpgDefault.default,
                         alt: "img-event",
                         className: "part02-article"
                     }, void 0, false, {
                         fileName: "src/pages/event.jsx",
-                        lineNumber: 11,
+                        lineNumber: 12,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27783,12 +27785,12 @@ const Event = ()=>{
                             alt: "logo-euro"
                         }, void 0, false, {
                             fileName: "src/pages/event.jsx",
-                            lineNumber: 13,
+                            lineNumber: 14,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/event.jsx",
-                        lineNumber: 12,
+                        lineNumber: 13,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
@@ -27796,19 +27798,117 @@ const Event = ()=>{
                         children: "Je participe"
                     }, void 0, false, {
                         fileName: "src/pages/event.jsx",
-                        lineNumber: 15,
+                        lineNumber: 16,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/event.jsx",
-                lineNumber: 9,
+                lineNumber: 10,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event-2nd",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Type d'event"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 20,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _bullesJpgDefault.default,
+                        alt: "img-event",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 21,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article-2nd",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/pages/event.jsx",
+                            lineNumber: 23,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 22,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article-2nd",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 25,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/event.jsx",
+                lineNumber: 19,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("article", {
+                className: "article-event-2nd",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                        className: "part01-article",
+                        children: "Type d'event"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 29,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _bullesJpgDefault.default,
+                        alt: "img-event",
+                        className: "part02-article"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 30,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "part03-article-2nd",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: _prixSvgDefault.default,
+                            alt: "logo-euro"
+                        }, void 0, false, {
+                            fileName: "src/pages/event.jsx",
+                            lineNumber: 32,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 31,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                        className: "part05-article-2nd",
+                        children: "Je participe"
+                    }, void 0, false, {
+                        fileName: "src/pages/event.jsx",
+                        lineNumber: 34,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/event.jsx",
+                lineNumber: 28,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/event.jsx",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 9
     }, undefined);
 };
@@ -27821,8 +27921,11 @@ $RefreshReg$(_c, "Event");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr"}],"1UWgr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-icons":"6Q2Cv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/assets/img/svg/prix.svg":"1UWgr","../../public/assets/img/bulles.jpg":"eB7mU"}],"1UWgr":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "prix.4adb791d.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"eB7mU":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "bulles.0e5d1c3c.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"2b2aI":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b282 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
