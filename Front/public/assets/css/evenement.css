@@ -1,0 +1,35 @@
+.EvenementImportant, .EvenementPerso{
+    height: 50%;
+    width: 95%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.EvenementPerso{
+    height: 45%;
+}
+
+.add{
+    width: 1%;
+    margin-left: 95%;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+.EventImportant, .EventPerso{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+
+.EventImportant::-webkit-scrollbar, .EventPerso::-webkit-scrollbar {
+    display: none;
+}
+
+.EventImportant img, .EventPerso img{
+    height: 35vh;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

@@ -18,6 +18,16 @@
 .main-container {
     margin-left: 16vw;
     height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.main-container,
+.page-title,
+#copy {
+    font-family: 'Lobster', 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .page-title {
@@ -69,8 +79,9 @@
 
 .nameNav {
     display: flex;
-    font-family: 'Open Sans', sans-serif;
     align-items: center;
+    font-family: 'Futura', 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .min-compte {
@@ -80,15 +91,13 @@
 #copy {
     font-size: 1.2rem;
     height: 10vh;
-    background: var(--bgHeaderMobile);
     width: 84%;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lobster', cursive;
 }
 
 #copy,
