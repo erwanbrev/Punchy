@@ -15,9 +15,17 @@ export const Searchbar = () => {
                 {/* intervalle */}
             </div>
             <div className="housing-content">
-                Contenu
-            </div>
+                <label class="container-cont">Non meublé
+                    <input type="radio" checked="checked" name="radio" />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container-cont">Meublé
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                </label>
+            </div >
             <div className="housing-type">Type</div>
-        </div>
+        </div >
     )
 }
