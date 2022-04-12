@@ -1,5 +1,6 @@
 import React from "react";
 import '../account/account.css';
+import { Upload } from "../upload";
 
 
 export const Register = () => {
@@ -71,6 +72,8 @@ export const Register = () => {
                 <button type="submit" className="submit" name="register">Sign Me Up</button>
             </div>
         </form>
+
+        <Upload/>
     </div>
     )
 }

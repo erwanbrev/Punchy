@@ -82,7 +82,7 @@ router.post('/', authorize, async (req, res) => {
 router.get('/:id/participate', authorize, async (req, res) => {
 	req.user;
 	const carpooling = await Carpooling.findOneAndUpdate(
-		{ id: { $eq: req.params.id }, driver: { $ne: req.user._id.toString() }, $where: 'this.peopleNumber>this.participants.length' },
+		{ id: { $eq: req.params.id }, driver: { $ne: req.user._id.toString() }, $expr: { $lt: [{ $size: '$participants' }, '$peopleNumber'] } },
 		{ $addToSet: { participants: req.user._id.toString() } },
 		{ new: true }
 	);
