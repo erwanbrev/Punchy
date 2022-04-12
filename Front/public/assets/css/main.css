@@ -62,10 +62,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 19%;
-}
-
-.cont-Nav {
-    margin-bottom: 90%;
+    margin-bottom: 82%;
 }
 
 .cont-Nav img,
@@ -73,15 +70,15 @@
     width: 24%;
 }
 
-.nameNav:not(:last-child) {
-    margin-bottom: 2%;
-}
-
 .nameNav {
     display: flex;
     align-items: center;
     font-family: 'Futura', 'Open Sans', sans-serif;
     font-weight: 400;
+}
+
+.nameNav:not(:last-child) {
+    margin-bottom: 2%;
 }
 
 /** Btn de nav grossis lors d'un changement de page */
@@ -132,14 +129,14 @@
     display: none;
 }
 
-/* ?format plein écran mac os x */
+/* !format plein écran mac os x */
 @media screen and (min-height: 730px) {
     .cont-Nav {
-        margin-bottom: 141%;
+        margin-bottom: 130%;
     }
 }
 
-/*? format mobile */
+/*! format mobile */
 @media screen and (max-width: 600px) {
 
     .mobile-head {

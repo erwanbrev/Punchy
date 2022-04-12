@@ -1,6 +1,6 @@
 import React from "react";
 import { icons } from "react-icons";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "./../../public/assets/img/svg/logo.svg";
 
 
@@ -13,15 +13,15 @@ export const Navbar = () => {
             {/* Header version Mobile */}
             <nav className="mobile-head">
                 <div id="logo-mobile">
-                    <NavLink to="/">
+                    <Link to="/">
                         <img src={logo} alt="logo-mobile" />
-                    </NavLink>
+                    </Link>
                 </div>
             </nav>
             {/* Menu latérale gauche version Desktop */}
             <nav className="leftMenu">
                 <div id="logo">
-                    <NavLink to="/" ><img src={logo} alt="logo" /></NavLink>
+                    <Link to="/" ><img src={logo} alt="logo" /></Link>
                 </div>
                 <div className="cont-Nav">
                     <NavLink exact activeClassName="active" to="/event" className="nameNav" ><img
