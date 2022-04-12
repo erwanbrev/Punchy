@@ -107,7 +107,7 @@ const Schema = new mongoose.Schema(
 );
 
 Schema.methods.generateAuthToken = function () {
-	return jwt.sign({ _id: this._id }, process.env.PRIVATE_KEY, { expiresIn: '7d' });
+	return jwt.sign({ _id: this._id, block: this.block }, process.env.PRIVATE_KEY, { expiresIn: '7d' });
 };
 
 const User = mongoose.model('User', Schema);
