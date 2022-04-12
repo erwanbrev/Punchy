@@ -69,6 +69,10 @@ body{
 		z-index: -1;
 	width: 100%;
 }
+
+span.label-text {
+	font-family: 'Futura', 'Open Sans', 'sans-serif';
+}
 form button.submit{
 	background: rgba(255,255,255,0.25);
 	border: 1px solid #333;
