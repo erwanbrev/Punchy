@@ -1,6 +1,7 @@
 import React from "react";
 import { icons } from "react-icons";
-import euro from "../../public/assets/img/svg/prix.svg"
+// import euro from "../../public/assets/img/svg/prix.svg"
+import { IoLogoEuro } from "react-icons/io5";
 
 export const Friends = () => {
     return (
@@ -10,7 +11,7 @@ export const Friends = () => {
                 <h2 className="part01-article">Amis</h2>
                 <img src="#" alt="img-amis" className="part02-article" />
                 <div className="part03-article-2nd">
-                    <img src={euro} alt="logo-euro" />
+                    <img src={<IoLogoEuro />} alt="logo-euro" />
                 </div>
                 <h3 className="part05-article-2nd">Je participe</h3>
             </article>
