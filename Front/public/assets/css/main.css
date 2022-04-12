@@ -41,8 +41,9 @@
 /*? organisation du menu laterale gauche */
 .leftMenu {
     display: flex;
+    align-items: center;
     height: 100vh;
-    width: 16%;
+    width: 20%;
     background: linear-gradient(var(--linear-two), var(--linear-one));
     flex-direction: column;
     position: fixed;
@@ -61,13 +62,10 @@
 .cont-Nav {
     display: flex;
     flex-direction: column;
-    margin-left: 19%;
-    margin-bottom: 55%;
-}
-
-.cont-Nav img,
-.min-compte img {
-    width: 24%;
+    justify-content: space-between;
+    height: 25%;
+    width: 55%;
+    margin-bottom: 22rem;
 }
 
 .nameNav:not(:last-child) {
@@ -78,11 +76,15 @@
     display: flex;
     align-items: center;
     font-family: 'Futura', 'Open Sans', sans-serif;
+    gap: 10px;
     font-weight: 400;
 }
 
 .min-compte {
-    margin-left: 19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10%;
 }
 
 /* ! nav button more higher onClick */
@@ -101,7 +103,7 @@
     justify-content: center;
     font-size: 1.2rem;
     height: 10vh;
-    width: 84%;
+    width: 80%;
     position: absolute;
     z-index: 4;
     right: 0;
@@ -129,11 +131,6 @@
 }
 
 /* ?format plein écran mac os x */
-@media screen and (min-height: 730px) {
-    .cont-Nav {
-        margin-bottom: 100%;
-    }
-}
 
 /*? format mobile */
 @media screen and (max-width: 600px) {
@@ -170,5 +167,8 @@
     #logo-mobile {
         display: block;
         margin: 10%;
+    }
+    .iconMenu {
+        margin-right: 15px;
     }
 }
