@@ -1,5 +1,5 @@
 .button {
-    position: fixed;
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,6 +7,6 @@
     width: 3rem;
     border-radius: 50%;
     background-color: var(--linear-one);
-    bottom: 5%;
+    bottom: 12%;
     left: 93%;
 }

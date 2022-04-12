@@ -62,10 +62,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 19%;
-}
-
-.cont-Nav {
-    margin-bottom: 90%;
+    margin-bottom: 82%;
 }
 
 .cont-Nav img,
@@ -89,18 +86,12 @@
 }
 
 #copy {
-    font-size: 1.2rem;
-    height: 10vh;
-    width: 84%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     height: 10vh;
-    width: 84vw;
+    width: 84%;
     position: absolute;
     z-index: 4;
     right: 0;
@@ -108,7 +99,7 @@
 
 #copy,
 .mobile-head {
-    background: rgba(240, 234, 232, .7);
+    background: #e5e0ff;
 }
 
 /* ?retouche du nom evenement + connexion */
@@ -130,7 +121,7 @@
 /* ?format plein écran mac os x */
 @media screen and (min-height: 730px) {
     .cont-Nav {
-        margin-bottom: 141%;
+        margin-bottom: 130%;
     }
 }
 
