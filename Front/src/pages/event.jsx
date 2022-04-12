@@ -3,7 +3,7 @@ import { icons } from "react-icons";
 import "../../public/assets/css/evenement.css"
 import euro from "../../public/assets/img/svg/prix.svg"
 import image from "../../public/assets/img/bulles.jpg"
-import { CgEuro } from 'react-icons/cg';
+import { CgEuro, CgSmartHomeBoiler } from 'react-icons/cg';
 
 
 export const Event = () => {
@@ -12,30 +12,42 @@ export const Event = () => {
         () => {        
         function popupinfo(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
         function popupinfoDeux(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
         function popupinfoTrois(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
         function popupinfoQuatre(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
         function popupinfoCinq(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
         function popupinfoSix(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
         function popupinfoSept(){
             detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
+        }
+
+        function clair(){
+            detailevent.classList.toggle('hide');
+            sombre.classList.toggle('clair');
         }
 
 
@@ -47,6 +59,7 @@ export const Event = () => {
         ClickCinq.addEventListener('click', popupinfoCinq)
         ClickSix.addEventListener('click', popupinfoSix)
         ClickSept.addEventListener('click', popupinfoSept)
+        sombre.addEventListener('click', clair)
         }
     )
     
@@ -61,6 +74,7 @@ export const Event = () => {
     
     return (
         <div>
+            <div className="clair" id="sombre"></div>
             <div className="eventcontainer">
                 <div className="EventImportant">
                     <article className="evenement">
