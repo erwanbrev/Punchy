@@ -1,6 +1,30 @@
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
+const HistorySchema = mongoose.Schema(
+	{
+		carpooling: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				required: false
+			}
+		],
+		event: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				required: false
+			}
+		],
+		housing: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				required: false
+			}
+		]
+	},
+	{ _id: false }
+);
+
 const Schema = new mongoose.Schema(
 	{
 		fName: {
@@ -65,6 +89,15 @@ const Schema = new mongoose.Schema(
 		],
 		phone: {
 			type: String,
+			required: true
+		},
+		block: {
+			type: Boolean,
+			default: false,
+			required: true
+		},
+		history: {
+			type: HistorySchema,
 			required: true
 		}
 	},
