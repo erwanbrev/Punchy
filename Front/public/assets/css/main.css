@@ -84,6 +84,11 @@
     font-weight: 400;
 }
 
+/** Btn de nav grossis lors d'un changement de page */
+.active {
+    font-size: 1.2rem;
+}
+
 .min-compte {
     margin-left: 19%;
 }
@@ -98,7 +103,6 @@
     position: absolute;
     z-index: 4;
     right: 0;
-    /* bottom: 0; */
 }
 
 #copy,
