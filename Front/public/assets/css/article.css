@@ -1,21 +1,94 @@
+/*? definition des couleurs  */
+:root {
+    --bgLeftTop: #FAFAFA;
+    --Shadow: #B4B4B4;
+}
+
 /* !style défini des articles des pages principales/secondaires */
 .article-event,
 .article-event-2nd {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    border: 1px blue solid;
-    margin: 11.5% 12%;
+    background: rgba(240, 234, 232, .7);
+    margin: 13% 12%;
     height: 40vh;
     border-radius: 12px;
+    box-shadow: 0em .3em .5em var(--Shadow);
 }
 
 /* !taille des articles */
 .article-event {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     width: 60%;
+    padding: 1%;
 }
 
+/* emplacement du type d'event */
+.part01-article {
+    grid-column: 1;
+    grid-row: 1;
+    position: absolute;
+    background: var(--bgLeftTop);
+}
+
+/* emplacement de la photo de l'event */
+.part02-article {
+    grid-area: 1 / 1 / 5 / 5;
+    border: 1px solid red;
+}
+
+/* emplacement du logo euro */
+.part03-article {
+    grid-column: 1;
+    grid-row: 5;
+    border: 1px solid green;
+}
+
+.part03-article img {
+    width: 15%;
+}
+
+/* emplacement du nbr de participants */
+.part04-article {
+    grid-column: 2 / 4;
+    grid-row: 5;
+    border: 1px solid blue;
+}
+
+/* emplacement du bouton */
+.part05-article {
+    grid-column: 4;
+    grid-row: 5;
+    border: 1px solid brown;
+}
+
+/*? rajout de -2nd dans le nom pour préciser que c'est une modif sur les pages secondaires */
 .article-event-2nd {
     margin: 11.5% 6%;
     width: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.part03-article-2nd {
+    grid-column: 1;
+    grid-row: 4;
+    border: blue 1px solid;
+    display: grid;
+    align-items: center;
+}
+
+.part03-article-2nd img {
+    width: 50%;
+}
+
+.part05-article-2nd {
+    grid-column: 2 / 4;
+    grid-row: 4;
+    border: 1px solid brown;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }

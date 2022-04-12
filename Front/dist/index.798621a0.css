@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400";
 *, :before, :after {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +15,14 @@
 .main-container {
   height: 90vh;
   margin-left: 16vw;
+}
+
+.page-title {
+  margin-top: 4%;
+  margin-left: 33vw;
+  font-size: 3rem;
+  display: flex;
+  position: absolute;
 }
 
 .leftMenu {
@@ -74,7 +83,7 @@
 }
 
 #copy, .mobile-head {
-  background: #f0eae880;
+  background: #f0eae8b3;
 }
 
 .event {
@@ -132,60 +141,307 @@
   }
 }
 
-.EvenementImportant, .EvenementPerso {
-  height: 50%;
-  width: 95%;
-  margin-left: 50%;
-  transform: translateX(-50%);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
 }
 
-.EvenementPerso {
-  height: 45%;
+body {
+  color: #333;
+  background-size: cover;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
 }
 
-.add {
-  width: 1%;
-  margin-left: 95%;
-  font-size: 50px;
-  transform: translateX(-50%);
+.container {
+  max-width: 480px;
+  z-index: 1;
+  width: 98%;
+  border-radius: .5em;
+  padding: 2em;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1em #33333340;
 }
 
-.EventImportant, .EventPerso {
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: auto;
+.container:before {
+  content: "";
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  height: 100vh;
+  z-index: -1;
+  width: 100vw;
+  background: url("http://tfgms.com/sandbox/dailyui/bg-1.jpg") center / cover no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.EventImportant::-webkit-scrollbar, .EventPerso::-webkit-scrollbar {
+.container:after {
+  content: "";
+  height: 100%;
+  z-index: -1;
+  width: 100%;
+  background: #fff9;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+form button.submit {
+  background: #ffffff40;
+  border: 1px solid #333;
+  padding: .5em;
+  line-height: 1em;
+  transition: all .25s;
+}
+
+form button:hover, form button:focus, form button:active, form button.loading {
+  color: #fff;
+  background: #333;
+  outline: none;
+}
+
+form button.success {
+  color: #fff;
+  background: #27ae60;
+  border-color: #27ae60;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+form button span.loading-spinner {
+  height: 1em;
+  width: 1em;
+  border: 2px solid #fff;
+  border-top-color: #0000;
+  border-radius: 50%;
+  animation: spin .5s linear infinite;
+  display: inline-block;
+}
+
+form label {
+  border-bottom: 1px solid #333;
+  margin-bottom: .5em;
+  font-size: 1.25em;
+  transition: all .25s;
+  display: block;
+}
+
+form label.col-one-half {
+  float: left;
+  width: 50%;
+}
+
+form label.col-one-half:nth-of-type(2n) {
+  border-left: 1px solid #333;
+  padding-left: .25em;
+}
+
+form label input {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: .125em .25em;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+form label input:focus {
+  outline: none;
+}
+
+form label input:-webkit-autofill {
+  background-color: #0000 !important;
+}
+
+form label span.label-text {
+  text-transform: uppercase;
+  padding-left: .5em;
+  font-size: .5em;
+  font-weight: bold;
+  transition: all .25s;
+  display: block;
+}
+
+form label.checkbox {
+  text-align: center;
+  border-bottom: none;
+}
+
+form label.checkbox input {
   display: none;
 }
 
-.EventImportant img, .EventPerso img {
-  height: 35vh;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 5%;
+form label.checkbox span {
+  font-size: .5em;
 }
 
+form label.checkbox span:before {
+  content: "";
+  padding-right: .25em;
+  font-family: Glyphicons Halflings;
+  font-size: 1.125em;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+}
 
+form label.checkbox input:checked + span:before {
+  content: "";
+}
+
+form label.invalid {
+  border-color: #c0392b !important;
+}
+
+form label.invalid span.label-text {
+  color: #c0392b;
+}
+
+form label.password {
+  position: relative;
+}
+
+form label.password button.toggle-visibility {
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  border: none;
+  font-size: .75em;
+  line-height: 1em;
+  transition: all .25s;
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  transform: translateY(-50%);
+}
+
+form label.password button.toggle-visibility:hover, form label.password button.toggle-visibility:focus, form label.password button.toggle-visibility:active {
+  color: #000;
+  outline: none;
+}
+
+form label.password button.toggle-visibility span {
+  vertical-align: middle;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 .5em;
+  font-family: Cookie, cursive;
+  font-size: 3em;
+}
+
+h1 img {
+  height: auto;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+  font-size: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+:root {
+  --bgLeftTop: #fafafa;
+  --Shadow: #b4b4b4;
+}
 
 .article-event, .article-event-2nd {
   height: 40vh;
-  border: 1px solid #00f;
+  box-shadow: 0em .3em .5em var(--Shadow);
+  background: #f0eae8b3;
   border-radius: 12px;
-  flex-direction: column;
-  margin: 11.5% 12%;
-  display: flex;
+  margin: 13% 12%;
   position: absolute;
 }
 
 .article-event {
   width: 60%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1%;
+  display: grid;
+}
+
+.part01-article {
+  background: var(--bgLeftTop);
+  grid-area: 1 / 1;
+  position: absolute;
+}
+
+.part02-article {
+  border: 1px solid red;
+  grid-area: 1 / 1 / 5 / 5;
+}
+
+.part03-article {
+  border: 1px solid green;
+  grid-area: 5 / 1;
+}
+
+.part03-article img {
+  width: 15%;
+}
+
+.part04-article {
+  border: 1px solid #00f;
+  grid-area: 5 / 2 / auto / 4;
+}
+
+.part05-article {
+  border: 1px solid brown;
+  grid-area: 5 / 4;
 }
 
 .article-event-2nd {
   width: 20%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 11.5% 6%;
+  display: grid;
+}
+
+.part03-article-2nd {
+  border: 1px solid #00f;
+  grid-area: 4 / 1;
+  align-items: center;
+  display: grid;
+}
+
+.part03-article-2nd img {
+  width: 50%;
+}
+
+.part05-article-2nd {
+  border: 1px solid brown;
+  grid-area: 4 / 2 / auto / 4;
+  justify-content: center;
+  align-items: center;
+  display: grid;
 }
 
 /*# sourceMappingURL=index.798621a0.css.map */
