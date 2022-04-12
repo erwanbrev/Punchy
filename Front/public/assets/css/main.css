@@ -87,6 +87,11 @@
 /** Btn de nav grossis lors d'un changement de page */
 .active {
     font-size: 1.2rem;
+    margin-left: -1rem;
+}
+
+.active img {
+    width: 28%;
 }
 
 .min-compte {
