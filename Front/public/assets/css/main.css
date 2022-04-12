@@ -62,10 +62,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 19%;
-}
-
-.cont-Nav {
-    margin-bottom: 90%;
+    margin-bottom: 55%;
 }
 
 .cont-Nav img,
@@ -84,7 +81,11 @@
     font-weight: 400;
 }
 
-/** Btn de nav grossis lors d'un changement de page */
+.min-compte {
+    margin-left: 19%;
+}
+
+/* ! nav button more higher onClick */
 .active {
     font-size: 1.2rem;
     margin-left: -1rem;
@@ -94,17 +95,13 @@
     width: 28%;
 }
 
-.min-compte {
-    margin-left: 19%;
-}
-
 #copy {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     height: 10vh;
-    width: 84vw;
+    width: 84%;
     position: absolute;
     z-index: 4;
     right: 0;
@@ -134,7 +131,7 @@
 /* ?format plein écran mac os x */
 @media screen and (min-height: 730px) {
     .cont-Nav {
-        margin-bottom: 141%;
+        margin-bottom: 100%;
     }
 }
 

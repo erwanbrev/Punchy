@@ -1,7 +1,7 @@
 import React from "react";
-import { icons } from "react-icons";
 import "../../public/assets/css/article.css"
-import euro from "../../public/assets/img/svg/prix.svg"
+// import euro from "../../public/assets/img/svg/prix.svg"
+import { IoLogoEuro } from "react-icons/io5";
 export const Article = () => {
     return (
         <div className="main-container">
@@ -10,7 +10,7 @@ export const Article = () => {
                 <h2 className="part01-article">Type d'Article</h2>
                 <img src="#" alt="img-event" className="part02-article" />
                 <div className="part03-article">
-                    <img src={euro} alt="logo-euro" />
+                    <IoLogoEuro />
                 </div>
                 <p className="part04-article">compteur de participant</p>
                 <h3 className="part05-article">Je participe</h3>

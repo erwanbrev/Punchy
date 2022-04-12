@@ -26,19 +26,7 @@ export class Authentification {
 
     // requete à l'api
     static logout = () => {
-        const request = {
-            method: 'GET',
-            headers: { 'uid': localStorage.getItem('uid') },
-            credentials: 'include'
-        }
-
-        return fetch('http://localhost:5000/logout', request)
-        .then(res => {
-            // on lui dit qu'il est plus connecter
-            Authentification.authenticated = false
-            // on clear tout les informations de l'utilisateur du localStorage
-            localStorage.clear()
-        })
+        localStorage.clear()
     }
 
     //function qui renvoie le status de connexion de l'utilisateur
