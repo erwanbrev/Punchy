@@ -11,5 +11,6 @@ module.exports = Joi.object({
 	profilePicture: Joi.string(),
 	phone: Joi.string()
 		.pattern(/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/)
-		.required()
+		.required(),
+	profil: Joi.string()
 });
