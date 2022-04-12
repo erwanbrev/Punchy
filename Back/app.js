@@ -24,7 +24,7 @@ app.use('/event', event);
 app.use('/housing', housing);
 app.use('/carpooling', carpooling);
 
-app.get('/upload', (req, res) => {
+app.post('/upload', (req, res) => {
 	console.log(req.body);
 	return res.status(200).send(req.body);
 });
