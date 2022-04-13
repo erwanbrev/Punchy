@@ -12,7 +12,7 @@ import punchie from '../../public/assets/img/punchie.png';
 import {FiUser} from "react-icons/fi";
 import {MdOutlineSchool} from "react-icons/md";
 import {MdOutlineLocationOn} from "react-icons/md";
-import {Mdnorth} from "react-icons/md";
+import {MdNorth} from "react-icons/md";
 import {MdSouth} from "react-icons/md";
 
 
@@ -30,18 +30,18 @@ export const Friends = () => {
                 </form>
 
                 <form id="filterBar">
-                <label>Établissement scolaire</label>
-                        <select name="school">
-                            <option value="iut">IUT</option>
-                            <option value="lyceeM">Lycée Maritime</option>
-                            <option value="institutD">Institut du design</option>
-                        </select>
-                <label>Score Punchy</label>
-                <img src={downFleche}></img>
-                <img src={upFleche}></img>
-                
-                    <button type="submit"><img className="loop" src={loopImg} alt="loupe"></img>
-                    </button>
+                    <label id="labelSchool">Établissement scolaire</label>
+                    <select name="school">
+                        <option value="iut">IUT</option>
+                        <option value="lyceeM">Lycée Maritime</option>
+                        <option value="institutD">Institut du design</option>
+                    </select>
+                    <label id="labelPunchy">Score Punchy</label>
+                       <div id="iconesScore"> <MdNorth/>
+                        <MdSouth/>
+                        </div>
+                   
+                    <button type="submit"><img className="loop" src={loopImg} alt="loupe"></img></button>
                 </form>   
 
                 <div id="listFriends">

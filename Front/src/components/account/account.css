@@ -129,14 +129,14 @@ form button span.loading-spinner {
 	width: 1em;
 }
 
-/* form label {
+form label {
 	border-bottom: 1px solid #333;
 	display: block;
 	font-size: 1.25em;
 	margin-bottom: 0.5em;
 	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
-} */
+}
 
 form label.col-one-half {
 	float: left;
