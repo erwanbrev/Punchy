@@ -94,5 +94,6 @@
         }
             button:hover {
                 background-color: var(--linear-two)!important;
+                color: white;
             }
 
