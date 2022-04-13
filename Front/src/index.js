@@ -12,6 +12,7 @@ import { Friends } from "./pages/friends";
 import { Register } from "./components/account/register";
 import { Navbar } from "./components/menu";
 import { Article } from "./components/article";
+import { ReserveCar } from "./pages/reserveCar";
 
 
 const Main = () => {
@@ -29,6 +30,7 @@ const Main = () => {
                     <Route element={<Navbar />} />
                     <Route path="/login" element={<Login/>}></Route>            
                     <Route path="/register" element={<Register/>}></Route>
+                    <Route path="/reserveCar" element={<ReserveCar/>}></Route>
                 </Route>
             </Routes>
         </BrowserRouter>

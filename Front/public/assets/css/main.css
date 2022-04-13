@@ -41,8 +41,9 @@
 /*? organisation du menu laterale gauche */
 .leftMenu {
     display: flex;
+    align-items: center;
     height: 100vh;
-    width: 16%;
+    width: 20%;
     background: linear-gradient(var(--linear-two), var(--linear-one));
     flex-direction: column;
     position: fixed;
@@ -61,38 +62,31 @@
 .cont-Nav {
     display: flex;
     flex-direction: column;
-    margin-left: 19%;
-    margin-bottom: 55%;
-}
-
-.cont-Nav img,
-.min-compte img {
-    width: 24%;
-}
-
-.nameNav:not(:last-child) {
-    margin-bottom: 2%;
+    justify-content: space-between;
+    min-height: 12rem;    
 }
 
 .nameNav {
     display: flex;
     align-items: center;
     font-family: 'Futura', 'Open Sans', sans-serif;
+    gap: 10px;
     font-weight: 400;
 }
 
 .min-compte {
-    margin-left: 19%;
+    position: absolute;
+    bottom: 5%;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /* ! nav button more higher onClick */
 .active {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-left: -1rem;
-}
-
-.active img {
-    width: 28%;
 }
 
 #copy {
@@ -101,7 +95,7 @@
     justify-content: center;
     font-size: 1.2rem;
     height: 10vh;
-    width: 84%;
+    width: 80%;
     position: absolute;
     z-index: 4;
     right: 0;
@@ -128,15 +122,21 @@
     display: none;
 }
 
-/* ?format plein écran mac os x */
-@media screen and (min-height: 730px) {
-    .cont-Nav {
-        margin-bottom: 100%;
-    }
+.leftMenu::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/svg/arrow.svg);
+    top: 2%;
+    right: 3%;
+    width: 35px;
+    height: 35px;
 }
 
+
+/* ?format plein écran mac os x */
+
 /*? format mobile */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
 
     .mobile-head {
         display: flex;
@@ -145,10 +145,10 @@
         border: 1px solid red;
         position: relative;
         z-index: 100;
-    }
+    } */
 
     /*? organisation du menu laterale gauche, horizontalement en bas de l'ecran */
-    .leftMenu {
+    /* .leftMenu {
         display: none;
     }
 
@@ -171,4 +171,7 @@
         display: block;
         margin: 10%;
     }
-}
+    .iconMenu {
+        margin-right: 15px;
+    }
+} */

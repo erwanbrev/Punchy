@@ -25,7 +25,7 @@ router.post('/signup', async (req, res) => {
 		const salt = await bcrypt.genSalt(10);
 		const hash = await bcrypt.hash(req.body.password, salt);
 
-		if (!req.body.profilePicture) {
+		if (!req.body.profil) {
 			const {
 				data: { drinks }
 			} = await axios('https://www.thecocktaildb.com/api/json/v1/1/random.php');
@@ -34,8 +34,12 @@ router.post('/signup', async (req, res) => {
 				responseType: 'arraybuffer'
 			});
 
-			const a = await sharp(data).webp({ quality: 20, alphaQuality: 1 }).resize(200, 200).toBuffer();
-			req.body.profilePicture = 'data:image/png;base64, ' + a.toString('base64');
+			const bufferImage = await sharp(data).webp({ quality: 20, alphaQuality: 1 }).resize(200, 200).toBuffer();
+			req.body.profilePicture = 'data:image/png;base64, ' + bufferImage.toString('base64');
+		} else {
+			const buffer = Buffer.from(req.body.profil.split(',')[1], 'base64');
+			const bufferImage = await sharp(buffer).webp({ quality: 20, alphaQuality: 1 }).resize(200, 200).toBuffer();
+			req.body.profilePicture = 'data:image/png;base64, ' + bufferImage.toString('base64');
 		}
 
 		const user = new User({
@@ -48,7 +52,8 @@ router.post('/signup', async (req, res) => {
 			friends: req.body.friends,
 			notationCar: req.body.notationCar,
 			phone: req.body.phone,
-			password: hash
+			password: hash,
+			history: {}
 		});
 
 		const userData = await user.save();
@@ -104,7 +109,7 @@ router.get('/me', authorize, async (req, res) => {
 			return res.status(404).send('No user found');
 		}
 
-		return res.status(200).send(_.pick(user, ['fName', 'lName', 'school', 'friends', 'notationCar', 'phone']));
+		return res.status(200).send(_.pick(user, ['fName', 'lName', 'school', 'friends', 'notationCar', 'phone', 'profilePicture', 'history']));
 	} catch (err) {
 		console.log(err.message);
 		return res.status(500).send(err.message);
