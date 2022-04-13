@@ -15,17 +15,33 @@
 }
 
 
-#filterBar{
+#filterBar,
+#researchBar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background-color: #B8BDEF;
+    background-color: #f1e9e9;
     height:2rem;
-    margin:2rem;
-    border:var(--linear-two) 1px solid;
+    margin:1rem;
+    border: #ffffff 4px solid;
     padding:1.2rem 0;
     border-radius: 50rem;
-    color:white;
+    color:var(--linear-two);
+    box-shadow: 0.2rem 0.1rem 1rem  rgb(168, 168, 168);
+}
+#filterBar{
+    margin-top:4rem;
+}
+#researchBar{   
+    background-color: #f1e9e9;
+}
+
+#researchBar input{
+    border:none;
+}
+
+#filterBar label{
+    padding-left:1rem;
 }
 
 #filterBar select{
@@ -35,25 +51,28 @@
     margin:0 2rem;
     
 }
-#iconesScore{
-    margin: 0 1rem;
+
+#scoreDown,
+#scoreUp{
+    margin: 0 0.5rem;
+
+}
+#scoreDown:hover,
+#scoreUp:hover{
+    cursor:pointer;
 }
 
 .friendBlock{
     border:0.3rem #ffffff solid;
     border-radius: 0.5rem;
-    /* display:flex;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #E5E0FF;
     color: var(--linear-two);
-    margin:2rem;
+    margin:1rem;
     width:25rem;
     height: 16rem;
-    gap:0;
-    box-shadow: 0.3rem 0.3rem 1rem  grey;
+    box-shadow: 0.2rem 0.1rem 1rem  rgb(168, 168, 168);
 
 }
 
@@ -82,6 +101,7 @@
 #researchBar input{
     border-radius: 3rem;
     height:2rem;
+    background-color: #f1e9e9;
 
 }
 
@@ -90,10 +110,19 @@
     border-radius: 3rem;
     padding:0.5rem;
     background-color: var(--linear-two);
+}
+
+#researchBar button:hover,
+#filterBar button:hover{
+    cursor:pointer;
 
 }
 
-
+#filterBar select{
+    border:3px white solid;
+    text-align: center;
+    color: var(--linear-two);
+}
 
 #listFriends{
     display:flex;
@@ -143,7 +172,7 @@
 
 .friendImg{
     align-self:flex-start;
-    margin:1rem;
+    margin:2rem;
 }
 
 #profileButton{
@@ -170,4 +199,21 @@
 
 .schoolName{
     font-size:90%;
+}
+@media screen and (max-width: 600px) {
+
+    #filterBar {
+        display: flex;
+        flex-direction: column;
+        height:15rem;
+        margin:2rem;
+        border-radius: 2rem;
+        width:60vw;
+    } 
+    #filterBar select,
+    #filterBar label{
+        margin:0.5rem;
+    }
+  
+
 }
