@@ -46,6 +46,16 @@ const Schema = new mongoose.Schema(
 				message: props => `${props.value} is not a valid email!`
 			}
 		},
+		paypalEmail: {
+			type: String,
+			required: false,
+			validate: {
+				validator: v => {
+					return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v);
+				},
+				message: props => `${props.value} is not a valid email!`
+			}
+		},
 		password: {
 			type: String,
 			minlength: 8,

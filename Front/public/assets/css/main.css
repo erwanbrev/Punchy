@@ -17,7 +17,7 @@
 /* ? definition de la taille du body (espace blanc entre header + footer) */
 .main-container {
     margin-left: 16vw;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-wrap: wrap;
 }
@@ -28,14 +28,7 @@
 #copy {
     font-family: 'Lobster', 'Open Sans', sans-serif;
     font-weight: 400;
-}
-
-.page-title {
-    display: flex;
-    font-size: 3rem;
-    position: absolute;
-    margin-top: 4%;
-    margin-left: 33vw;
+    color: var(--textBlack);
 }
 
 /*? organisation du menu laterale gauche */
@@ -63,7 +56,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 12rem;    
+    min-height: 12rem;
+    width: 48%;
 }
 
 .nameNav {
@@ -84,11 +78,13 @@
 }
 
 /* ! nav button more higher onClick */
-.active {
-    font-size: 1.1rem;
-    margin-left: -1rem;
+.active.nameNav span {
+    font-size: 1.4rem;
+    margin-left: 0rem;
 }
 
+
+/* !footer */
 #copy {
     display: flex;
     align-items: center;
@@ -104,11 +100,6 @@
 #copy,
 .mobile-head {
     background: #e5e0ff;
-}
-
-/* ?retouche du nom evenement + connexion */
-.event {
-    margin-top: 3%;
 }
 
 /* !logo */
@@ -147,8 +138,8 @@
         z-index: 100;
     } */
 
-    /*? organisation du menu laterale gauche, horizontalement en bas de l'ecran */
-    /* .leftMenu {
+/*? organisation du menu laterale gauche, horizontalement en bas de l'ecran */
+/* .leftMenu {
         display: none;
     }
 

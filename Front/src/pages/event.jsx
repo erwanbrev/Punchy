@@ -5,6 +5,9 @@ import euro from "../../public/assets/img/svg/prix.svg"
 import image from "../../public/assets/img/bulles.jpg"
 import imagePerso from "../../public/assets/img/boite.jpg"
 import { CgEuro, CgSmartHomeBoiler } from 'react-icons/cg';
+import { ButtonAdd } from "../components/buttonAdd";
+import { CgEuro } from 'react-icons/cg';
+import { CgEuro } from 'react-icons/cg';
 
 
 export const Event = () => {
@@ -44,6 +47,11 @@ export const Event = () => {
         function popupinfoSept(){
             detailevent.classList.toggle('hide');
             sombre.classList.toggle('clair');
+        }
+
+        function partiImportant(){
+            ParticipantsImportants.classList.toggle('hidetexte')
+            ParticipantsImportants.classList.toggle('showtexte')
         }
 
         function clair(){
@@ -91,6 +99,11 @@ export const Event = () => {
             sombrePerso.classList.toggle('clairPerso');
         }
 
+        function partiPerso(){
+            ParticipantsPerso.classList.toggle('hidetexte')
+            ParticipantsPerso.classList.toggle('showtexte')
+        }
+
         Click.addEventListener('click', popupinfo)
         ClickDeux.addEventListener('click', popupinfoDeux)
         ClickTrois.addEventListener('click', popupinfoTrois)
@@ -99,6 +112,8 @@ export const Event = () => {
         ClickSix.addEventListener('click', popupinfoSix)
         ClickSept.addEventListener('click', popupinfoSept)
         sombre.addEventListener('click', clair)
+        catParticipant.addEventListener('mouseover', partiImportant)
+        catParticipant.addEventListener('mouseout', partiImportant)
 
         ClickPerso.addEventListener('click', popupinfoPerso)
         ClickPersoDeux.addEventListener('click', popupinfoDeuxPerso)
@@ -108,6 +123,8 @@ export const Event = () => {
         ClickPersoSix.addEventListener('click', popupinfoSixPerso)
         ClickPersoSept.addEventListener('click', popupinfoSeptPerso)
         sombrePerso.addEventListener('click', clairPerso)
+        catPersoParticipant.addEventListener('mouseover', partiPerso)
+        catPersoParticipant.addEventListener('mouseout', partiPerso)
         }
     )
     
@@ -116,7 +133,8 @@ export const Event = () => {
         prix: '20',
         datedebut: '15 Janvier 2022',
         datefin: '21 Janvier 2022',
-        lieu: '11 rue de la république, St Malo 35400'
+        lieu: '11 rue de la république, St Malo 35400',
+        participant : ['Bruce Willis ', 'Phillipe Poutou ', 'Jean Dujardin ', 'Homer Simpson ', 'Pierre Lemonnier ', 'Antoine Mounier ', 'Quentin Seurt ', 'Mathieu Peran ']
     }
 
     let eventPerso = {
@@ -124,7 +142,8 @@ export const Event = () => {
         prix: '9,50',
         datedebut: '15 Janvier 2022 20h30',
         datefin: '15 Janvier 2022 22h30',
-        lieu: 'Cinedol, place du Foirail, 35120 Dol-de-Bretagne'
+        lieu: 'Cinedol, place du Foirail, 35120 Dol-de-Bretagne',
+        participant : ['Johnny Hallyday ', 'Emmanuel Macron ', 'Jean Lassale ', 'Mathieu Peran ', 'Alexandre Touchet ', 'Erwan Brevault ', 'Jean Naymar ', 'Archibald Theobald ']
     }
 
     
@@ -246,6 +265,7 @@ export const Event = () => {
                 <span className="catPrix grisTexte">Prix :</span><span className="detailprix">{event.prix} €</span>
                 <span id="catParticipant">Participants</span>
                 <button className="catParticipation">Je participe</button>
+                <span class="hidetexte" id="ParticipantsImportants">{event.participant}</span>
 
 
 
@@ -258,10 +278,11 @@ export const Event = () => {
                 <span className="catPersoDebut grisTexte">Début :</span><span className="titrePerso detailPersodebut">{eventPerso.datedebut}</span>
                 <span className="catPersoFin grisTexte">Fin :</span><span className="titrePerso detailPersofin">{eventPerso.datefin}</span>
                 <span className="catPersoPrix grisTexte">Prix :</span><span className="titrePerso detailPersoprix">{eventPerso.prix} €</span>
-                <span id="catPersoParticipant">Participants</span>
-                <button className="catPersoParticipation">Je participe</button>
+                <span className="catTop" id="catPersoParticipant">Participants</span>
+                <button className="catTop catPersoParticipation">Je participe</button>
+                <span class="hidetexte" id="ParticipantsPerso">{eventPerso.participant}</span>
             </div>
-
+            <ButtonAdd />
         </div>            
     )
 }
