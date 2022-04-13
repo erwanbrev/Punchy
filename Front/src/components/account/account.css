@@ -200,13 +200,13 @@ span.label-text {
 }
 .registration-form label.password button.toggle-visibility span{vertical-align: middle;}
 
-h1{
+.h1-register{
 	font-size: 3em;
 	margin: 0 0 0.5em 0;
 	text-align: center;
 	font-family: 'Cookie', cursive;
 }
-h1 img{
+.h1-register img{
 	height: auto;
 	margin: 0 auto;
 	max-width: 240px;
