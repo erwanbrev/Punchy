@@ -4,12 +4,10 @@ import "../../public/assets/css/evenement.css"
 import euro from "../../public/assets/img/svg/prix.svg"
 import image from "../../public/assets/img/bulles.jpg"
 import imagePerso from "../../public/assets/img/boite.jpg"
-<<<<<<< HEAD
 import { CgEuro, CgSmartHomeBoiler } from 'react-icons/cg';
 import { ButtonAdd } from "../components/buttonAdd";
-=======
 import { CgEuro } from 'react-icons/cg';
->>>>>>> 1462ffe46079e206f84b6c64f1f8fb9b31fb0c82
+import { CgEuro } from 'react-icons/cg';
 
 
 export const Event = () => {
