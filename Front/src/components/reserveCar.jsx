@@ -52,7 +52,7 @@ export const ReserveCar = ({ informations }) => {
 			<img className="illustration" src={img} alt="illustration covoiturage" />
 			<div className="annonce">
 				<div className="row_">
-					<img className="pProfil" src={user} alt="photo de profil" />
+					<img className="pProfil" src={informations.driver.profilePicture} alt="photo de profil" />
 					<div className="monProfil">
 						<p>{informations.driver.fName}</p>
 						<div className="row_">
