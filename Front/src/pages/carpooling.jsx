@@ -6,6 +6,7 @@ import user from "../../public/assets/img/user.png"
 import { IoStar, IoLogoEuro, IoTimeOutline } from "react-icons/io5";
 import { BouttonPlus } from "../components/buttonAdd";
 import { AddPunchy } from "../components/addPunchy";
+import { ReserveCar } from "../components/reserveCar";
 
 export const Carpool = () => {
 

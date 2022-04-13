@@ -24,7 +24,6 @@ export const Navbar = () => {
                     <NavLink activeclassname="active" to="/carpool" className="nameNav"> <IoCarSharp className="iconMenu" color="#FFF" size='20' /> Covoiturage</NavLink>
                     <NavLink activeclassname="active" to="/housing" className="nameNav"> <IoBusiness className="iconMenu" color="#FFF" size='20' /> Logement</NavLink>
                     <NavLink activeclassname="active" to="/friends" className="nameNav"> <IoPersonAdd className="iconMenu" color="#FFF" size='20' /> Amis</NavLink>
-                    <NavLink activeclassname="active" to="/reserveCar" className="nameNav">test</NavLink>
                 </div>
                 <div className="min-compte">
                     <NavLink to="/login" className="nameNav">
