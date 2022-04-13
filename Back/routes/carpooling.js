@@ -2,11 +2,12 @@ const router = require('express').Router();
 const _ = require('lodash');
 
 const Carpooling = require('./../models/Carpooling');
+const User = require('./../models/User');
 
 const authorize = require('./../middlewares/authorize');
 
 router.get('/', async (req, res) => {
-	const carpoolings = await Carpooling.find({ endTime: { $lte: Date.now() } });
+	const carpoolings = await Carpooling.find({ endTime: { $gte: Date.now() } });
 	const response = [];
 	carpoolings.forEach(
 		({ _id, startLocalisation, endLocalisation, startTime, endTime, repeat, peopleNumber, price, driver, event, smoker, carType, carColor }) => {
@@ -80,7 +81,6 @@ router.post('/', authorize, async (req, res) => {
 });
 
 router.get('/:id/participate', authorize, async (req, res) => {
-	req.user;
 	const carpooling = await Carpooling.findOneAndUpdate(
 		{ id: { $eq: req.params.id }, driver: { $ne: req.user._id.toString() }, $expr: { $lt: [{ $size: '$participants' }, '$peopleNumber'] } },
 		{ $addToSet: { participants: req.user._id.toString() } },
@@ -90,6 +90,7 @@ router.get('/:id/participate', authorize, async (req, res) => {
 	if (!carpooling) {
 		return res.status(404).send('Carpooling not found, already full or you are the driver');
 	}
+	await User.findOneAndUpdate(req.user, { $addToSet: { 'history.carpooling': carpooling._id } });
 
 	return res.status(201).send(carpooling);
 });

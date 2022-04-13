@@ -28,17 +28,21 @@ export const Login = () => {
 
     return (
         <>
-            <div style={{ background: 'linear-gradient(90deg, #4b6cb7 0%, #182848 100%', height: '100vh' }}>
-
-        <div className="login">
-        <div className="form">
-            <form className="login-form" onSubmit={handleSubmit}>
-                <input type="text" placeholder="first name" onChange={e => setIdentifier(e.target.value)}/>
-                <input type="password" placeholder="password" required onChange={e => setPassword(e.target.value)}/>
-                <button>login</button>
+        <div className="container">
+            <h1 className="text-center">Login</h1>
+            <form className="registration-form" onSubmit={handleSubmit}>
+            <label>
+                <span className="label-text">First Name</span>
+                <input type="text" required onChange={(e) => {setIdentifier(e.target.value)}}/>
+            </label>
+            <label className="password">
+                <span className="label-text">Password</span>
+                <input type="password" required value={password} onChange={(e) => {setPassword(e.target.value)}} />
+            </label>
+            <div className="text-center">
+                <button type="submit" className="submit">Login</button>
+            </div>
             </form>  
-        </div>
-        </div>
         </div>
     </>
     )

@@ -1,11 +1,11 @@
-.containerCar {
+.cont-house {
     display: flex;
     justify-content: center;
     gap: 2rem;
     width: 80%;
     min-height: 100vh;
     padding: 50px 10px;
-    margin-left: 13rem;
+    margin-left: 16rem;
     flex-wrap: wrap;
     margin-bottom: 5rem;
 }
