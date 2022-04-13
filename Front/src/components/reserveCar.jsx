@@ -36,7 +36,7 @@ export const ReserveCar = () => {
                 </div>
                 <div className="row_">
                     <p>{profil.arrivee}</p>
-                    <img className="line" src={line} alt="ligne de trajet" />
+                    <img className="lineO" src={line} alt="ligne de trajet" />
                     <p>{profil.depart}</p>
                 </div>
                 <div className="row_">
@@ -63,7 +63,7 @@ export const ReserveCar = () => {
                         <span>{profil.prix}</span>
                         <IoLogoEuro size="25"/>
                     </div>
-                    <button>Je participe</button>
+                    <button className="btnAdd">Je participe</button>
                 </div>
             </div>
         </div>
