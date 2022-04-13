@@ -126,7 +126,7 @@ export const Event = () => {
     )
     
     let event = {
-        titre: 'Quai des bulles à St Malo',
+        titre: 'Quai des bulles',
         prix: '20',
         datedebut: '15 Janvier 2022',
         datefin: '21 Janvier 2022',
@@ -246,7 +246,7 @@ export const Event = () => {
                     <article className="evenementPerso">
                         <span className="titre">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoSept" src={imagePerso} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
                 </div>

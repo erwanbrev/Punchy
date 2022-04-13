@@ -14,6 +14,37 @@
     height: 45vh;
 }
 
+.EventImportant img{
+    height: 55vh;
+    border-radius: 5px;
+}
+
+.evenementPerso img{
+    height: 30vh;
+    border-radius: 5px;
+}
+
+.EventImportant, .EventPerso{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.EventPerso{
+    height: 50vh;
+    margin-top: -9vh;
+}
+
+
+.EventImportant::-webkit-scrollbar, .EventPerso::-webkit-scrollbar {
+    display: none;
+}
+
+    /*! Les cartes */
+    /*! Les cartes */
+    /*! Les cartes */
+    /*! Les cartes */
+
 .evenement{
     display: grid;
     grid: repeat(3, auto);
@@ -54,7 +85,7 @@
 }
 
 .evenement p:hover, .evenementPerso p:hover{
-    color:#E5E0FF;
+    color:#ED8B78;
 }
 
 .evenement p, .evenementPerso p{
@@ -63,42 +94,25 @@
     align-items: center;
 }
 
-    .titre{
-        grid-row: 1;
-        grid-column: 1/3;
-        text-align: center;
-        font-family: 'Futura', 'Open Sans', sans-serif;
-    }
+    /*! Pop up event */
+    /*! Pop up event */
+    /*! Pop up event */
+    /*! Pop up event */
 
-    .image{
-        grid-row: 2;
-        grid-column: 1/3;
-    }
+#sombre, #sombrePerso{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.529);
+    position: fixed;
+    display: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
 
-    .prix{
-        grid-row: 3;
-        grid-column: 1;
-        margin-left: 20px;
-        margin-top: 5px;
-        height: 35px;
-    }
-
-    .euro{
-        grid-row: 3;
-        grid-column: 1;
-        margin-left: -10px;
-        font-size: 30px;
-        margin-top: 7px;
-    }
-
-    .participation{
-        grid-row: 3;
-        grid-column: 2/3;
-        font-family: 'Futura', 'Open Sans', sans-serif;
-        font-weight: 400;
-        color: var(--linear-two);
-        text-align: center;   
-    }
+.clair, .clairPerso{
+    display: none;
+}
 
 #detailevent, #detaileventPerso{
     width: 60vw;
@@ -124,73 +138,60 @@
 #detaileventPerso{
     height: 70vh;
     width: 50vw;
-    top: 20%;
+    top: 10%;
     right: -8%;
     transform: translateX(-50%);
     transform: translateY(-50%);
-
 }
+
+    .image{
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+
+    .titre{
+        grid-row: 1;
+        grid-column: 1/3;
+        text-align: center;
+        font-family: 'Futura', 'Open Sans', sans-serif;
+    }
+    
+    .prix{
+        grid-row: 3;
+        grid-column: 1;
+        margin-left: 20px;
+        margin-top: 5px;
+        height: 35px;
+        font-size: 30px;
+        font-family: 'Lobster';
+    }
+
+    .euro{
+        grid-row: 3;
+        grid-column: 1;
+        margin-left: -10px;
+        font-size: 30px;
+        margin-top: 7px;
+    }
+
+    .participation{
+        grid-row: 3;
+        grid-column: 2/3;
+        font-family: 'Lobster';
+        font-weight: 400;
+        color: var(--linear-two);
+        text-align: center;   
+    }
+
 
 .hide{
     visibility:hidden;
 }
 
-.catNom{
-    grid-row: 2;
-    grid-column: 2
-}
-
-.catLieu{
-    grid-row: 3;
-    grid-column: 2
-}
-
-.catDebut{
-    grid-row: 4;
-    grid-column: 2
-}
-.catFin{
-    grid-row: 5;
-    grid-column: 2
-}
-
-.catPrix{    
-    grid-row: 6;
-    grid-column: 2
-}
-
-#catParticipant{
-    grid-row: 7;
-    grid-column: 2;
-    background-color: #E5E0FF;
-    border-radius: 10px;
-    border:#454D9A 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    .detailtitre{
-        grid-row: 2;
-        grid-column: 3
-    }
-    .detaillieu{
-        grid-row: 3;
-        grid-column: 3
-    }
-    .detaildebut{
-        grid-row: 4;
-        grid-column: 3
-    }
-    .detailfin{
-        grid-row: 5;
-        grid-column: 3
-    }
-    .detailprix{
-        grid-row: 6;
-        grid-column: 3;
-        margin-bottom: 30px;
-    }
+   /*! Détail des evenement important*/ 
+   /*! Détail des evenement important*/ 
+   /*! Détail des evenement important*/ 
+   /*! Détail des evenement important*/ 
 
     .imageDetail{
         grid-row: 1/10;
@@ -199,13 +200,89 @@
         display: absolute;
     }
 
+    .catNom{
+        grid-row: 2;
+        grid-column: 2
+    }
+
+    .detailtitre{
+        grid-row: 2;
+        grid-column: 3
+    }
+
+    .catLieu{
+        grid-row: 3;
+        grid-column: 2
+    }
+
+    .detaillieu{
+        grid-row: 3;
+        grid-column: 3
+    }
+
+    .catDebut{
+        grid-row: 4;
+        grid-column: 2
+    }
+
+    .detaildebut{
+        grid-row: 4;
+        grid-column: 3
+    }
+
+    .catFin{
+        grid-row: 5;
+        grid-column: 2
+    }
+
+    .detailfin{
+        grid-row: 5;
+        grid-column: 3
+    }
+
+    .catPrix{    
+        grid-row: 6;
+        grid-column: 2
+    }
+
+    .detailprix{
+        grid-row: 6;
+        grid-column: 3;
+        margin-bottom: 30px;
+    }
+
+    #catParticipant{
+        grid-row: 7;
+        grid-column: 2;
+        background-color: #E5E0FF;
+        border-radius: 10px 10px 0 0;
+        border:#454D9A 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+    }
+
     #ParticipantsImportants, #ParticipantsPerso{
         grid-row: 8;
-        width: 30vh;
-        background-color: rgba(0, 0, 0, 0.681);
+        width: 200px;
+        border: #454D9A 1px solid;
+        background-color: #E5E0FF;
         position: absolute;
         margin-left: 40vh;
-        color: white;
+        color: #454D9A;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        font-weight: 100;
+        display: flex;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #ParticipantsImportants{
+        grid-column: 1;
+        margin-left: 269px;
+        margin-top: -2px;
     }
 
     .catParticipation{
@@ -217,8 +294,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 25px;
-        width: 10vw;
+        height: 50px;
+        width: 200px;
         margin-left: -15vw;
     }
 
@@ -227,27 +304,15 @@
         color: #E5E0FF;
     }
 
+    /*! Détail des evenement personnel*/ 
+    /*! Détail des evenement personnel*/ 
+    /*! Détail des evenement personnel*/ 
+    /*! Détail des evenement personnel*/ 
+
+
+
     .catPersoNom{
         grid-row: 1;
-        grid-column: 3
-    }
-    
-    .catPersoLieu{
-        grid-row: 3;
-        grid-column: 3
-    }
-    
-    .catPersoDebut{
-        grid-row: 4;
-        grid-column: 3
-    }
-    .catPersoFin{
-        grid-row: 5;
-        grid-column: 3
-    }
-    
-    .catPersoPrix{    
-        grid-row: 6;
         grid-column: 3
     }
 
@@ -255,30 +320,55 @@
         grid-row: 1;
         grid-column: 4/6
     }
-    .detailPersolieu{
-        grid-row: 3;
-        grid-column: 4/6
-    }
-    .detailPersodebut{
-        grid-row: 4;
-        grid-column: 4/6
-    }
-    .detailPersofin{
-        grid-row: 5;
-        grid-column: 4/6
-    }
-    .detailPersoprix{
-        grid-row: 6;
-        grid-column: 4/6;
-        margin-bottom: 30px;
-    }
-
+    
+    
     .imageDetailPerso{
         margin-left: 4vw;
         grid-row: 2;
         grid-column: 3/6;
         height: 30vh;
         display: absolute;
+    }
+
+    .catPersoLieu{
+        grid-row: 3;
+        grid-column: 3
+    }
+
+    .detailPersolieu{
+        grid-row: 3;
+        grid-column: 4/6
+    }
+    
+    .catPersoDebut{
+        grid-row: 4;
+        grid-column: 3
+    }
+
+    .detailPersodebut{
+        grid-row: 4;
+        grid-column: 4/6
+    }
+
+    .catPersoFin{
+        grid-row: 5;
+        grid-column: 3
+    }
+
+    .detailPersofin{
+        grid-row: 5;
+        grid-column: 4/6
+    }
+    
+    .catPersoPrix{    
+        grid-row: 6;
+        grid-column: 3
+    }
+
+    .detailPersoprix{
+        grid-row: 6;
+        grid-column: 4/6;
+        margin-bottom: 30px;
     }
 
     .catPersoParticipation{
@@ -290,25 +380,28 @@
     #ParticipantsPerso{
         grid-row: 8;
         grid-column: 1;
-        margin-top: -20vh;
-        width: 30vh;
-        background-color: rgba(0, 0, 0, 0.681);
+        margin-top: 11px;
+        width: 200px;
+        margin-left: 45px;
+        background-color: #E5E0FF;
         position: absolute;
-        color: white;
+        color: #454D9A;
         padding: 10px;
-        margin-left: -9vw;
     }
 
     #catPersoParticipant{
         grid-row: 8;
         grid-column: 3;
         background-color: #E5E0FF;
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
         border:#454D9A 1px solid;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 25px;
+        height: 50px;
+        position: sticky;
+        width: 200px;
+
     }
 
 
@@ -322,9 +415,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 25px;    
+        height: 50px;    
+        width: 200px;
         margin-left: -20vw;
-        width: 10vw;
     }
 
     .catPersoParticipation:hover{
@@ -339,45 +432,6 @@
     .titrePerso{
         margin-left: -10%;
     }
-
-.EventImportant, .EventPerso{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.EventPerso{
-    height: 50vh;
-    margin-top: -9vh;
-}
-
-
-.EventImportant::-webkit-scrollbar, .EventPerso::-webkit-scrollbar {
-    display: none;
-}
-
-.EventImportant img{
-    height: 55vh;
-}
-
-.evenementPerso img{
-    height: 30vh;
-}
-
-#sombre, #sombrePerso{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.529);
-    position: fixed;
-    display: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-}
-
-.clair, .clairPerso{
-    display: none;
-}
 
 .grisTexte{
     color:rgb(87, 87, 87);
