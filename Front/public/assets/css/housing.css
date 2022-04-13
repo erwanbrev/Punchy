@@ -1,20 +1,29 @@
-.cont-house {
+:root {
+    --orange: #FF7A00;
+    --bgArt-Hou: #E5E0FF;
+}
+
+.cont-house,
+.art-Housing {
     display: flex;
+}
+
+.contain-house {
     justify-content: center;
-    gap: 2rem;
     width: 80%;
     min-height: 100vh;
     padding: 50px 10px;
     margin-left: 16rem;
     flex-wrap: wrap;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem;
+    gap: 2rem; */
 }
 
 .art-Housing {
-    display: flex;
+    margin-left: 6.8%;
     flex-direction: column;
     width: 30%;
-    background-color: #E5E0FF;
+    background-color: var(--bgArt-Hou);
     height: 23rem;
     outline: 5px solid #FFF;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
@@ -22,6 +31,8 @@
     font-weight: 400;
     color: var(--linear-two);
     cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 4%;
 }
 
 .img-housing {
@@ -31,57 +42,65 @@
     background-position: center;
     background-repeat: no-repeat;
     scale: fill;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
-.art-Housing,
-.img-housing {
-    border-radius: 5px;
-}
-
-.between {
+.between-housing {
     display: flex;
     justify-content: space-between;
     margin: 0.391rem 1rem;
     height: 50%;
+    padding: 12px;
 }
 
-.vertical {
+/* colonnes dans l'article */
+.vertical-housing-left,
+.vertical-housing-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.localization {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.vertical-housing-left {
+    align-items: flex-end;
 }
 
-.localization span {
+.vertical-housing-right {
+    align-items: center;
+}
+
+.localization-housing span {
     padding: .3rem;
     border: 1px solid #424C9B;
     border-radius: 5px;
     background-color: #424c9b44;
-    font-size: 12px;
 }
 
-.surface {
-    display: flex;
-    align-items: center;
+.price-housing {
+    border: 1px solid var(--orange);
+    color: var(--orange);
     justify-content: center;
-    gap: 0.313rem;
-    padding: 0.313rem;
-    width: 55px;
-    border: 1px solid #FF7A00;
+    padding: 2%;
+    width: 84%;
     border-radius: 0.313rem;
-    color: #FF7A00;
 }
-/* 
-.time {
+
+.localization-housing,
+.price-housing,
+.type-housing,
+.content-housing,
+.surface-housing {
     display: flex;
     align-items: center;
-    font-size: 18px;
-    padding: 0.313rem;
-    border: 1px solid var(--linear-two);
-    border-radius: 0.313rem;
-} */
+    gap: 4%;
+}
+
+.localiz-logo,
+.price-logo,
+.housing-logo,
+.content-logo,
+.surface-logo {
+    width: 1.3rem;
+    height: auto;
+}
