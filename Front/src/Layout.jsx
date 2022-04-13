@@ -12,6 +12,7 @@ export const Layout = () => {
         <div>
             <Navbar />
             <Outlet />
+            <ButtonAdd />
             <Footer />
         </div>
     )

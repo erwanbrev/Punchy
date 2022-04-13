@@ -8,7 +8,7 @@ const CarNote = require('./../models/CarNote');
 const authorize = require('./../middlewares/authorize');
 
 router.get('/', async (req, res) => {
-	const carpoolings = await Carpooling.find({ endTime: { $gte: Date.now() } });
+	const carpoolings = await Carpooling.find({ endTime: { $gte: Date.now() } }).populate('driver');
 	const response = [];
 	carpoolings.forEach(
 		({ _id, startLocalisation, endLocalisation, startTime, endTime, repeat, peopleNumber, price, driver, event, smoker, carType, carColor }) => {
@@ -21,7 +21,11 @@ router.get('/', async (req, res) => {
 				repeat,
 				peopleNumber,
 				price,
-				driver,
+				driver: {
+					fName: driver.fName,
+					notation: driver.notationCar,
+					profilePicture: driver.profilePicture
+				},
 				event,
 				smoker,
 				carType,
@@ -30,6 +34,7 @@ router.get('/', async (req, res) => {
 		}
 	);
 
+	console.log(response);
 	return res.status(200).send(response);
 });
 router.post('/', authorize, async (req, res) => {

@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 31.25rem;
-    height: 40rem;
+    height: 45rem;
     background-color: #FFF;
     border-radius: 5px;
     padding: 1.563rem;
@@ -13,9 +13,6 @@
     .overlayPunchy h1 {
         color: var(--linear-one);
         font-size: 1.875rem;
-        font-family: 'Lobster';
-        font-weight: 400;
-        margin-bottom: 1rem;
     }
     .formAdd {
         display: flex;
@@ -30,9 +27,9 @@
             color: var(--linear-two);
             font-family: 'Futura PT';
             border-bottom: none;
+            margin-bottom: .3rem;
         }
-        
-        .formAdd input, #categories  {
+        .formAdd input, #categories select {
             display: flex;
             width: 100%;
             height: 1.875rem;
@@ -42,9 +39,6 @@
             font-size: 15px;
             padding-left: 2rem;
         }
-        .label {
-            row-gap: 20px;
-        }
         .row {
             display: flex;
             justify-content: space-between;
@@ -53,11 +47,8 @@
         }
         .icon {
             position: absolute;
-            display: block;
-            margin: .35rem;
-            justify-content: center;
-            align-items: center;
             color: var(--linear-two);
+            margin: 6px;
         }
         .description input {
             height: 6.25rem;
@@ -87,6 +78,7 @@
             font-size: 10px;
             padding-left: 30px;
         }
+
         .btnAdd {
             position: relative;
             left: 60%;
