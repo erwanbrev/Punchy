@@ -19,53 +19,53 @@ export const AddPunchy = () => {
                         </select>
                     </div>
                     <div className="label">
-                        <label className='mLabel'>Titre</label>
+                        <label>Titre</label>
                         <IoPencilOutline className='icon' size="20px" />
                         <input type="text"/> 
                     </div>
                 </div>
                 <div className="row">
                     <div className="label">
-                        <label className='mLabel'>Lieu</label>
+                        <label>Lieu</label>
                         <IoLocationSharp className='icon' size="20px"/>
                         <input type="text"/>
                     </div>
                     <div className="label">
-                        <label className='mLabel'>Date de début</label>
+                        <label>Date de début</label>
                         <IoCalendar className='icon' size="20px" />
                         <input type="date"/> 
                     </div>
                     <div className="label">
-                        <label className='mLabel'>Date de fin</label>
+                        <label>Date de fin</label>
                         <IoCalendar className='icon' size="20px" />
                         <input type="date"/> 
                     </div>
                 </div>
                 <div className="row">
                     <div className="label">
-                        <label className='mLabel'>Nom</label>
+                        <label>Nom</label>
                         <IoAccessibilitySharp className='icon' size="20px"/>
                         <input type="text"/>
                     </div>
                     <div className="label">
-                        <label className='mLabel'>Prix</label>
+                        <label>Prix</label>
                         <IoLogoEuro className='icon' size="20px" />
                         <input type="number"/> 
                     </div>
                     <div className="label">
-                        <label className='mLabel'>Participants</label>
+                        <label>Participants</label>
                         <IoPeople className='icon' size="20px" />
                         <input type="number"/> 
                     </div>
                 </div>
                 <div className='description'>
-                    <label htmlFor="" className='mLabel'>Description</label>
+                    <label htmlFor="">Description</label>
                     <input type="text" />
                 </div>
                 <div className='affiche'>
-                    <label htmlFor="" className='mLabel'>Affiche de l'évènement</label>
+                    <label htmlFor="">Affiche de l'évènement</label>
                     <IoPush className='iconAffiche' size="50"/>
-                    <input type="file" />
+                    <input type="image" />
                 </div>
                 <button className='btnAdd'>Je m'inscris !</button>
             </form>

@@ -85,3 +85,7 @@
     .participe .btnAdd {
         width: auto;
     }
+
+.button {
+    display: none;
+}
