@@ -3,6 +3,7 @@ const _ = require('lodash');
 const mongoose = require('mongoose');
 
 const Event = require('./../models/Event');
+const User = require('../models/User');
 
 const authorize = require('./../middlewares/authorize');
 
@@ -11,8 +12,9 @@ const { sendMailEvent } = require('./../nodemailer/mail');
 router.get('/', async (req, res) => {
 	const events = await Event.find({ validated: true });
 	const response = [];
-	events.forEach(({ category, title, description, localisation, price, startDate, endDate, pictures }) => {
+	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures }) => {
 		response.push({
+			id: _id,
 			category,
 			title,
 			description,
@@ -57,8 +59,23 @@ router.post('/', authorize, async (req, res) => {
 });
 
 router.get('/confirmed', async (req, res) => {
-	const event = await Event.findOneAndUpdate({ _id: mongoose.Types.ObjectId(req.query.id) }, { validated: true });
+	const event = await Event.findOneAndUpdate({ _id: mongoose.Types.ObjectId(req.query.id) }, { validated: true }, { new: true });
 	return res.status(201).send({ message: 'Publier avec succès', content: event });
+});
+
+router.get('/:id/participate', authorize, async (req, res) => {
+	const event = await Event.findOneAndUpdate(
+		{ _id: { $eq: req.params.id.toString() }, validated: true },
+		{ $addToSet: { participants: req.user._id.toString() } },
+		{ new: true }
+	);
+
+	if (!event) {
+		return res.status(404).send('Event not found');
+	}
+	await User.findOneAndUpdate(req.user, { $addToSet: { 'history.event': event._id } });
+
+	return res.status(201).send(event);
 });
 
 module.exports = router;
