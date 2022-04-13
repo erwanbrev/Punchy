@@ -4,6 +4,14 @@
     --Shadow: #B4B4B4;
 }
 
+.page-title-menu {
+    display: flex;
+    font-size: 3rem;
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 33vw;
+}
+
 /* !style défini des articles des pages principales/secondaires */
 .article-event,
 .article-event-2nd {

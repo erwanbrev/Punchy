@@ -1,7 +1,8 @@
 import React from "react";
-import {IoBeer, IoCarSharp, IoBusiness, IoPersonAdd, IoPersonCircle} from "react-icons/io5";
+import { IoBeer, IoCarSharp, IoBusiness, IoPersonAdd, IoPersonCircle } from "react-icons/io5";
 import { Link, NavLink, NavNavLink } from "react-router-dom";
 import logo from "./../../public/assets/img/svg/logo.svg";
+import "../../public/assets/css/main.css"
 
 export const Navbar = () => {
     return (
@@ -20,11 +21,10 @@ export const Navbar = () => {
                     <Link to="/" ><img src={logo} alt="logo" /></Link>
                 </div>
                 <div className="cont-Nav">
-                    <NavLink activeclassname="active" to="/event" className="nameNav" > <IoBeer className="iconMenu" color="#FFF" size='20' /> <span id="event">Événement</span> </NavLink>
-                    <NavLink activeclassname="active" to="/carpool" className="nameNav"> <IoCarSharp className="iconMenu" color="#FFF" size='20' /> Covoiturage</NavLink>
-                    <NavLink activeclassname="active" to="/housing" className="nameNav"> <IoBusiness className="iconMenu" color="#FFF" size='20' /> Logement</NavLink>
-                    <NavLink activeclassname="active" to="/friends" className="nameNav"> <IoPersonAdd className="iconMenu" color="#FFF" size='20' /> Amis</NavLink>
-                    <NavLink activeclassname="active" to="/reserveCar" className="nameNav">test</NavLink>
+                    <NavLink activeclassname="active" to="/event" className="nameNav" > <IoBeer className="iconMenu" color="#FFF" size='20' /> <span>Événement</span>  </NavLink>
+                    <NavLink activeclassname="active" to="/carpool" className="nameNav"> <IoCarSharp className="iconMenu" color="#FFF" size='20' /> <span>Covoiturage</span></NavLink>
+                    <NavLink activeclassname="active" to="/housing" className="nameNav"> <IoBusiness className="iconMenu" color="#FFF" size='20' /> <span>Logement</span></NavLink>
+                    <NavLink activeclassname="active" to="/friends" className="nameNav"> <IoPersonAdd className="iconMenu" color="#FFF" size='20' /> <span>Amis</span></NavLink>
                 </div>
                 <div className="min-compte">
 
@@ -43,7 +43,7 @@ export const Navbar = () => {
 
             {/* Version Mobile */}
             <nav className="bottomMenu" >
-                <div className="cont-Nav">
+                {/* <div className="cont-Nav">
                     <NavLink activeclassname="active" to="/event" className="nameNav"><img
                         src={require('../../public/assets/img/svg/evenement.svg')} alt="logo-event" /></NavLink>
                     <NavLink activeclassname="active" to="/covoit" className="nameNav"><img src={require('../../public/assets/img/svg/covoit.svg')} alt="logo-covoit" /></NavLink>
@@ -57,7 +57,7 @@ export const Navbar = () => {
                     <NavLink activeclassname="active" to="/connexion">
                         <img src={require('../../public/assets/img/svg/nb_personnes.svg')} alt="min-inscription" />
                     </NavLink>
-                </div>
+                </div> */}
             </nav >
         </div>
     )

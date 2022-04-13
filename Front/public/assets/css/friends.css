@@ -1,0 +1,158 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;  
+    font-family: 'Futura PT', 'Open Sans', sans-serif;
+    margin-left:5rem;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.page-title{
+    margin:0;
+    position: relative;
+}
+
+
+#filterBar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #B8BDEF;
+    height:2rem;
+    margin:2rem;
+    border:var(--linear-two) 1px solid;
+    padding:1.2rem 0;
+    border-radius: 50rem;
+    color:white;
+}
+
+#filterBar select{
+    border-radius: 50rem;
+    padding:0.2rem;
+    border: 1px var(--linear-two) solid;
+    margin:0 2rem;
+    
+}
+#iconesScore{
+    margin: 0 1rem;
+}
+
+.friendBlock{
+    padding:0.5rem;
+    border:0.3rem #ffffff solid;
+    border-radius: 0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E0FF;
+    color: var(--linear-two);
+    margin:1rem;
+    width:27rem;
+    box-shadow: 0.3rem 0.3rem 1rem  grey;
+
+}
+
+.friendBlock ul {
+    list-style: none;
+}
+
+.friendImg img{
+    height: 8rem;
+    border-radius: 100%;
+}
+
+#filterBar img,
+#researchBar img{
+    color:white;
+    height:1.2rem;
+    padding:0 0.2rem;
+}
+
+#filterBar button:hover,
+#researchBar button:hover{
+    opacity:80%;
+}
+
+#researchBar input{
+    border-radius: 3rem;
+    height:2rem;
+
+}
+
+#researchBar button,
+#filterBar button{
+    border-radius: 3rem;
+    padding:0.5rem;
+    background-color: var(--linear-two);
+
+}
+
+#labelSchool{
+    margin:0 0.5rem 0 2rem;
+}
+
+#listFriends{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:18%;
+
+}
+.infosList li{
+    padding:0.5rem;
+}
+
+.friendName{
+    font-size: 120%;
+    font-weight: 600;
+}
+.schoolName{
+    font-style: italic;
+}
+
+.punchiesNumber{
+    font-size: 150%;
+    font-family: Lobster;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.friendInfos{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.friendInfos img{
+    height : 2rem;
+    padding-left:0.8rem;
+}
+
+#profileButton{
+    padding: 0.5rem 0.7rem;
+    color:#EA7826;
+    border-radius: 2rem;
+    border: #B8BDEF 2px solid;
+    margin:1rem;
+    width:10rem;
+    font-weight: 600;
+}
+
+#profileButton:hover{
+    cursor:pointer;
+    background-color: #E5E0FF;
+}
+
+.infosList li{
+    padding:0.7rem;
+    display:flex;
+    align-items: center;
+    gap:0.7rem;
+}
+
+.schoolName{
+    font-size:90%;
+}

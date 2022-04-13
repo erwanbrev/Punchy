@@ -64,7 +64,7 @@ export const Event = () => {
     )
     
     let event = {
-        titre: 'Quai des bulles à St Malo',
+        titre: 'Quai des bulles',
         prix: '20',
         datedebut: '15 Janvier 2022',
         datefin: '21 Janvier 2022',
@@ -127,6 +127,60 @@ export const Event = () => {
                 </div>
             </div>
             
+            <div className="clairPerso" id="sombrePerso"></div>
+            <div className="eventPersocontainer">
+                <div className="EventPerso">
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPerso" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPersoDeux" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPersoTrois" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPersoQuatre" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPersoCinq" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPersoSix" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+
+                    <article className="evenementPerso">
+                        <span className="titre">{eventPerso.titre}</span>
+                        <img className="image" id="ClickPersoSept" src={imagePerso} alt="" srcset="" />
+                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <p className="participation PartiPerso">Je participe !</p>
+                    </article>
+                </div>
+            </div>
+
+
             <div className="hide" id="detailevent">
                 <span className="catNom">Nom :</span><span className="detailtitre">{event.titre}</span>
                 <span className="catLieu">Lieu :</span><span className="detaillieu">{event.lieu}</span>
