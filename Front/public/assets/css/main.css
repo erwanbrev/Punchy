@@ -12,6 +12,7 @@
     --textBlack: #0E0E0E;
     --linear-one: #EE8C78;
     --linear-two: #434C9B;
+    --footer-header: #e5e0ff;
 }
 
 /* ? definition de la taille du body (espace blanc entre header + footer) */
@@ -51,6 +52,7 @@
     width: 35px;
     height: 35px;
 }
+
 .left {
     width: 7%;
 }
@@ -83,9 +85,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     min-height: 12rem;
-    width: 65%;
+    /* width: 65%; */
 }
 
 .nameNav {
@@ -99,7 +101,7 @@
 .min-compte {
     position: absolute;
     bottom: 5%;
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -132,7 +134,7 @@
 
 #copy,
 .mobile-head {
-    background: #e5e0ff;
+    background: var(--footer-header);
 }
 
 /* !logo */
@@ -145,6 +147,7 @@
 #logo-mobile {
     display: none;
 }
+
 /* ?format plein écran mac os x */
 
 /*? format mobile */
