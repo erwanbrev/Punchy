@@ -51,7 +51,7 @@ export const Friends = () => {
                         </div>
                         <div className="friendInfos">
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/>Saint-Malo</li>
                                     <li className="schoolName"><MdOutlineSchool/>Institut Marie-Thérèse Solacroup</li>
                                     
@@ -102,7 +102,7 @@ export const Friends = () => {
                         <div className="friendInfos">
                     
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/>Saint-Méloir</li>
                                     <li className="schoolName"><MdOutlineSchool/>Institut Marie-Thérèse Solacroup</li>  
                                     
@@ -119,7 +119,7 @@ export const Friends = () => {
                         <div className="friendInfos">
                     
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/> Saint-Malo</li>
                                     <li className="schoolName"><MdOutlineSchool/>IUT</li>  
                                     
@@ -136,7 +136,7 @@ export const Friends = () => {
                         <div className="friendInfos">
                     
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/>La Fresnais</li>
                                     <li className="schoolName"><MdOutlineSchool/>Lycée Jacques-Cartier</li>  
                                     
