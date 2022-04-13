@@ -3,7 +3,7 @@ import '../../public/assets/css/carpooling.css';
 import imageCar from '../../public/assets/img/imageCarMin.png';
 import line from '../../public/assets/img/svg/line.svg';
 import { IoStar, IoLogoEuro, IoTimeOutline } from 'react-icons/io5';
-import { BouttonPlus } from '../components/buttonAdd';
+import { BouttonPlus, ButtonAdd } from '../components/buttonAdd';
 import { AddPunchy } from '../components/addPunchy';
 import { ReserveCar } from '../components/reserveCar';
 
@@ -83,6 +83,7 @@ export const Carpool = () => {
 					</article>
 				);
 			})}
+			<ButtonAdd /> 
 		</div>
 	);
 };

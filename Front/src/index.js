@@ -14,6 +14,7 @@ import { Register } from './components/account/register';
 import { Navbar } from './components/menu';
 import { Article } from './components/article';
 import { ReserveCar } from './components/reserveCar';
+import { Accueil } from './pages/accueil';
 
 const Main = () => {
 	return (
@@ -21,7 +22,7 @@ const Main = () => {
 			<Routes>
 				{/* les chemin d'accès des pages + le composent qui va avec */}
 				<Route path="/" element={<Layout />}>
-					<Route path="/" element={<Article />} />
+					<Route path="/" element={<Accueil />} />
 					<Route path="/event" element={<Event />} />
 					<Route path="/carpool" element={<Carpool />} />
 					<Route path="/housing" element={<Housing />} />

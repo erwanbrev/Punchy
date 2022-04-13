@@ -3,6 +3,7 @@ import "../../public/assets/css/housing.css"
 import picHouse from "../../public/assets/img/dinan-yannick-dufils-bN7Ae_grzZw-unsplash.jpeg"
 import { IoStar, IoLogoEuro, IoLocationSharp, IoPieChart, IoPodium, IoStorefront } from "react-icons/io5";
 import { Searchbar } from "../components/searchbar";
+import { ButtonAdd } from "../components/buttonAdd";
 
 export const Housing = () => {
 
@@ -93,6 +94,7 @@ export const Housing = () => {
                     </div>
                 </div>
             </article>
+            <ButtonAdd />
         </div>
     )
 }
