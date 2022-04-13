@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import { Register } from "./components/account/register"
 import { Login } from "./components/account/login"
+import { Profil } from "./components/account/profil"
 import "../public/assets/css/main.css"
 import { Event } from "./pages/event";
 import { Carpool } from "./pages/carpooling";
@@ -30,6 +31,7 @@ const Main = () => {
                     <Route element={<Navbar />} />
                     <Route path="/login" element={<Login/>}></Route>            
                     <Route path="/register" element={<Register/>}></Route>
+                    <Route path="/profil" element={<Profil/>}></Route>            
                     <Route path="/reserveCar" element={<ReserveCar/>}></Route>
                 </Route>
             </Routes>

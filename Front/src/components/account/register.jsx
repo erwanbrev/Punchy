@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import '../account/account.css';
 
 
 export const Register = () => {
+    const navigate = useNavigate()
+
 
     const [file, setFile] = React.useState()
     const [fName, setFName] = React.useState('')
@@ -37,6 +40,8 @@ export const Register = () => {
         fetch(`http://localhost:5000/user/signup`, request)
         .then(res => console.log(res))
         .catch(err => console.log(err))
+
+        navigate('/', { replace: true })
     }
 
     const handleChange = e => {
@@ -45,7 +50,8 @@ export const Register = () => {
     }
 
     return (
-        <div className="container">
+        <div className="main-container">
+        <div className="container-register">
         <h1 className="text-center h1-register">Register</h1>
         <form className="registration-form" onSubmit={handleSubmit} encType="multipart/form-data">
             <label className="col-one-half">
@@ -87,6 +93,7 @@ export const Register = () => {
             </div>
         </form>
 
+    </div>
     </div>
     )
 }

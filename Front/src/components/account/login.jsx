@@ -27,13 +27,13 @@ export const Login = () => {
     // })
 
     return (
-        <>
-        <div className="container">
-            <h1 className="text-center">Login</h1>
+        <div className="main-container">
+        <div className="container-register">
+            <h1 className="text-center h1-register">Login</h1>
             <form className="registration-form" onSubmit={handleSubmit}>
             <label>
-                <span className="label-text">First Name</span>
-                <input type="text" required onChange={(e) => {setIdentifier(e.target.value)}}/>
+                <span className="label-text">Email</span>
+                <input type="email" required value={identifier} onChange={(e) => {setIdentifier(e.target.value)}}/>
             </label>
             <label className="password">
                 <span className="label-text">Password</span>
@@ -44,6 +44,6 @@ export const Login = () => {
             </div>
             </form>  
         </div>
-    </>
+    </div>
     )
 }

@@ -27,6 +27,11 @@ export const Navbar = () => {
                     <NavLink activeclassname="active" to="/reserveCar" className="nameNav">test</NavLink>
                 </div>
                 <div className="min-compte">
+
+                    <NavLink to="/profil" className="nameNav">
+                        <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Profil</span>
+                    </NavLink>
+
                     <NavLink to="/login" className="nameNav">
                         <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Connexion</span>
                     </NavLink>
