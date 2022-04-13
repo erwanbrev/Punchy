@@ -5,13 +5,19 @@ import logo from "./../../public/assets/img/svg/logo.svg";
 import "../../public/assets/css/main.css"
 
 export const Navbar = () => {
+
+    const leftMenu = () => {
+        const a = document.querySelector('.leftMenu');
+        a.classList.toggle('left');        
+    }
+
     return (
         <div>
             {/* Header version Mobile */}
             <nav className="mobile-head">
                 <div id="logo-mobile">
                     <Link to="/">
-                        <img src={logo} alt="logo-mobile" />
+                        <img src={logo} alt="logo-mobile"/>
                     </Link>
                 </div>
             </nav>
@@ -20,6 +26,7 @@ export const Navbar = () => {
                 <div id="logo">
                     <Link to="/" ><img src={logo} alt="logo" /></Link>
                 </div>
+                <p className="iconLeft" onClick={leftMenu}></p>
                 <div className="cont-Nav">
                     <NavLink activeclassname="active" to="/event" className="nameNav" > <IoBeer className="iconMenu" color="#FFF" size='20' /> <span>Événement</span>  </NavLink>
                     <NavLink activeclassname="active" to="/carpool" className="nameNav"> <IoCarSharp className="iconMenu" color="#FFF" size='20' /> <span>Covoiturage</span></NavLink>
