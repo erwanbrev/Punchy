@@ -37,7 +37,7 @@ export const Carpool = () => {
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -71,7 +71,7 @@ export const Carpool = () => {
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -105,7 +105,7 @@ export const Carpool = () => {
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -139,7 +139,7 @@ export const Carpool = () => {
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
