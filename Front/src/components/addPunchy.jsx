@@ -5,7 +5,7 @@ export const AddPunchy = () => {
     return (
         <div className="overlayPunchy">
             <h1>Ajouter un évènement</h1>
-            <form action="">
+            <form className='formAdd' action="">
                 <div className="row">
                     <div className="label">
                         <label>Catégorie</label>
@@ -67,7 +67,7 @@ export const AddPunchy = () => {
                     <IoPush className='iconAffiche' size="50"/>
                     <input type="image" />
                 </div>
-                <button>Je m'inscris !</button>
+                <button className='btnAdd'>Je m'inscris !</button>
             </form>
         </div>
     )

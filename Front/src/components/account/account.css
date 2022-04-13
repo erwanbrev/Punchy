@@ -20,6 +20,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
 	background-size: cover;
 	color: #333;
@@ -73,7 +74,7 @@ body{
 span.label-text {
 	font-family: 'Futura', 'Open Sans', 'sans-serif';
 }
-form button.submit{
+.registration-form button.submit{
 	background: rgba(255,255,255,0.25);
 	border: 1px solid #333;
 	line-height: 1em;
@@ -81,15 +82,15 @@ form button.submit{
 	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
 }
-form button:hover,
-form button:focus,
-form button:active,
-form button.loading{
+.registration-form button:hover,
+.registration-form button:focus,
+.registration-form button:active,
+.registration-form button.loading{
 	background: #333;
 	color: #fff;
 	outline: none;
 }
-form button.success{
+.registration-form button.success{
 	background: #27ae60;
 	border-color: #27ae60; 
 	color: #fff;
@@ -102,7 +103,7 @@ form button.success{
 	from{ transform: rotate(0deg); }
 	to{ transform: rotate(360deg); }
 }
-form button span.loading-spinner{
+.registration-form button span.loading-spinner{
 	-webkit-animation: spin 0.5s linear infinite;
 	animation: spin 0.5s linear infinite;
 	border: 2px solid #fff;
@@ -113,7 +114,7 @@ form button span.loading-spinner{
 	width: 1em;
 }
 
-form label{
+.registration-form label{
 	border-bottom: 1px solid #333;
 	display: block;
 	font-size: 1.25em;
@@ -121,15 +122,15 @@ form label{
 	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
 }
-form label.col-one-half{
+.registration-form label.col-one-half{
 	float: left;
 	width: 50%;
 }
-form label.col-one-half:nth-of-type(even){
+.registration-form label.col-one-half:nth-of-type(even){
 	border-left: 1px solid #333;
 	padding-left: 0.25em;
 }
-form label input{
+.registration-form label input{
 	background: none;
 	border: none;
 	line-height: 1em;
@@ -137,13 +138,13 @@ form label input{
 	padding: 0.125em 0.25em;
 	width: 100%;
 }
-form label input:focus{
+.registration-form label input:focus{
 	outline: none;
 }
-form label input:-webkit-autofill{
+.registration-form label input:-webkit-autofill{
 	background-color: transparent !important;
 }
-form label span.label-text{
+.registration-form label span.label-text{
 	display: block;
 	font-size: 0.5em;
 	font-weight: bold;
@@ -152,17 +153,17 @@ form label span.label-text{
 	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
 }
-form label.checkbox{
+.registration-form label.checkbox{
 	border-bottom: 0;
 	text-align: center;
 }
-form label.checkbox input{
+.registration-form label.checkbox input{
 	display: none;
 }
-form label.checkbox span{
+.registration-form label.checkbox span{
 	font-size: 0.5em;
 }
-form label.checkbox span:before{
+.registration-form label.checkbox span:before{
 	content: '\e157';
 	display: inline-block;
 	font-family: 'Glyphicons Halflings';
@@ -171,11 +172,11 @@ form label.checkbox span:before{
 	position: relative;
 		top: 1px;
 }
-form label.checkbox input:checked + span:before{content: '\e067';}
-form label.invalid{border-color: #c0392b !important;}
-form label.invalid span.label-text{color: #c0392b;}
-form label.password{position: relative;}
-form label.password button.toggle-visibility{
+.registration-form label.checkbox input:checked + span:before{content: '\e067';}
+.registration-form label.invalid{border-color: #c0392b !important;}
+.registration-form label.invalid span.label-text{color: #c0392b;}
+.registration-form label.password{position: relative;}
+.registration-form label.password button.toggle-visibility{
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -191,21 +192,21 @@ form label.password button.toggle-visibility{
 	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
 }
-form label.password button.toggle-visibility:hover,
-form label.password button.toggle-visibility:focus,
-form label.password button.toggle-visibility:active{
+.registration-form label.password button.toggle-visibility:hover,
+.registration-form label.password button.toggle-visibility:focus,
+.registration-form label.password button.toggle-visibility:active{
 	color: #000;
 	outline: none;
 }
-form label.password button.toggle-visibility span{vertical-align: middle;}
+.registration-form label.password button.toggle-visibility span{vertical-align: middle;}
 
-h1{
+.h1-register{
 	font-size: 3em;
 	margin: 0 0 0.5em 0;
 	text-align: center;
 	font-family: 'Cookie', cursive;
 }
-h1 img{
+.h1-register img{
 	height: auto;
 	margin: 0 auto;
 	max-width: 240px;

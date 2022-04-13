@@ -46,7 +46,7 @@ export const Register = () => {
 
     return (
         <div className="container">
-        <h1 className="text-center">Register</h1>
+        <h1 className="text-center h1-register">Register</h1>
         <form className="registration-form" onSubmit={handleSubmit} encType="multipart/form-data">
             <label className="col-one-half">
                 <span className="label-text">First Name</span>
@@ -71,6 +71,7 @@ export const Register = () => {
             <label>
                 <span className="label-text">School</span>
                 <select required value={school} onChange={handleChange}  style={{width: "100%"}}>
+                    <option >Sélectionnez un établissement.</option>
                     <option value="IMTS">IMTS</option>
                     <option value="IUT Saint Malo">IUT Saint Malo</option>
                     <option value="Ecole infirmiere">Ecole infirmiere</option>

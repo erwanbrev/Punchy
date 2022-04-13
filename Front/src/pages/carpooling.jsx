@@ -6,6 +6,7 @@ import user from "../../public/assets/img/user.png"
 import { IoStar, IoLogoEuro, IoTimeOutline } from "react-icons/io5";
 import { BouttonPlus } from "../components/buttonAdd";
 import { AddPunchy } from "../components/addPunchy";
+import { ReserveCar } from "../components/reserveCar";
 
 export const Carpool = () => {
 
@@ -17,7 +18,6 @@ export const Carpool = () => {
         heure: '17h30',
         prix: '3',
         time: '15'
-
     }
 
     return (
@@ -31,14 +31,14 @@ export const Carpool = () => {
                             <span>{profil.name}</span>
                             <div className="space">
                                 <span>{profil.stars}</span>
-                                <IoStar color="#FF7A00"/>
+                                <IoStar color="#FF7A00" />
                             </div>
                         </div>
                         <div className="hDepart">
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -50,7 +50,7 @@ export const Carpool = () => {
                             <span>{profil.arrivee}</span>
                         </div>
                         <div className="time">
-                            <IoTimeOutline/>
+                            <IoTimeOutline />
                             <p>{profil.time} min</p>
                         </div>
                     </div>
@@ -65,14 +65,14 @@ export const Carpool = () => {
                             <span>{profil.name}</span>
                             <div className="space">
                                 <span>{profil.stars}</span>
-                                <IoStar color="#FF7A00"/>
+                                <IoStar color="#FF7A00" />
                             </div>
                         </div>
                         <div className="hDepart">
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -84,7 +84,7 @@ export const Carpool = () => {
                             <span>{profil.arrivee}</span>
                         </div>
                         <div className="time">
-                            <IoTimeOutline/>
+                            <IoTimeOutline />
                             <p>{profil.time} min</p>
                         </div>
                     </div>
@@ -99,14 +99,14 @@ export const Carpool = () => {
                             <span>{profil.name}</span>
                             <div className="space">
                                 <span>{profil.stars}</span>
-                                <IoStar color="#FF7A00"/>
+                                <IoStar color="#FF7A00" />
                             </div>
                         </div>
                         <div className="hDepart">
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -118,7 +118,7 @@ export const Carpool = () => {
                             <span>{profil.arrivee}</span>
                         </div>
                         <div className="time">
-                            <IoTimeOutline/>
+                            <IoTimeOutline />
                             <p>{profil.time} min</p>
                         </div>
                     </div>
@@ -133,14 +133,14 @@ export const Carpool = () => {
                             <span>{profil.name}</span>
                             <div className="space">
                                 <span>{profil.stars}</span>
-                                <IoStar color="#FF7A00"/>
+                                <IoStar color="#FF7A00" />
                             </div>
                         </div>
                         <div className="hDepart">
                             <p>Départ:</p>
                             <span>{profil.heure}</span>
                         </div>
-                        <div className="prix">
+                        <div className="prixCar">
                             <span>{profil.prix}</span>
                             <IoLogoEuro />
                         </div>
@@ -152,7 +152,7 @@ export const Carpool = () => {
                             <span>{profil.arrivee}</span>
                         </div>
                         <div className="time">
-                            <IoTimeOutline/>
+                            <IoTimeOutline />
                             <p>{profil.time} min</p>
                         </div>
                     </div>

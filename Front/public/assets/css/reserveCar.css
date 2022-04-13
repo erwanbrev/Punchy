@@ -1,0 +1,91 @@
+.reserveCar {
+    position: absolute;
+    top: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 70vh;
+    margin-left: auto;
+    color: var(--linear-two);
+    font-family: 'Futura PT';
+    font-size: 1.5rem;
+    background-color: #FFF;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+}
+    .illustration {
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+.annonce {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 35rem;
+    padding: 2rem 3rem;
+    width: 100%;
+}
+
+.column_ {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.row_ {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+    .pProfil {
+        width: 8.125rem;
+        height: 8.125rem;
+        border-radius: 50%;
+    }
+    .monProfil p {
+        font-family: 'Lobster';
+        font-size: 2.5rem;
+    }
+    .row_ span {
+        font-size: 1.8rem;
+    }
+    .lineO{
+        height: 2.2rem;
+    }
+    .depart {
+        padding: .3rem;
+        border: 1px solid #424C9B;
+        border-radius: 5px;
+        background-color: #424c9b44;
+        font-size: 20px;
+    }
+    .v2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem;
+        height: auto;
+        width: 100px;
+        border: 1px solid #FF7A00;
+        border-radius: 0.313rem;
+        font-size: 50px;
+        color: #FF7A00;
+        margin: 0;
+    }
+    .participe {
+        justify-content: space-between;
+    }
+    .row_ .btnAdd {
+        position: flex;
+        left: 0;
+    }
+    .participe .btnAdd {
+        width: auto;
+    }
+
+.button {
+    display: none;
+}

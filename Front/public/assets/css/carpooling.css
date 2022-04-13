@@ -5,7 +5,7 @@
     width: 80%;
     min-height: 100vh;
     padding: 50px 10px;
-    margin-left: 13rem;
+    margin-left: 16rem;
     flex-wrap: wrap;
     margin-bottom: 5rem;
 }
@@ -98,14 +98,14 @@
     font-size: 12px;
 }
 
-.prix {
+.prixCar {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.313rem;
     padding: 0.313rem;
     width: 55px;
-    border: 1px solid #FF7A00;
+    border: 1px solid #FF7A00;  
     border-radius: 0.313rem;
     color: #FF7A00;
 }
