@@ -87,6 +87,35 @@ router.post('/', authorize, async (req, res) => {
 	}
 });
 
+router.get('/:id', async (req, res) => {
+	const carpooling = await Carpooling.findById(req.params.id).populate('driver');
+	if (!carpooling) {
+		return res.status(404).send('Carpooling not found');
+	}
+
+	const response = {
+		id: carpooling._id,
+		startLocalisation: carpooling.startLocalisation,
+		endLocalisation: carpooling.endLocalisation,
+		startTime: carpooling.startTime,
+		endTime: carpooling.endTime,
+		repeat: carpooling.repeat,
+		peopleNumber: carpooling.peopleNumber,
+		price: carpooling.price,
+		driver: {
+			fName: carpooling.driver.fName,
+			notation: carpooling.driver.notationCar,
+			profilePicture: carpooling.driver.profilePicture
+		},
+		event: carpooling.event,
+		smoker: carpooling.smoker,
+		carType: carpooling.carType,
+		carColor: carpooling.carColor
+	};
+
+	return res.status(200).send(response);
+});
+
 router.get('/:id/participate', authorize, async (req, res) => {
 	const carpooling = await Carpooling.findOneAndUpdate(
 		{ _id: { $eq: req.params.id.toString() }, driver: { $ne: req.user._id.toString() }, $expr: { $lt: [{ $size: '$participants' }, '$peopleNumber'] } },
