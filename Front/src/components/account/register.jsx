@@ -46,7 +46,7 @@ export const Register = () => {
 
     return (
         <div className="container">
-        <h1 className="text-center">Register</h1>
+        <h1 className="text-center h1-register">Register</h1>
         <form className="registration-form" onSubmit={handleSubmit} encType="multipart/form-data">
             <label className="col-one-half">
                 <span className="label-text">First Name</span>
