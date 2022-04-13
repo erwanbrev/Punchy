@@ -3,7 +3,7 @@
     --bgArt-Hou: #E5E0FF;
 }
 
-.cont-house,
+.contain-house,
 .art-Housing {
     display: flex;
 }
@@ -13,7 +13,7 @@
     width: 80%;
     min-height: 100vh;
     padding: 50px 10px;
-    margin-left: 16rem;
+    margin-left: 20%;
     flex-wrap: wrap;
     /* margin-bottom: 5rem;
     gap: 2rem; */
@@ -22,7 +22,7 @@
 .art-Housing {
     margin-left: 6.8%;
     flex-direction: column;
-    width: 30%;
+    width: 36%;
     background-color: var(--bgArt-Hou);
     height: 23rem;
     outline: 5px solid #FFF;
@@ -33,6 +33,10 @@
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 4%;
+}
+
+.art-Housing span {
+    font-size: 100%;
 }
 
 .img-housing {
@@ -48,8 +52,8 @@
 
 .between-housing {
     display: flex;
-    justify-content: space-between;
-    margin: 0.391rem 1rem;
+    justify-content: space-evenly;
+    margin: 0.391rem -2rem;
     height: 50%;
     padding: 12px;
 }
@@ -60,40 +64,35 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.vertical-housing-left {
     align-items: flex-end;
 }
 
-.vertical-housing-right {
-    align-items: center;
-}
-
-.localization-housing span {
-    padding: .3rem;
-    border: 1px solid #424C9B;
-    border-radius: 5px;
-    background-color: #424c9b44;
-}
-
-.price-housing {
-    border: 1px solid var(--orange);
-    color: var(--orange);
-    justify-content: center;
-    padding: 2%;
-    width: 84%;
-    border-radius: 0.313rem;
-}
-
+/* parametrage de l'espacement entre picto et mot */
 .localization-housing,
 .price-housing,
 .type-housing,
 .content-housing,
 .surface-housing {
     display: flex;
-    align-items: center;
-    gap: 4%;
+    gap: .7vw;
+}
+
+.content-housing {
+    gap: 3.7vw;
+}
+
+.surface-housing {
+    gap: 5.4vw;
+}
+
+/* definition emplacement de prix */
+.price-housing {
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    justify-content: center;
+    padding: 4%;
+    width: 84%;
+    border-radius: 0.313rem;
 }
 
 .localiz-logo,

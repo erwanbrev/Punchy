@@ -21,6 +21,13 @@ export const Carpool = () => {
 			});
 	}, []);
 
+	const handleClick = e => {
+		console.log(e);
+		const a = document.querySelector(`article[data-id="${e}"] .reserveCarDiv`);
+		console.log(a);
+		a.hidden = !a.hidden;
+	};
+
 	return (
 		<div className="containerCar">
 			{data.map(profil => {
@@ -47,7 +54,10 @@ export const Carpool = () => {
 				}
 
 				return (
-					<article className="articleCar">
+					<article className="articleCar" data-id={profil.id} onClick={() => handleClick(profil.id)}>
+						<div className="reserveCarDiv" hidden>
+							<ReserveCar informations={profil} />
+						</div>
 						<img className="imgCar" src={imageCar} alt="affiche de voiture" />
 						<div className="between">
 							<div className="vertical">

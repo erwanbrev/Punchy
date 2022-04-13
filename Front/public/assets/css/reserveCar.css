@@ -3,7 +3,7 @@
     top: 2%;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 220%;
     min-height: 70vh;
     margin-left: auto;
     color: var(--linear-two);
