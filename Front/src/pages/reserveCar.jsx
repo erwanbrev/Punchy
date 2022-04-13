@@ -59,7 +59,7 @@ export const ReserveCar = () => {
                     </div>
                 </div>
                 <div className="participe row_">
-                        <div className="prix v2">
+                        <div className="prixCar v2">
                         <span>{profil.prix}</span>
                         <IoLogoEuro size="25"/>
                     </div>

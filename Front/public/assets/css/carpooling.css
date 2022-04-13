@@ -98,14 +98,14 @@
     font-size: 12px;
 }
 
-.prix {
+.prixCar {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.313rem;
     padding: 0.313rem;
     width: 55px;
-    border: 1px solid #FF7A00;
+    border: 1px solid #FF7A00;  
     border-radius: 0.313rem;
     color: #FF7A00;
 }
