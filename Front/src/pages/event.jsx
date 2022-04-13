@@ -248,6 +248,7 @@ export const Event = () => {
                 <button className="catParticipation">Je participe</button>
 
 
+
             </div>
 
             <div className="hide" id="detaileventPerso">
