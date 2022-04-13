@@ -53,7 +53,6 @@ router.post('/signup', async (req, res) => {
 			notationCar: req.body.notationCar,
 			phone: req.body.phone,
 			password: hash,
-			paypalEmail: '',
 			history: {}
 		});
 
@@ -110,27 +109,7 @@ router.get('/me', authorize, async (req, res) => {
 			return res.status(404).send('No user found');
 		}
 
-		return res.status(200).send(_.pick(user, ['fName', 'lName', 'school', 'friends', 'notationCar', 'phone', 'profilePicture', 'history', 'paypalEmail']));
-	} catch (err) {
-		console.log(err.message);
-		return res.status(500).send(err.message);
-	}
-});
-
-router.put('/me', authorize, async (req, res) => {
-	const schema = require('../schemas/updateUser');
-	const { error } = schema.validate(req.body);
-	if (error) {
-		return res.status(400).send(error.details[0].message);
-	}
-
-	try {
-		const user = await User.findOneAndUpdate(req.user, req.body, { new: true });
-		if (!user) {
-			return res.status(404).send('No user found');
-		}
-
-		return res.status(200).send(_.pick(user, ['fName', 'lName', 'school', 'friends', 'notationCar', 'phone', 'profilePicture', 'history', 'paypalEmail']));
+		return res.status(200).send(_.pick(user, ['fName', 'lName', 'school', 'friends', 'notationCar', 'phone', 'profilePicture', 'history']));
 	} catch (err) {
 		console.log(err.message);
 		return res.status(500).send(err.message);
