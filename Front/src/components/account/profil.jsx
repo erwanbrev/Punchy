@@ -4,7 +4,7 @@ import '../../../public/assets/css/Pprofil.css'
 
 
 export const Profil = () => {
-    const [body, setBody]=React.useState([])
+    const [body, setBody]=React.useState()
 
     React.useEffect(() => {
         (async() => {

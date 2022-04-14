@@ -47,7 +47,6 @@ body{
 	margin-bottom: 5%;
 }
 .container-register:before{
-	background: url('http://tfgms.com/sandbox/dailyui/bg-1.jpg') center no-repeat;
 	background-size: cover;
 	content: '';
 	-webkit-filter: blur(10px);
