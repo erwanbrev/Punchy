@@ -14,9 +14,26 @@ Content-Type: application/json
 ###
 POST http://localhost:5000/auth/signin
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjRlZjE0MDI3NzYzZmYzOTA5ODNmMTciLCJpYXQiOjE2NDkzNDA3MzYsImV4cCI6MTY0OTk0NTUzNn0.24bxoZ6DpRUs_6IlxDiQq-psHhMz6wYKW7svyVIEnjg
 
 {
-    "email": "alexandre.pro3525@gmail.com",
+    "email": "test@test.com",
     "password": "123456789"
+}
+
+###
+POST http://localhost:5000/carpooling
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjU2OWI3YjQxMzAxYjgyNTFhYzNlMjQiLCJibG9jayI6ZmFsc2UsImlhdCI6MTY0OTg1NTgyOCwiZXhwIjoxNjUwNDYwNjI4fQ.FD2dhc872zRkwshIKS4oD3DhBRK3Wjblo9A7kGiBsKc
+
+{
+    "startLocalisation": "dinard",
+    "endLocalisation": "dinan",
+    "startTime": 1749855881755,
+    "endTime": 1849855881755,
+    "price": 0,
+    "peopleNumber": 2,
+    "carType": "set",
+    "carColor": "red",
+    "repeat": "None",
+    "smoker": false
 }

@@ -1,11 +1,25 @@
+import { useState, useEffect } from 'react';
 import img from '../../public/assets/img/routeDuRock.jpg';
 import user from '../../public/assets/img/user.png';
-import { IoStar, IoLogoEuro, IoTimeOutline, IoPerson} from 'react-icons/io5';
+import { IoStar, IoLogoEuro, IoTimeOutline, IoPerson } from 'react-icons/io5';
 import '../../public/assets/css/accueil.css';
 import { ButtonAdd } from '../components/buttonAdd';
 
-
 export const Accueil = () => {
+	let [events, setEvents] = useState([]);
+
+	useEffect(() => {
+		fetch('http://localhost:5000/event/popular')
+			.then(response => {
+				return response.json();
+			})
+			.then(({ response }) => {
+				setEvents(response);
+			})
+			.catch(err => {
+				console.log(err.message);
+			});
+	}, []);
 
     let profil = {
         prix: 53,

@@ -12,7 +12,7 @@ export const Carpool = () => {
 	let [data, setData] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:3000/carpooling')
+		fetch('http://localhost:5000/carpooling')
 			.then(response => {
 				return response.json();
 			})
@@ -38,7 +38,7 @@ export const Carpool = () => {
 				const day = startDate.getDate();
 				const month = startDate.getMonth() + 1;
 				const hours = startDate.getHours();
-				const minutes = startDate.getMinutes();
+				let minutes = startDate.getMinutes();
 				if (minutes < 10) {
 					minutes = '0' + minutes;
 				}

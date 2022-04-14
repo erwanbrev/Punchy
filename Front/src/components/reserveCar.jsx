@@ -29,7 +29,7 @@ export const ReserveCar = ({ informations }) => {
 		if (!localStorage.getItem('access_token')) {
 			return navigate('/login', { replace: true });
 		}
-		fetch(`http://localhost:3000/carpooling/${informations.id}/participate`, {
+		fetch(`http://localhost:5000/carpooling/${informations.id}/participate`, {
 			headers: {
 				Authorization: 'Bearer ' + localStorage.getItem('access_token')
 			}
@@ -43,7 +43,7 @@ export const ReserveCar = ({ informations }) => {
 			})
 			.catch(err => {
 				console.log(err.message);
-				alert('Le covoiturage est complet');
+				alert(err.message);
 			});
 	};
 

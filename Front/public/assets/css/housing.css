@@ -13,10 +13,22 @@
     width: 80%;
     min-height: 100vh;
     padding: 50px 10px;
-    margin-left: 20%;
+    margin-left: 17%;
     flex-wrap: wrap;
-    /* margin-bottom: 5rem;
-    gap: 2rem; */
+}
+
+.housing-title {
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    justify-content: center;
+    font-size: 200%;
+    margin-left: 6%;
+}
+
+.art-Housing:nth-child(2),
+.art-Housing:nth-child(3) {
+    margin-top: 10%;
 }
 
 .art-Housing {

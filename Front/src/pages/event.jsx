@@ -75,8 +75,8 @@ export const Event = () => {
         }
 
         function popupinfoQuatrePerso(){
-            detaileventPerso.PersoclassList.toggle('hide');
-            sombrePerso.PersoclassList.toggle('clairPerso');
+            detaileventPerso.classList.toggle('hide');
+            sombrePerso.classList.toggle('clairPerso');
         }
 
         function popupinfoCinqPerso(){
@@ -129,12 +129,13 @@ export const Event = () => {
     )
     
     let event = {
-        titre: 'Quai des bulles à St Malo',
+        titre: 'Quai des bulles',
         prix: '20',
         datedebut: '15 Janvier 2022',
         datefin: '21 Janvier 2022',
-        lieu: '11 rue de la république, St Malo 35400',
-        participant : ['Bruce Willis ', 'Phillipe Poutou ', 'Jean Dujardin ', 'Homer Simpson ', 'Pierre Lemonnier ', 'Antoine Mounier ', 'Quentin Seurt ', 'Mathieu Peran ']
+        lieu: '39 Rue du Levant, 35400 Saint-Malo',
+        participant : ['Bruce Willis ', 'Phillipe Poutou ', 'Jean Dujardin ', 'Homer Simpson ', 'Pierre Lemonnier ', 'Antoine Mounier ', 'Quentin Seurt ', 'Mathieu Peran '],
+        description : `Quai des bulles est l'un des festival de BD les plus important de la région. Vous y découvrez de nombreux dessinateur et leur créations, un excellent moyen de découverte !`
     }
 
     let eventPerso = {
@@ -143,9 +144,9 @@ export const Event = () => {
         datedebut: '15 Janvier 2022 20h30',
         datefin: '15 Janvier 2022 22h30',
         lieu: 'Cinedol, place du Foirail, 35120 Dol-de-Bretagne',
-        participant : ['Johnny Hallyday ', 'Emmanuel Macron ', 'Jean Lassale ', 'Mathieu Peran ', 'Alexandre Touchet ', 'Erwan Brevault ', 'Jean Naymar ', 'Archibald Theobald ']
+        participant : ['Johnny Hallyday ', 'Emmanuel Macron ', 'Jean Lassale ', 'Mathieu Peran ', 'Alexandre Touchet ', 'Erwan Brevault ', 'Jean Naymar ', 'Archibald Theobald '],
+        description : `Le BDE vous propose une séance de cinéma pour aller voir ensemble le film Garfield 8.`
     }
-
     
     return (
         <div>
@@ -153,50 +154,50 @@ export const Event = () => {
             <div className="eventcontainer">
                 <div className="EventImportant">
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="Click" src={image} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{event.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="ClickDeux" src={image} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{event.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="ClickTrois" src={image} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{event.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation">Je participe !</p>
                     </article>
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="ClickQuatre" src={image} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{event.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="ClickCinq" src={image} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{event.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="ClickSix" src={image} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{event.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation">Je participe !</p>
                     </article>
 
                     <article className="evenement">
-                        <span className="titre">{event.titre}</span>
+                        <span className="titre orange">{event.titre}</span>
                         <img className="image" id="ClickSept" src={image} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <div className="priceEvent"><span className="euro orange"><CgEuro /></span><span className="prix orange">{event.prix}</span></div>
                         <p className="participation">Je participe !</p>
                     </article>
                 </div>
@@ -204,52 +205,53 @@ export const Event = () => {
             
             <div className="clairPerso" id="sombrePerso"></div>
             <div className="eventPersocontainer">
+
                 <div className="EventPerso">
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPerso" src={imagePerso} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
 
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoDeux" src={imagePerso} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
 
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoTrois" src={imagePerso} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoQuatre" src={imagePerso} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
 
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoCinq" src={imagePerso} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
 
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoSix" src={imagePerso} alt="" srcset="" />
-                        <div className="euro"><CgEuro /></div><span className="prix">{eventPerso.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
 
                     <article className="evenementPerso">
-                        <span className="titre">{eventPerso.titre}</span>
+                        <span className="titre orange">{eventPerso.titre}</span>
                         <img className="image" id="ClickPersoSept" src={imagePerso} alt="" srcset="" />
-                        <span className="prix"> <CgEuro />{event.prix}</span>
+                        <div className="priceEvent"><span className="prix orange">{eventPerso.prix}</span><span className="euro orange"><CgEuro /></span></div>
                         <p className="participation PartiPerso">Je participe !</p>
                     </article>
                 </div>
@@ -258,29 +260,45 @@ export const Event = () => {
 
             <div className="hide" id="detailevent">
                 <img className="imageDetail" src={image} alt="" srcset="" />
-                <span className="catNom grisTexte">Nom :</span><span className="detailtitre">{event.titre}</span>
-                <span className="catLieu grisTexte">Lieu :</span><span className="detaillieu">{event.lieu}</span>
-                <span className="catDebut grisTexte">Début :</span><span className="detaildebut">{event.datedebut}</span>
-                <span className="catFin grisTexte">Fin :</span><span className="detailfin">{event.datefin}</span>
-                <span className="catPrix grisTexte">Prix :</span><span className="detailprix">{event.prix} €</span>
-                <span id="catParticipant">Participants</span>
+                <span className="titreEvent catNom grisTexte">Nom :</span><span className="eventExplication detailtitre">{event.titre}</span>
+                <span className="titreEvent catLieu grisTexte">Lieu :</span><span className="eventExplication detaillieu">{event.lieu}</span>
+                <span className="titreEvent catDebut grisTexte">Début :</span><span className="eventExplication detaildebut">{event.datedebut}</span>
+                <span className="titreEvent catFin grisTexte">Fin :</span><span className="eventExplication detailfin">{event.datefin}</span>
+                <span className="titreEvent catPrix grisTexte">Prix :</span><span className="eventExplication detailprix">{event.prix} €</span>
+                <span className="detaildescription">{event.description}</span>
+                <span className=" eventPart" id="catParticipant">Participants</span>
                 <button className="catParticipation">Je participe</button>
-                <span class="hidetexte" id="ParticipantsImportants">{event.participant}</span>
-
-
-
+                <span class="hidetexte eventPart" id="ParticipantsImportants"><ul>
+                <p>{event.participant.length} participants dont :</p><br/>
+                <li>{event.participant[0]}</li>
+                <li>{event.participant[1]}</li>
+                <li>{event.participant[2]}</li>
+                <li>{event.participant[3]}</li>
+                <li>{event.participant[4]}</li>
+                <li>{event.participant[5]}</li>
+                </ul>
+                </span>
             </div>
 
             <div className="hide" id="detaileventPerso">
                 <img className="imageDetailPerso" src={imagePerso} alt="" srcset="" />
-                <span className="catPersoNom grisTexte">Nom :</span><span className="titrePerso detailPersotitre">{eventPerso.titre}</span>
-                <span className="catPersoLieu grisTexte">Lieu :</span><span className="titrePerso detailPersolieu">{eventPerso.lieu}</span>
-                <span className="catPersoDebut grisTexte">Début :</span><span className="titrePerso detailPersodebut">{eventPerso.datedebut}</span>
-                <span className="catPersoFin grisTexte">Fin :</span><span className="titrePerso detailPersofin">{eventPerso.datefin}</span>
-                <span className="catPersoPrix grisTexte">Prix :</span><span className="titrePerso detailPersoprix">{eventPerso.prix} €</span>
+                <span className="detailPersotitre">{eventPerso.titre}</span>
+                <span className="persoNomination catPersoLieu grisTexte">Lieu :</span><span className="persoCategorie titrePerso detailPersolieu">{eventPerso.lieu}</span>
+                <span className="persoNomination catPersoDebut grisTexte">Début :</span><span className="persoCategorie titrePerso detailPersodebut">{eventPerso.datedebut}</span>
+                <span className="persoNomination catPersoFin grisTexte">Fin :</span><span className="persoCategorie titrePerso detailPersofin">{eventPerso.datefin}</span>
+                <span className="persoNomination catPersoPrix grisTexte">Prix :</span><span className="persoCategorie titrePerso detailPersoprix">{eventPerso.prix} €</span>
+                <span className="detailPersodescription">{eventPerso.description}</span>
                 <span className="catTop" id="catPersoParticipant">Participants</span>
                 <button className="catTop catPersoParticipation">Je participe</button>
-                <span class="hidetexte" id="ParticipantsPerso">{eventPerso.participant}</span>
+                <span class="hidetexte" id="ParticipantsPerso"><ul>
+                <p>{eventPerso.participant.length} participants dont :</p><br/>
+                <li>{eventPerso.participant[0]}</li>
+                <li>{eventPerso.participant[1]}</li>
+                <li>{eventPerso.participant[2]}</li>
+                <li>{eventPerso.participant[3]}</li>
+                <li>{eventPerso.participant[4]}</li>
+                <li>{eventPerso.participant[5]}</li>
+                </ul></span>
             </div>
             <ButtonAdd />
         </div>            
