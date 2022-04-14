@@ -1,220 +1,218 @@
-.main{
-    display:flex;
-    flex-direction: column;
-    align-items: center;  
-    font-family: 'Futura PT', 'Open Sans', sans-serif;
-    margin-left:5rem;
-    font-size: 16px;
-    font-weight: 400;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Futura PT", "Open Sans", sans-serif;
+  margin-left: 20%;
+  font-size: 16px;
+  font-weight: 400;
+  width:80vw;  
 }
 
+/* .page-title {
+  margin: 0;
+  position: relative;
+} */
 
-.page-title{
-    margin:0;
-    position: relative;
-}
-
-
+/* Barres de filtres et recherche */
 #filterBar,
-#researchBar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background-color: #f1e9e9;
-    height:2rem;
-    margin:1rem;
-    border: #ffffff 4px solid;
-    padding:1.2rem 0;
-    border-radius: 50rem;
-    color:var(--linear-two);
-    box-shadow: 0.2rem 0.1rem 1rem  rgb(168, 168, 168);
-}
-#filterBar{
-    margin-top:4rem;
-}
-#researchBar{   
-    background-color: #f1e9e9;
-}
-
-#researchBar input{
-    border:none;
-}
-
-#filterBar label{
-    padding-left:1rem;
-}
-
-#filterBar select{
-    border-radius: 50rem;
-    padding:0.2rem;
-    border: 1px var(--linear-two) solid;
-    margin:0 2rem;
-    
-}
-
-#scoreDown,
-#scoreUp{
-    margin: 0 0.5rem;
-
-}
-#scoreDown:hover,
-#scoreUp:hover{
-    cursor:pointer;
-}
-
-.friendBlock{
-    border:0.3rem #ffffff solid;
-    border-radius: 0.5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: #E5E0FF;
-    color: var(--linear-two);
-    margin:1rem;
-    width:25rem;
-    height: 16rem;
-    box-shadow: 0.2rem 0.1rem 1rem  rgb(168, 168, 168);
-
-}
-
-.friendBlock ul {
-    list-style: none;
-   
-}
-
-.friendImg img{
-    height: 8rem;
-    border-radius: 100%;
+#researchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1e9e9;
+  height: 2rem;
+  margin: 1rem;
+  border: #ffffff 4px solid;
+  padding: 1.2rem 0;
+  border-radius: 50rem;
+  color: var(--linear-two);
+  box-shadow: 0.2rem 0.1rem 1rem rgb(168, 168, 168);
 }
 
 #filterBar img,
-#researchBar img{
-    color:white;
-    height:1.2rem;
-    padding:0 0.2rem;
+#researchBar img {
+  color: white;
+  height: 1.2rem;
+  padding: 0 0.2rem;
 }
 
-#filterBar button:hover,
-#researchBar button:hover{
-    opacity:80%;
+#filterBar {
+  margin-top: 4rem;
 }
 
-#researchBar input{
-    border-radius: 3rem;
-    height:2rem;
-    background-color: #f1e9e9;
+#filterBar label {
+  padding-left: 1rem;
+}
 
+#filterBar select {
+  border-radius: 50rem;
+  padding: 0.2rem;
+  border: 1px var(--linear-two) solid;
+  margin: 0 2rem;
+  border: 3px white solid;
+  text-align: center;
+  color: var(--linear-two);
+}
+
+#scoreDown,
+#scoreUp {
+  margin: 0 0.5rem;
+}
+
+#scoreDown:hover,
+#scoreUp:hover {
+  cursor: pointer;
+}
+
+#researchBar {
+  background-color: #f1e9e9;
+}
+
+#researchBar input {
+  border: none;
+  border-radius: 3rem;
+  height: 2rem;
+  background-color: #f1e9e9;
 }
 
 #researchBar button,
-#filterBar button{
-    border-radius: 3rem;
-    padding:0.5rem;
-    background-color: var(--linear-two);
+#filterBar button {
+  border-radius: 3rem;
+  padding: 0.5rem;
+  background-color: var(--linear-two);
 }
 
-#researchBar button:hover,
-#filterBar button:hover{
-    cursor:pointer;
-
+#filterBar button:hover,
+#researchBar button:hover {
+  opacity: 80%;
+  cursor: pointer;
 }
 
-#filterBar select{
-    border:3px white solid;
-    text-align: center;
-    color: var(--linear-two);
+/* Liste d'amis*/
+#friendsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:15%;
+  margin-bottom: 5rem;
 }
 
-#listFriends{
-    display:flex;
-    flex-wrap: wrap;
-    margin-left:18%;
-    margin-bottom:5rem;
-
-}
-.infosList li{
-    padding:0.5rem;
-    margin : 0;
-}
-
-.friendName{
-    font-size: 120%;
-    font-weight: 600;
-    white-space: nowrap;
-}
-.schoolName{
-    font-style: italic;
+.friendBlock {
+  border: 0.3rem #ffffff solid;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #e5e0ff;
+  color: var(--linear-two);
+  margin: 1rem;
+  width: 25rem;
+  height: 16rem;
+  box-shadow: 0.2rem 0.1rem 1rem rgb(168, 168, 168);
 }
 
-.punchiesNumber{
-    font-size: 150%;
-    font-family: Lobster;
-    display: flex ;
+.friendBlock ul {
+  list-style: none;
+}
+
+.friendImg {
+  align-self: flex-start;
+  margin: 2rem;
+}
+
+.friendImg img {
+  height: 8rem;
+  border-radius: 100%;
+}
+
+.friendInfos {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.friendInfos ul {
+  margin: 0;
+  padding: 0;
+}
+
+.friendInfos img {
+  height: 2rem;
+  padding-left: 0.8rem;
+}
+
+.infosList li {
+  padding: 0.7rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.schoolName {
+  font-size: 90%;
+}
+
+.friendName {
+  font-size: 120%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.schoolName {
+  font-style: italic;
+}
+
+.punchiesNumber {
+  font-size: 150%;
+  font-family: Lobster;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.profileButton {
+  padding: 0.5rem 0.7rem;
+  color: #ea7826;
+  border-radius: 2rem;
+  border: #b8bdef 2px solid;
+  margin: 1rem;
+  width: 10rem;
+  font-weight: 600;
+}
+
+.profileButton:hover {
+  cursor: pointer;
+  background-color: #e5e0ff;
+}
+
+
+
+/* Version mobile*/
+@media screen and (max-width: 600px) {
+  
+    #filterBar {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    width: 60vw;
+  }
+
+  #filterBar select,
+  #filterBar label {
+    margin: 0.5rem;
+  }
+
+  .friendBlock {
+    width: 70vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
     justify-content: center;
     align-items: center;
-    align-self: center;
-}
-
-.friendInfos{
-    
-   margin:0;
-   padding:0;
-    width:100%;
-}
-
-.friendInfos ul{
-    margin:0;
-    padding:0;
-}
-
-.friendInfos img{
-    height : 2rem;
-    padding-left:0.8rem;
-}
-
-.friendImg{
-    align-self:flex-start;
-    margin:2rem;
-}
-
-#profileButton{
-    padding: 0.5rem 0.7rem;
-    color:#EA7826;
-    border-radius: 2rem;
-    border: #B8BDEF 2px solid;
-    margin:1rem;
-    width:10rem;
-    font-weight: 600;
-}
-
-#profileButton:hover{
-    cursor:pointer;
-    background-color: #E5E0FF;
-}
-
-.infosList li{
-    padding:0.7rem;
-    display:flex;
-    align-items: center;
-    gap:0.7rem;
-}
-
-.schoolName{
-    font-size:90%;
-}
-@media screen and (max-width: 600px) {
-
-    #filterBar {
-        display: flex;
-        flex-direction: column;
-        height:15rem;
-        margin:2rem;
-        border-radius: 2rem;
-        width:60vw;
-    } 
-    #filterBar select,
-    #filterBar label{
-        margin:0.5rem;
-    }
-  
-
+    padding: none;
+  }
 }
