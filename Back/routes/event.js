@@ -64,7 +64,7 @@ router.get('/popular', async (req, res) => {
 			}
 		},
 		{ $sort: { size: 1 } }
-	]);
+	]).limit(5);
 
 	const response = [];
 	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures, users }) => {
