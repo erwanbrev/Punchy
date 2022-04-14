@@ -29,16 +29,19 @@ export const Register = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
+        const body = { fName, lName, email, password, phone, school }
+        if(profil) body.profil = profil
         const request = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify({ fName, lName, email, password, phone, school, profil })
+            body: JSON.stringify(body)
         }
         console.log(request);
     
         // requete à l'api
         fetch(`http://localhost:5000/user/signup`, request)
-        .then(res => console.log(res))
+        .then(res => res.json())
+        .then(data => console.log(data))
         .catch(err => console.log(err))
 
         navigate('/', { replace: true })

@@ -31,7 +31,7 @@ export const Profil = () => {
             <article className="articleCar">
             <div className="between">
                 <div className="vertical">
-                    <div className="profil">
+                    <div className="profil Pprofil">
                         <img className="userImage" src={body.profilePicture} alt="image de profil" />
                         <span>{body.fName}</span>
                         <div className="space">
