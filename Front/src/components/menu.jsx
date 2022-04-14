@@ -38,7 +38,11 @@ export const Navbar = (props) => {
                     <NavLink activeclassname="active" to="/event" className="nameNav" > <IoBeer className="iconMenu" color="#FFF" size='20' /> <span>Événement</span>  </NavLink>
                     <NavLink activeclassname="active" to="/carpool" className="nameNav"> <IoCarSharp className="iconMenu" color="#FFF" size='20' /> <span>Covoiturage</span></NavLink>
                     <NavLink activeclassname="active" to="/housing" className="nameNav"> <IoBusiness className="iconMenu" color="#FFF" size='20' /> <span>Logement</span></NavLink>
+                    {Authentification.isAuthenticated() ?
+                    <>
                     <NavLink activeclassname="active" to="/friends" className="nameNav"> <IoPersonAdd className="iconMenu" color="#FFF" size='20' /> <span>Amis</span></NavLink>
+                    </> : 
+                    <></>}
                 </div>
                 <div className="min-compte">
 
