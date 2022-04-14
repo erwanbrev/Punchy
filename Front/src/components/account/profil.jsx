@@ -1,4 +1,6 @@
 import React from "react";
+import { IoStar } from 'react-icons/io5';
+
 
 export const Profil = () => {
     const [body, setBody]=React.useState([])
@@ -26,13 +28,26 @@ export const Profil = () => {
 
     return (
         <div className="main-container">
-            <ul style={{marginLeft: "20%"}}>
-                <li>{body.fName}</li>
-                <li>{body.lName}</li>
-                <li>{body.phone}</li>
-                <li>{body.school}</li>
-            </ul>
-            <img src={body.profilePicture} alt="" />
+            <article className="articleCar">
+            <div className="between">
+                <div className="vertical">
+                    <div className="profil">
+                        <img className="userImage" src={body.profilePicture} alt="image de profil" />
+                        <span>{body.fName}</span>
+                        <div className="space">
+                            <span>NOTE</span>
+                            <IoStar color="#FF7A00" />
+                        </div>
+                    </div>
+                    <div className="parcour">
+                        <p>Départ:</p>
+                        <span>{body.school}</span>
+                    </div>
+                </div>
+            </div>
+            </article>
+            
         </div>
+
     )
 }
