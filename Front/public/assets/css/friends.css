@@ -190,7 +190,6 @@
   background-color: #e5e0ff;
 }
 
-
 /* Version mobile*/
 @media screen and (max-width: 600px) {
   main {
@@ -259,5 +258,4 @@
     padding: 0.3rem;
     width: 50%;
   }
-
 }
