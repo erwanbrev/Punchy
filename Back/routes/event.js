@@ -10,7 +10,7 @@ const authorize = require('./../middlewares/authorize');
 const { sendMailEvent } = require('./../nodemailer/mail');
 
 router.get('/', async (req, res) => {
-	const events = await Event.find({ validated: true });
+	const events = await Event.find({ validated: true, endDate: { $gte: Date.now() } });
 	const response = [];
 	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures }) => {
 		response.push({
@@ -28,6 +28,54 @@ router.get('/', async (req, res) => {
 
 	return res.status(200).send(response);
 });
+
+router.get('/popular', async (req, res) => {
+	const events = await Event.aggregate([
+		{
+			$match: {
+				$expr: {
+					$and: [{ $eq: ['$validated', true] }, { $gte: ['$endDate', Date.now()] }]
+				}
+			}
+		},
+		{ $unwind: '$participants' },
+		{
+			$group: {
+				_id: '$_id',
+				category: { $first: '$category' },
+				title: { $first: '$title' },
+				pictures: { $first: '$pictures' },
+				description: { $first: '$description' },
+				localisation: { $first: '$localisation' },
+				price: { $first: '$price' },
+				startDate: { $first: '$startDate' },
+				endDate: { $first: '$endDate' },
+				participants: { $push: '$participants' },
+				size: { $sum: 1 }
+			}
+		},
+		{ $sort: { size: 1 } }
+	]);
+
+	const response = [];
+	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures, participants }) => {
+		response.push({
+			id: _id,
+			category,
+			title,
+			description,
+			localisation,
+			price,
+			startDate,
+			endDate,
+			pictures,
+			participants
+		});
+	});
+
+	return res.status(200).send(response);
+});
+
 router.post('/', authorize, async (req, res) => {
 	const schema = require('../schemas/event');
 	const { error } = schema.validate(req.body);
