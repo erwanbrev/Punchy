@@ -1,94 +1,95 @@
 .accueil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin-left: 20%;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	margin-left: 20%;
+	min-height: 100vh;
 }
-    .card {
-        display: flex;
-        margin: 1rem;
-        flex-direction: column;
-        width: 50rem;
-        height: 37rem;
-        border: 10px solid #FFF;
-        border-radius: 10px; 
-        background-color: #FFF9F4;
-        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
-    }
-        .absolute {
-            position: absolute;
-            padding: 1rem 4rem;
-            background-color: #fff;
-            border-bottom-right-radius: 10px;
-            font-family: Lobster;
-            font-size: 1.563rem;
-            color: var(--linear-one);
-        }
-        .card .acAffiche {
-            height: 90%;
-            background-size: auto;
-            width: 100%;
-            border-radius: 2rem;
-        }
-        .row1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            width: 100%;
-        }
+.card {
+	display: flex;
+	margin: 1rem;
+	flex-direction: column;
+	width: 50rem;
+	height: 37rem;
+	border: 10px solid #fff;
+	border-radius: 10px;
+	background-color: #fff9f4;
+	filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+}
+.absolute {
+	position: absolute;
+	padding: 1rem 4rem;
+	background-color: #fff;
+	border-bottom-right-radius: 10px;
+	font-family: Lobster;
+	font-size: 1.563rem;
+	color: var(--linear-one);
+}
+.card .acAffiche {
+	object-fit: scale-down;
+	height: 90%;
+	background-size: auto;
+	width: 100%;
+	border-radius: 2rem;
+}
+.row1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	width: 100%;
+}
 
-        .gap {
-            display: flex;
-            gap: 2rem;
-        }
+.gap {
+	display: flex;
+	gap: 2rem;
+}
 
-        .row1 .btnAdd {
-            position: inherit;
-            width: 25%;
-            margin: 0;
-        }
-        .amis {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 0.313rem 1rem;
-            border: 1px solid #53519A;
-            border-radius: 10px;
-            font-family: 'Futura PT';
-            
-        }
-            .friends {
-                display: flex;
-                justify-content: center;
-                max-width: 8rem;
-                min-width: 7rem;
-            }
+.row1 .btnAdd {
+	position: inherit;
+	width: 25%;
+	margin: 0;
+}
+.amis {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0.313rem 1rem;
+	border: 1px solid #53519a;
+	border-radius: 10px;
+	font-family: 'Futura PT';
+}
+.friends {
+	display: flex;
+	justify-content: center;
+	max-width: 8rem;
+	min-width: 7rem;
+}
 
-            .pUser {
-                position: relative;
-                margin-left: -15px;
-                width: 2rem;
-                height: 2rem;
-                border-radius: 50%;
-                border: 1px solid #53519A;
-            }
-            .number {
-                display: flex;
-                color: #53519A;
-                align-items: center;
-                gap: .3rem;
-            }
-            .prixCar {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.313rem;
-                min-width: 4rem;
-                border: 1px solid #FF7A00;
-                border-radius: 0.313rem;
-                color: #FF7A00;
-                font-family: 'Futura PT';
-            }
+.pUser {
+	object-fit: cover;
+	position: relative;
+	margin-left: -15px;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	border: 1px solid #53519a;
+}
+.number {
+	display: flex;
+	color: #53519a;
+	align-items: center;
+	gap: 0.3rem;
+}
+.prixCar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.313rem;
+	min-width: 4rem;
+	border: 1px solid #ff7a00;
+	border-radius: 0.313rem;
+	color: #ff7a00;
+	font-family: 'Futura PT';
+}

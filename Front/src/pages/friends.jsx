@@ -22,13 +22,17 @@ export const Friends = () => {
       {/* <h1 className="page-title">Amis</h1> */}
 
 
-       {/* Barre de filtres */}
+      {/* Barre de filtres */}
       <form id="filterBar">
         <label id="labelSchool">Établissement scolaire</label>
         <select name="school">
+          <option value="institutD">Institut du Design</option>
           <option value="iut">IUT</option>
-          <option value="lyceeM">Lycée Maritime</option>
-          <option value="institutD">Institut du design</option>
+          <option value="maritime">Lycée Maritime</option>
+          <option value="institPRo">Lycée L'Institution / La Providence</option>
+          <option value="maupertuis">Lycée Maupertuis</option>
+          <option value="jc">Lycée Jacques Cartier</option>
+          <option value="marineMarchande">École de Marine Marchande</option>
         </select>
 
         <label id="labelPunchy">Score Punchy</label>
@@ -45,7 +49,7 @@ export const Friends = () => {
       </form>
 
 
-    {/* Barre de recherche */}
+      {/* Barre de recherche */}
       <form id="researchBar">
         <input type="text" name="research" />
         <button type="submit">
@@ -54,7 +58,7 @@ export const Friends = () => {
       </form>
 
 
-       {/* Liste d'amis */}
+      {/* Liste d'amis */}
       <div id="friendsList">
 
         <div className="friendBlock">
