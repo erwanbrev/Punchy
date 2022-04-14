@@ -1,11 +1,12 @@
 .containerCar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 50px;
     gap: 2rem;
-    width: 80%;
+    min-width: 80%;
+    max-width: calc(100% - 2em);
     min-height: 100vh;
-    padding: 50px 10px;
-    margin-left: 16rem;
+    margin-left: 20%;
     flex-wrap: wrap;
     margin-bottom: 5rem;
 }

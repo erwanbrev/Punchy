@@ -3,7 +3,7 @@ import '../../public/assets/css/carpooling.css';
 import imageCar from '../../public/assets/img/imageCarMin.png';
 import line from '../../public/assets/img/svg/line.svg';
 import { IoStar, IoLogoEuro, IoTimeOutline } from 'react-icons/io5';
-import { BouttonPlus } from '../components/buttonAdd';
+import { BouttonPlus, ButtonAdd } from '../components/buttonAdd';
 import { AddPunchy } from '../components/addPunchy';
 import { ReserveCar } from '../components/reserveCar';
 
@@ -20,6 +20,13 @@ export const Carpool = () => {
 				setData(result);
 			});
 	}, []);
+
+	const handleClick = e => {
+		console.log(e);
+		const a = document.querySelector(`article[data-id="${e}"] .reserveCarDiv`);
+		console.log(a);
+		a.hidden = !a.hidden;
+	};
 
 	return (
 		<div className="containerCar">
@@ -47,7 +54,10 @@ export const Carpool = () => {
 				}
 
 				return (
-					<article className="articleCar">
+					<article className="articleCar" data-id={profil.id} onClick={() => handleClick(profil.id)}>
+						<div className="reserveCarDiv" hidden>
+							<ReserveCar informations={profil} />
+						</div>
 						<img className="imgCar" src={imageCar} alt="affiche de voiture" />
 						<div className="between">
 							<div className="vertical">
@@ -83,6 +93,7 @@ export const Carpool = () => {
 					</article>
 				);
 			})}
+			<ButtonAdd /> 
 		</div>
 	);
 };
