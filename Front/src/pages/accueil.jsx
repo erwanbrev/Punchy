@@ -7,7 +7,6 @@ export const Accueil = () => {
 	let profil = {
 		prix: 53,
 		amis: 13
-        
 	};
 
 	return (

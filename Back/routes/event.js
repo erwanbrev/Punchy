@@ -38,6 +38,14 @@ router.get('/popular', async (req, res) => {
 				}
 			}
 		},
+		{
+			$lookup: {
+				from: 'users',
+				localField: 'participants',
+				foreignField: '_id',
+				as: 'users'
+			}
+		},
 		{ $unwind: '$participants' },
 		{
 			$group: {
@@ -51,6 +59,7 @@ router.get('/popular', async (req, res) => {
 				startDate: { $first: '$startDate' },
 				endDate: { $first: '$endDate' },
 				participants: { $push: '$participants' },
+				users: { $first: '$users' },
 				size: { $sum: 1 }
 			}
 		},
@@ -58,7 +67,11 @@ router.get('/popular', async (req, res) => {
 	]);
 
 	const response = [];
-	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures, participants }) => {
+	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures, users }) => {
+		const user = [];
+		users.forEach(({ _id, fName, lName, profilePicture }) => {
+			user.push({ _id, fName, lName, profilePicture });
+		});
 		response.push({
 			id: _id,
 			category,
@@ -69,7 +82,7 @@ router.get('/popular', async (req, res) => {
 			startDate,
 			endDate,
 			pictures,
-			participants
+			users: user
 		});
 	});
 
