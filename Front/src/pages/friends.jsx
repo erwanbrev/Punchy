@@ -22,12 +22,7 @@ export const Friends = () => {
     return (
         <div className="main">
             <h1 className="page-title">Amis</h1>
-            
-                <form id="researchBar">
-                    <input type="text" name="research"/>
-                    <button type="submit"><img className="loop" src={loopImg} alt="loupe"></img>
-                    </button>
-                </form>
+        
 
                 <form id="filterBar">
                     <label id="labelSchool">Établissement scolaire</label>
@@ -37,12 +32,22 @@ export const Friends = () => {
                         <option value="institutD">Institut du design</option>
                     </select>
                     <label id="labelPunchy">Score Punchy</label>
-                       <div id="iconesScore"> <MdNorth/>
+                       <div id="scoreUp"> 
+                       <MdNorth/>
+                       </div>
+                       <div id="scoreDown">
                         <MdSouth/>
                         </div>
                    
                     <button type="submit"><img className="loop" src={loopImg} alt="loupe"></img></button>
                 </form>   
+
+                <form id="researchBar">
+               
+               <input type="text" name="research"/>
+                  
+                   <button type="submit"><img className="loop" src={loopImg} alt="loupe"></img></button>
+               </form>
 
                 <div id="listFriends">
                     <div className ="friendBlock">
@@ -51,7 +56,7 @@ export const Friends = () => {
                         </div>
                         <div className="friendInfos">
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/>Saint-Malo</li>
                                     <li className="schoolName"><MdOutlineSchool/>Institut Marie-Thérèse Solacroup</li>
                                     
@@ -102,7 +107,7 @@ export const Friends = () => {
                         <div className="friendInfos">
                     
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/>Saint-Méloir</li>
                                     <li className="schoolName"><MdOutlineSchool/>Institut Marie-Thérèse Solacroup</li>  
                                     
@@ -119,7 +124,7 @@ export const Friends = () => {
                         <div className="friendInfos">
                     
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/> Saint-Malo</li>
                                     <li className="schoolName"><MdOutlineSchool/>IUT</li>  
                                     
@@ -136,7 +141,7 @@ export const Friends = () => {
                         <div className="friendInfos">
                     
                                 <ul className="infosList">
-                                    <li className="friendName"><FiUser/>Mathieu Péran</li>
+                                    <li className="friendName"><FiUser/>Mathieu Peran</li>
                                     <li className="location"><MdOutlineLocationOn/>La Fresnais</li>
                                     <li className="schoolName"><MdOutlineSchool/>Lycée Jacques-Cartier</li>  
                                     
