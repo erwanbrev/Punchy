@@ -27,14 +27,14 @@ router.get('/', async (req, res) => {
 		});
 	});
 
-	return res.status(200).send(response);
+	return res.status(200).send({ error: false, response });
 });
 
 router.post('/', authorize, async (req, res) => {
 	const schema = require('../schemas/housing');
 	const { error } = schema.validate(req.body);
 	if (error) {
-		return res.status(400).send(error.details[0].message);
+		return res.status(400).send({ error: false, message: error.details[0].message });
 	}
 
 	try {
@@ -58,27 +58,26 @@ router.post('/', authorize, async (req, res) => {
 
 		await sendMailHousing(housingData);
 
-		return res
-			.status(201)
-			.send(
-				_.pick(housingData, [
-					'localisation',
-					'surface',
-					'available',
-					'rent',
-					'furnished',
-					'type',
-					'bedroomNumber',
-					'bathroomNumber',
-					'garden',
-					'terrace',
-					'pictures',
-					'description'
-				])
-			);
+		return res.status(201).send({
+			error: false,
+			housing: _.pick(housingData, [
+				'localisation',
+				'surface',
+				'available',
+				'rent',
+				'furnished',
+				'type',
+				'bedroomNumber',
+				'bathroomNumber',
+				'garden',
+				'terrace',
+				'pictures',
+				'description'
+			])
+		});
 	} catch (err) {
 		console.log(err.message);
-		return res.status(500).send(err.message);
+		return res.status(500).send({ error: true, message: err.message });
 	}
 });
 
