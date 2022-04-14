@@ -44,6 +44,7 @@ export const Friends = () => {
 			<form id="filterBar">
 				<label id="labelSchool">Établissement scolaire</label>
 				<select name="school">
+					<option value="IMTS">IMTS</option>
 					<option value="institutD">Institut du Design</option>
 					<option value="iut">IUT</option>
 					<option value="maritime">Lycée Maritime</option>
@@ -77,7 +78,7 @@ export const Friends = () => {
 			{/* Liste d'amis */}
 			<div id="friendsList">
 				{users.map(user => {
-          console.log(user);
+					console.log(user);
 					return (
 						<div className="friendBlock">
 							<div className="friendImg">
@@ -96,7 +97,7 @@ export const Friends = () => {
 									<li className="schoolName">
 										<MdOutlineSchool />
 										{/* Institut Marie-Thérèse Solacroup */}
-                    {user.school}
+										{user.school}
 									</li>
 								</ul>
 								<div className="punchiesNumber">
