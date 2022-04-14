@@ -1,0 +1,77 @@
+.barCar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 80%;
+    padding: 3rem;
+    margin-left: 20%;
+    font-family: 'Futura PT';
+    color: var(--linear-two)
+}
+    .searchCar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 62%;
+        height: auto;
+        background-color: #B8BDEE;
+        border: 1px solid #424C9B;
+        border-radius: 30px;
+    }
+        .flex {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            gap: 1.5rem;
+            padding: .5rem 1rem;
+        }
+        .choose {
+            display: flex;
+            align-items: center;
+            min-width: 5rem;
+            gap: .5rem;
+            border-right: 2px solid #424C9B;
+        }
+
+        .choose input::placeholder {
+            color: white;
+        }
+
+        .nombre {
+            width: 30%;
+        }
+
+        .nombre:nth-child(3) {
+            border: none;
+        }
+
+        .choose input {
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+            width: 90%;
+            padding: .3rem;
+            padding-right: .5rem;
+            font-size: 0.8rem;
+            color: white!important;
+        }
+
+        .between2 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .search {
+            height: 100%;
+            border-radius: 30px;
+            padding: .8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #424C9B;
+        }
+        .searchIcon {
+            color: white;
+        } 

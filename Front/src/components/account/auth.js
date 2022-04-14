@@ -11,11 +11,11 @@ export class Authentification {
                 },
                 body: JSON.stringify({email, password}),
             })
-            .then(response => response.text())
+            .then(response => response.json())
             .then(content => {
                 // console.log(content),
                 Authentification.authenticated = true,
-                localStorage.setItem('access_token', content)
+                localStorage.setItem('token', content.token)
                 // return content.user
             } 
             )
