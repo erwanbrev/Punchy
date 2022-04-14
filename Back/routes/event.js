@@ -63,7 +63,7 @@ router.get('/popular', async (req, res) => {
 				size: { $sum: 1 }
 			}
 		},
-		{ $sort: { size: 1 } }
+		{ $sort: { size: -1 } }
 	]).limit(5);
 
 	const response = [];
