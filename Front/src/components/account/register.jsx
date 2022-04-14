@@ -55,14 +55,14 @@ export const Register = () => {
     return (
         <div className="main-container">
         <div className="container-register">
-        <h1 className="text-center h1-register">Register</h1>
+        <h1 className="text-center h1-register">Inscription</h1>
         <form className="registration-form" onSubmit={handleSubmit} encType="multipart/form-data">
             <label className="col-one-half">
-                <span className="label-text">First Name</span>
+                <span className="label-text">Prénom</span>
                 <input type="text" required value={fName} onChange={(e) => {setFName(e.target.value)}}/>
             </label>
             <label className="col-one-half">
-                <span className="label-text">Last Name</span>
+                <span className="label-text">Nom</span>
                 <input type="text" required value={lName}  onChange={(e) => {setLName(e.target.value)}} />
             </label>
             <label>
@@ -70,15 +70,15 @@ export const Register = () => {
                 <input type="text" required value={email} onChange={(e) => {setEmail(e.target.value)}} />
             </label>
             <label className="password">
-                <span className="label-text">Password</span>
+                <span className="label-text">Mot de passe</span>
                 <input type="password" required value={password} onChange={(e) => {setPassword(e.target.value)}} />
             </label>
             <label>
-                <span className="label-text">Phone</span>
+                <span className="label-text">Téléphone</span>
                 <input type="text" required value={phone} onChange={(e) => {setPhone(e.target.value)}} />
             </label>
             <label>
-                <span className="label-text">School</span>
+                <span className="label-text">Ecole</span>
                 <select required value={school} onChange={handleChange}  style={{width: "100%"}}>
                     <option >Sélectionnez un établissement.</option>
                     <option value="IMTS">IMTS</option>
@@ -92,7 +92,7 @@ export const Register = () => {
             </label>
             <input type="file" onChange={e => setFile(e.target.files[0])} />
             <div className="text-center">
-                <button type="submit" className="submit" name="register">Sign Me Up</button>
+                <button type="submit" className="btnAdd" name="register">Sign Me Up</button>
             </div>
         </form>
 
