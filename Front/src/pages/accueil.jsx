@@ -34,7 +34,7 @@ export const Accueil = () => {
 				return (
 					<div className="card">
 						<div className="absolute">{event.category}</div>
-						<img className="acAffiche" src={event.pictures[0]} alt="affiche de l'évènement" />
+						<img className="acAffiche" src={event.pictures[1]} alt="affiche de l'évènement" />
 						<div className="row1">
 							<div className="gap">
 								<div className="prixCar">
