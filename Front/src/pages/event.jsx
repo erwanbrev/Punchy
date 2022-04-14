@@ -94,7 +94,7 @@ export const Event = () => {
 				</div>
 			</div>
 			{events[1].map((event, index) => {
-				return <div className={'clairPerso sombrePerso sombrePerso' + index}></div>;
+				return <div className={'clairPerso sombrePerso sombrePerso' + index} onClick={() => clairPerso(index)}></div>;
 			})}
 			<div className="eventPersocontainer">
 				<div className="EventPerso">
