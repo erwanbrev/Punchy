@@ -47,6 +47,7 @@
 
 .iconLeft {
     position: absolute;
+    cursor: pointer;
     background-image: url(../img/svg/arrow.svg);
     top: 2%;
     right: 3%;
