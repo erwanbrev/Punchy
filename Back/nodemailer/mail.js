@@ -55,7 +55,7 @@ const sendMailEvent = async event => {
 				minute: 'numeric'
 			})}</li>
 		</ul>
-        <form method="get" action="http://localhost:3000/event/confirmed">
+        <form method="get" action="http://localhost:5000/event/confirmed">
             <input type="hidden" name="id" value="${event._id.toString()}">
             <button type="submit">Publier</button>
         </form>
@@ -128,7 +128,7 @@ const sendMailHousing = async housing => {
 				minute: 'numeric'
 			})}</li>
 		</ul>
-        <form method="get" action="http://localhost:3000/housing/confirmed">
+        <form method="get" action="http://localhost:5000/housing/confirmed">
             <input type="hidden" name="id" value="${housing._id.toString()}">
             <button type="submit">Publier</button>
         </form>
