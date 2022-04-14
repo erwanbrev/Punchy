@@ -27,6 +27,7 @@
             color: var(--linear-one);
         }
         .card .acAffiche {
+            object-fit: scale-down;
             height: 90%;
             background-size: auto;
             width: 100%;

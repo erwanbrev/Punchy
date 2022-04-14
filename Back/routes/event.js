@@ -105,7 +105,8 @@ router.post('/', authorize, async (req, res) => {
 			localisation: req.body.localisation,
 			price: req.body.price,
 			startDate: req.body.startDate,
-			endDate: req.body.endDate
+			endDate: req.body.endDate,
+			participants: [req.user._id.toString()]
 		});
 
 		const eventData = await event.save();
