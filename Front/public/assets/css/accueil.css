@@ -10,8 +10,9 @@
 	display: flex;
 	margin: 1rem;
 	flex-direction: column;
+	justify-content: space-between;
 	width: 50rem;
-	height: 37rem;
+	height: 25rem;
 	border: 10px solid #fff;
 	border-radius: 10px;
 	background-color: #fff9f4;
@@ -20,6 +21,8 @@
 .absolute {
 	position: absolute;
 	padding: 1rem 4rem;
+	left: -3px;
+	top: -3px;
 	background-color: #fff;
 	border-bottom-right-radius: 10px;
 	font-family: Lobster;
@@ -27,10 +30,10 @@
 	color: var(--linear-one);
 }
 .card .acAffiche {
-	object-fit: scale-down;
+	object-fit: fill;
+	width: auto;
 	height: 90%;
-	background-size: auto;
-	width: 100%;
+	background-size: cover;
 	border-radius: 2rem;
 }
 .row1 {
