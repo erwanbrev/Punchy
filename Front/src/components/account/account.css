@@ -27,23 +27,26 @@ body{
 	font-size: 18px;
 	/* font-family: 'Raleway', sans-serif; */
 }
-.container{
+.container-register{
 	border-radius: 0.5em;
 	box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
 	display: block;
 	max-width: 480px;
+	max-height: 100vh;
 	overflow: hidden;
-	-webkit-transform: translate(-50%, -50%);
+	/* -webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
 	padding: 2em;
-	position: absolute;
+	/* position: absolute; */
 		top: 50%;
 		left: 50%;
-		z-index: 1;
+		/* z-index: 1; */
 	width: 98%;
+	margin-left: 45%;
+	margin-bottom: 5%;
 }
-.container:before{
+.container-register:before{
 	background: url('http://tfgms.com/sandbox/dailyui/bg-1.jpg') center no-repeat;
 	background-size: cover;
 	content: '';
@@ -59,7 +62,7 @@ body{
 	transform: translate(-50%, -50%);
 	width: 100vw;
 }
-.container:after{
+.container-register:after{
 	background: rgba(255,255,255,0.6);
 	content: '';
 	display: block;

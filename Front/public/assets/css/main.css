@@ -12,11 +12,12 @@
     --textBlack: #0E0E0E;
     --linear-one: #EE8C78;
     --linear-two: #434C9B;
+    --footer-header: #e5e0ff;
 }
 
 /* ? definition de la taille du body (espace blanc entre header + footer) */
 .main-container {
-    margin-left: 16vw;
+    margin-left: 20%;
     min-height: 90vh;
     display: flex;
     flex-wrap: wrap;
@@ -33,13 +34,41 @@
 
 /*? organisation du menu laterale gauche */
 .leftMenu {
+    position: fixed;
     display: flex;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     width: 20%;
     background: linear-gradient(var(--linear-two), var(--linear-one));
-    flex-direction: column;
-    position: fixed;
+    transition: width 1s ease-in-out;
+}
+
+.iconLeft {
+    position: absolute;
+    background-image: url(../img/svg/arrow.svg);
+    top: 2%;
+    right: 3%;
+    width: 35px;
+    height: 35px;
+}
+
+.left {
+    width: 7%;
+}
+
+.left span {
+    display: none;
+}
+
+.left .iconLeft {
+    transform: rotate(180deg);
+    top: 7%;
+}
+
+.left .cont-Nav {
+    align-items: center;
+    margin-top: 5rem;
 }
 
 .leftMenu a {
@@ -56,8 +85,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* align-items: flex-start; */
     min-height: 12rem;
-    width: 48%;
+    /* width: 65%; */
 }
 
 .nameNav {
@@ -71,16 +101,21 @@
 .min-compte {
     position: absolute;
     bottom: 5%;
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 /* ! nav button more higher onClick */
-.active.nameNav span {
+.active.nameNav {
     font-size: 1.4rem;
-    margin-left: 0rem;
+    margin-left: -.4rem;
+}
+
+.active .iconMenu {
+    height: 30px;
+    width: 30px;
 }
 
 
@@ -99,7 +134,7 @@
 
 #copy,
 .mobile-head {
-    background: #e5e0ff;
+    background: var(--footer-header);
 }
 
 /* !logo */
@@ -112,17 +147,6 @@
 #logo-mobile {
     display: none;
 }
-
-.leftMenu::after {
-    content: '';
-    position: absolute;
-    background-image: url(../img/svg/arrow.svg);
-    top: 2%;
-    right: 3%;
-    width: 35px;
-    height: 35px;
-}
-
 
 /* ?format plein écran mac os x */
 

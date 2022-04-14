@@ -1,13 +1,22 @@
-.eventcontainer {
+/*! Les cartes. */
+/*! Les cartes. */
+/*! Les cartes. */
+/*! Les cartes. */
+
+.eventcontainer, .eventPersocontainer {
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 5vw;
-    height: 90vh;
+    height: 87vh;
     min-height: 30vh;
     padding: 50px 15px;
     margin-left: 20vw;
     flex-wrap: wrap;
+}
+
+.eventPersocontainer{
+    height: 45vh;
 }
 
 .evenement{
@@ -16,84 +25,135 @@
     height: 65vh;
     margin-top: 5vh;
     margin-left: 3vw;
-    background-color: rgba(255, 212, 120, 0.9);
+    background-color: #E5E0FF;
+    outline: 5px solid #FFF;
+    filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    padding: 0.5%;
+}
+
+.evenementPerso{
+    display: grid;
+    grid: repeat(3, auto);
+    height: 40vh;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    background-color: #E5E0FF;
     outline: 5px solid #FFF;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
     padding: 0.5%;
 }
 
-.evenement:first-child{
-    margin-left: 1vw;
+.evenement:first-child, .evenementPerso:first-child{
+    margin-left: 2vw;
 }
 
-.evenement:last-child{
-    margin-right: 1vw;
+.evenement:last-child, .evenementPerso:last-child{
+    margin-right: 2vw;
 }
 
-.evenement:hover{
+.evenement:hover, .evenementPerso:hover{
     outline: 5px solid #454D9A;
 }
 
-.evenement p:hover{
-    color:#EC8B78;
+.evenement p:hover, .evenementPerso p:hover{
+    color:#E5E0FF;
 }
 
-.evenement p{
+.evenement p, .evenementPerso p{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-    .titre{
-        grid-row: 1;
-        grid-column: 1/3;
-        text-align: center;
-        font-family: 'Futura', 'Open Sans', sans-serif;
-    }
+.titre{
+    grid-row: 1;
+    grid-column: 1/3;
+    text-align: center;
+    font-family: 'Futura', 'Open Sans', sans-serif;
+}
 
-    .image{
-        grid-row: 2;
-        grid-column: 1/3;
-    }
+.image{
+    grid-row: 2;
+    grid-column: 1/3;
+}
 
-    .prix{
-        grid-row: 3;
-        grid-column: 1;
-        margin-left: 20px;
-        margin-top: 5px;
-        height: 35px;
-    }
+.prix{
+    grid-row: 3;
+    grid-column: 1;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 35px;
+}
 
-    .euro{
-        grid-row: 3;
-        grid-column: 1;
-        margin-left: -10px;
-        font-size: 30px;
-        margin-top: 7px;
-    }
+.euro{
+    grid-row: 3;
+    grid-column: 1;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: 7px;
+}
 
-    .participation{
-        grid-row: 3;
-        grid-column: 2/3;
-        font-family: 'Futura', 'Open Sans', sans-serif;
-        font-weight: 400;
-        color: var(--linear-two);
-        text-align: center;
-        
-    }
+.participation{
+    grid-row: 3;
+    grid-column: 2/3;
+    font-family: 'Futura', 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--linear-two);
+    text-align: center;   
+}
 
-#detailevent{
-    width: 40vw;
+.EventImportant, .EventPerso{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.EventPerso{
+    height: 50vh;
+    margin-top: -9vh;
+}
+
+
+.EventImportant::-webkit-scrollbar, .EventPerso::-webkit-scrollbar {
+    display: none;
+}
+
+.EventImportant img{
+    height: 55vh;
+}
+
+.evenementPerso img{
     height: 30vh;
-    background-color: #C97E7Fe6;
+}
+
+#sombre, #sombrePerso{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.529);
+    position: fixed;
+    display: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.clair, .clairPerso{
+    display: none;
+}
+
+#detailevent, #detaileventPerso{
+    width: 60vw;
+    height: 50vh;
+    background-color: #E5E0FFe6;
     outline: 5px solid #FFF;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
     padding: 1%;
     position: absolute;
-    margin-top: -50vh;
-    margin-left: 50vw;
+    top: 20%;
+    right: -15%;
     transform: translateX(-50%);
     transform: translateY(-50%);
     display: grid;
@@ -102,6 +162,16 @@
     position: fixed;
     font-family: 'Futura', 'Open Sans', sans-serif;
     font-weight: 400;
+}
+
+#detaileventPerso{
+    height: 65vh;
+    width: 50vw;
+    top: 7%;
+    right: -8%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+
 }
 
 .hide{
@@ -132,6 +202,18 @@
     grid-column: 2
 }
 
+#catParticipant{
+    grid-row: 7;
+    grid-column: 2;
+    background-color: #E5E0FF;
+    border-radius: 10px 10px 0 0;
+    border:#454D9A 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
     .detailtitre{
         grid-row: 2;
         grid-column: 3
@@ -150,33 +232,171 @@
     }
     .detailprix{
         grid-row: 6;
+        grid-column: 3;
+        margin-bottom: 30px;
+    }
+
+    .imageDetail{
+        grid-row: 1/10;
+        grid-column: 1;
+        height: 45vh;
+        display: absolute;
+    }
+
+    #ParticipantsImportants, #ParticipantsPerso{
+        grid-row: 8;
+        background-color: #E5E0FF;
+        border: 1px #454D9A solid;
+        position: absolute;
+        margin-left: 284px;
+        margin-top: -1px;
+        color: #454D9A;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 13px;
+        width: 200px;
+    }
+
+    .catParticipation{
+        grid-row: 7;
+        grid-column: 4;
+        background-color: #E5E0FF;
+        border-radius: 10px;
+        border:#454D9A 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 200px;
+        margin-left: -15vw;
+    }
+
+    .catParticipation:hover{
+        background-color: #454D9A;
+        color: #E5E0FF;
+    }
+
+    .catPersoNom{
+        grid-row: 1;
+        grid-column: 3
+    }
+    
+    .catPersoLieu{
+        grid-row: 3;
+        grid-column: 3
+    }
+    
+    .catPersoDebut{
+        grid-row: 4;
+        grid-column: 3
+    }
+    .catPersoFin{
+        grid-row: 5;
+        grid-column: 3
+    }
+    
+    .catPersoPrix{    
+        grid-row: 6;
         grid-column: 3
     }
 
-.EventImportant{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    .detailPersotitre{
+        grid-row: 1;
+        grid-column: 4/6
+    }
+    .detailPersolieu{
+        grid-row: 3;
+        grid-column: 4/6
+    }
+    .detailPersodebut{
+        grid-row: 4;
+        grid-column: 4/6
+    }
+    .detailPersofin{
+        grid-row: 5;
+        grid-column: 4/6
+    }
+    .detailPersoprix{
+        grid-row: 6;
+        grid-column: 4/6;
+        margin-bottom: 30px;
+    }
+
+    .imageDetailPerso{
+        margin-left: 4vw;
+        grid-row: 2;
+        grid-column: 3/6;
+        height: 30vh;
+        display: absolute;
+    }
+
+    .catPersoParticipation{
+        grid-row: 7;
+        grid-column: 3;
+        display: flex;
+    }
+
+    #ParticipantsPerso{
+        grid-row: 8;
+        grid-column: 1;
+        margin-top: -20vh;
+        width: 200px;
+        position: absolute;
+        padding: 10px;
+        margin-left: 45px;
+        margin-top: 0px;
+    }
+
+    #catPersoParticipant{
+        grid-row: 8;
+        grid-column: 3;
+        background-color: #E5E0FF;
+        border-radius: 10px 10px 0 0;
+        border:#454D9A 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 200px;
+    }
+
+
+    .catPersoParticipation{
+        grid-row: 8;
+        grid-column: 5/6;
+        margin-left: -10vw;
+        background-color: #E5E0FF;
+        border-radius: 10px;
+        border:#454D9A 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px; 
+        width: 200px;   
+        margin-left: -20vw;
+        width: 10vw;
+    }
+
+    .catPersoParticipation:hover{
+        background-color: #454D9A;
+        color: #E5E0FF;
+    }
+    
+    .catTop{
+        margin-top: -5vh;
+    }
+
+    .titrePerso{
+        margin-left: -10%;
+    }
+
+.grisTexte{
+    color:rgb(87, 87, 87);
 }
 
-
-.EventImportant::-webkit-scrollbar, .EventPerso::-webkit-scrollbar {
-    display: none;
+.hidetexte{
+    visibility: hidden;
 }
 
-.EventImportant img, .EventPerso img{
-    height: 55vh;
-}
-
-#sombre{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.529);
-    position: fixed;
-    display: absolute;
-    z-index: 1;
-}
-
-.clair{
-    display: none;
+.showtexte{
+    visibility: visible;
 }

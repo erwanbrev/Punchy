@@ -3,7 +3,7 @@ import '../../public/assets/css/carpooling.css';
 import imageCar from '../../public/assets/img/imageCarMin.png';
 import line from '../../public/assets/img/svg/line.svg';
 import { IoStar, IoLogoEuro, IoTimeOutline } from 'react-icons/io5';
-import { BouttonPlus } from '../components/buttonAdd';
+import { BouttonPlus, ButtonAdd } from '../components/buttonAdd';
 import { AddPunchy } from '../components/addPunchy';
 import { ReserveCar } from '../components/reserveCar';
 
@@ -11,7 +11,7 @@ export const Carpool = () => {
 	let [data, setData] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:3000/carpooling')
+		fetch('http://localhost:5000/carpooling')
 			.then(response => {
 				return response.json();
 			})
@@ -21,6 +21,13 @@ export const Carpool = () => {
 			});
 	}, []);
 
+	const handleClick = e => {
+		console.log(e);
+		const a = document.querySelector(`article[data-id="${e}"] .reserveCarDiv`);
+		console.log(a);
+		a.hidden = !a.hidden;
+	};
+
 	return (
 		<div className="containerCar">
 			{data.map(profil => {
@@ -28,7 +35,7 @@ export const Carpool = () => {
 				const day = startDate.getDate();
 				const month = startDate.getMonth() + 1;
 				const hours = startDate.getHours();
-				const minutes = startDate.getMinutes();
+				let minutes = startDate.getMinutes();
 				if (minutes < 10) {
 					minutes = '0' + minutes;
 				}
@@ -47,7 +54,10 @@ export const Carpool = () => {
 				}
 
 				return (
-					<article className="articleCar">
+					<article className="articleCar" data-id={profil.id} onClick={() => handleClick(profil.id)}>
+						<div className="reserveCarDiv" hidden>
+							<ReserveCar informations={profil} />
+						</div>
 						<img className="imgCar" src={imageCar} alt="affiche de voiture" />
 						<div className="between">
 							<div className="vertical">
@@ -83,6 +93,7 @@ export const Carpool = () => {
 					</article>
 				);
 			})}
+			<ButtonAdd /> 
 		</div>
 	);
 };
