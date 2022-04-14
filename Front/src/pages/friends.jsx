@@ -16,13 +16,11 @@ import { MdNorth } from "react-icons/md";
 import { MdSouth } from "react-icons/md";
 
 export const Friends = () => {
-
   return (
     <div className="main">
       {/* <h1 className="page-title">Amis</h1> */}
 
-
-       {/* Barre de filtres */}
+      {/* Barre de filtres */}
       <form id="filterBar">
         <label id="labelSchool">Établissement scolaire</label>
         <select name="school">
@@ -31,12 +29,14 @@ export const Friends = () => {
           <option value="institutD">Institut du design</option>
         </select>
 
-        <label id="labelPunchy">Score Punchy</label>
-        <div id="scoreUp">
-          <MdNorth />
-        </div>
-        <div id="scoreDown">
-          <MdSouth />
+        <div id="scoreBox">
+          <label id="labelPunchy">Score Punchy</label>
+          <div id="scoreUp">
+            <MdNorth />
+          </div>
+          <div id="scoreDown">
+            <MdSouth />
+          </div>
         </div>
 
         <button type="submit">
@@ -44,8 +44,7 @@ export const Friends = () => {
         </button>
       </form>
 
-
-    {/* Barre de recherche */}
+      {/* Barre de recherche */}
       <form id="researchBar">
         <input type="text" name="research" />
         <button type="submit">
@@ -53,10 +52,8 @@ export const Friends = () => {
         </button>
       </form>
 
-
-       {/* Liste d'amis */}
+      {/* Liste d'amis */}
       <div id="friendsList">
-
         <div className="friendBlock">
           <div className="friendImg">
             <img src={friendImg1} />

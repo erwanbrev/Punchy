@@ -55,6 +55,10 @@
   color: var(--linear-two);
 }
 
+#scoreBox{
+    display:flex;
+}
+
 #scoreDown,
 #scoreUp {
   margin: 0 0.5rem;
@@ -190,6 +194,11 @@
 
 /* Version mobile*/
 @media screen and (max-width: 600px) {
+    main {
+        display:flex;
+        flex-direction: column;
+        width:100vw;
+    }
   
     #filterBar {
     display: flex;
@@ -205,14 +214,52 @@
     margin: 0.5rem;
   }
 
+  #friendsList{
+    margin:0;
+  }
+
   .friendBlock {
     width: 70vw;
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     display: flex;
     flex-direction: column;
-    height: 30rem;
+    height: 18rem;
     justify-content: center;
     align-items: center;
     padding: none;
+    font-size: 90%;
+  }
+
+  .friendImg{
+      padding:0;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin:0.5rem 0 0 0 ;
+  }
+
+  .friendImg img{
+      height:6rem;
+      padding:0.5rem;
+  }
+ 
+  .infosList li{
+      padding:0.2rem;
+      margin:0;
+  }
+
+  .punchiesNumber {
+      margin:0.5rem;
+  }
+
+  .profileButton{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom:1rem;
+      padding:0.3rem;
+      width:50%;
+      
   }
 }
