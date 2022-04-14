@@ -1,5 +1,6 @@
 import React from "react";
 import { IoStar } from 'react-icons/io5';
+import '../../../public/assets/css/Pprofil.css'
 
 
 export const Profil = () => {
@@ -11,7 +12,7 @@ export const Profil = () => {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json',
                 //recupérer l'identification pour la requete
-                            'authorization': 'bearer ' + localStorage.getItem('access_token')}
+                            'authorization': 'bearer ' + localStorage.getItem('token')}
             }
         
             // requete à l'api
@@ -28,20 +29,21 @@ export const Profil = () => {
 
     return (
         <div className="main-container">
-            <article className="articleCar">
+            <article className="articleCar Pprofil">
             <div className="between">
                 <div className="vertical">
-                    <div className="profil Pprofil">
-                        <img className="userImage" src={body.profilePicture} alt="image de profil" />
-                        <span>{body.fName}</span>
+                    <div className="profil">
+                        <img className="userImage" src={body.user.profilePicture} alt="image de profil" />
+                        <p>Name :</p>
+                        <span>{body.user.fName}</span>
                         <div className="space">
                             <span>NOTE</span>
                             <IoStar color="#FF7A00" />
                         </div>
                     </div>
                     <div className="parcour">
-                        <p>Départ:</p>
-                        <span>{body.school}</span>
+                        <p>School:</p>
+                        <span>{body.user.school}</span>
                     </div>
                 </div>
             </div>

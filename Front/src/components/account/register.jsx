@@ -41,7 +41,7 @@ export const Register = () => {
         // requete à l'api
         fetch(`http://localhost:5000/user/signup`, request)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => localStorage.setItem('token', data.token))
         .catch(err => console.log(err))
 
         navigate('/', { replace: true })
