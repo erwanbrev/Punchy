@@ -16,8 +16,10 @@
         align-items: center;
         width: 62%;
         height: auto;
-        background-color: #B8BDEE;
-        border: 1px solid #424C9B;
+        background-color: #f1e9e9;
+        color: var(--linear-two);
+	    box-shadow: 0.2rem 0.1rem 1rem rgb(168, 168, 168);
+        border: #ffffff 4px solid;
         border-radius: 30px;
     }
         .flex {
@@ -36,7 +38,7 @@
         }
 
         .choose input::placeholder {
-            color: white;
+            color: var(--linear-two);
         }
 
         .nombre {
@@ -54,8 +56,8 @@
             width: 90%;
             padding: .3rem;
             padding-right: .5rem;
-            font-size: 0.8rem;
-            color: white!important;
+            font-size: 0.9rem;
+            color: var(--linear-two);
         }
 
         .between2 {
@@ -74,4 +76,7 @@
         }
         .searchIcon {
             color: white;
+        } 
+        .searchIcon:hover {
+            cursor:pointer;
         } 

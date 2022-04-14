@@ -85,6 +85,7 @@
 	border-radius: 3rem;
 	padding: 0.5rem;
 	background-color: var(--linear-two);
+    border:none;
 }
 
 #filterBar button:hover,
