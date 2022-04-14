@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 		});
 	});
 
-	return res.status(200).send(response);
+	return res.status(200).send({ error: false, response });
 });
 
 router.get('/popular', async (req, res) => {
@@ -36,6 +36,14 @@ router.get('/popular', async (req, res) => {
 				$expr: {
 					$and: [{ $eq: ['$validated', true] }, { $gte: ['$endDate', Date.now()] }]
 				}
+			}
+		},
+		{
+			$lookup: {
+				from: 'users',
+				localField: 'participants',
+				foreignField: '_id',
+				as: 'users'
 			}
 		},
 		{ $unwind: '$participants' },
@@ -51,14 +59,19 @@ router.get('/popular', async (req, res) => {
 				startDate: { $first: '$startDate' },
 				endDate: { $first: '$endDate' },
 				participants: { $push: '$participants' },
+				users: { $first: '$users' },
 				size: { $sum: 1 }
 			}
 		},
 		{ $sort: { size: 1 } }
-	]);
+	]).limit(5);
 
 	const response = [];
-	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures, participants }) => {
+	events.forEach(({ _id, category, title, description, localisation, price, startDate, endDate, pictures, users }) => {
+		const user = [];
+		users.forEach(({ _id, fName, lName, profilePicture }) => {
+			user.push({ _id, fName, lName, profilePicture });
+		});
 		response.push({
 			id: _id,
 			category,
@@ -69,18 +82,18 @@ router.get('/popular', async (req, res) => {
 			startDate,
 			endDate,
 			pictures,
-			participants
+			users: user
 		});
 	});
 
-	return res.status(200).send(response);
+	return res.status(200).send({ error: false, response });
 });
 
 router.post('/', authorize, async (req, res) => {
 	const schema = require('../schemas/event');
 	const { error } = schema.validate(req.body);
 	if (error) {
-		return res.status(400).send(error.details[0].message);
+		return res.status(400).send({ error: true, message: error.details[0].message });
 	}
 
 	try {
@@ -99,10 +112,13 @@ router.post('/', authorize, async (req, res) => {
 
 		await sendMailEvent(eventData);
 
-		return res.status(201).send(_.pick(eventData, ['category', 'title', 'pictures', 'description', 'localisation', 'price', 'startDate', 'endDate']));
+		return res.status(201).send({
+			error: false,
+			event: _.pick(eventData, ['category', 'title', 'pictures', 'description', 'localisation', 'price', 'startDate', 'endDate'])
+		});
 	} catch (err) {
 		console.log(err.message);
-		return res.status(500).send(err.message);
+		return res.status(500).send({ error: true, message: err.message });
 	}
 });
 
@@ -119,11 +135,11 @@ router.get('/:id/participate', authorize, async (req, res) => {
 	);
 
 	if (!event) {
-		return res.status(404).send('Event not found');
+		return res.status(404).send({ error: true, message: 'Event not found' });
 	}
 	await User.findOneAndUpdate(req.user, { $addToSet: { 'history.event': event._id } });
 
-	return res.status(201).send(event);
+	return res.status(201).send({ error: false, event });
 });
 
 module.exports = router;
