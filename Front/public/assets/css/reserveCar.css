@@ -18,6 +18,11 @@
         background-position: center;
         border-radius: 5px;
     }
+
+.toggle {
+    display: block;
+}
+
 .annonce {
     display: flex;
     flex-direction: column;

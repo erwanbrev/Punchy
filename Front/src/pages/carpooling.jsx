@@ -5,6 +5,7 @@ import line from '../../public/assets/img/svg/line.svg';
 import { IoStar, IoLogoEuro, IoTimeOutline } from 'react-icons/io5';
 import { BouttonPlus, ButtonAdd } from '../components/buttonAdd';
 import { AddPunchy } from '../components/addPunchy';
+import { SearchBarCar } from '../components/searchBarCar';
 import { ReserveCar } from '../components/reserveCar';
 
 export const Carpool = () => {
@@ -29,7 +30,9 @@ export const Carpool = () => {
 	};
 
 	return (
-		<div className="containerCar">
+		<div>
+			<SearchBarCar />
+			<div className="containerCar">
 			{data.map(profil => {
 				const startDate = new Date(profil.startTime);
 				const day = startDate.getDate();
@@ -52,7 +55,6 @@ export const Carpool = () => {
 				if (isNaN(note)) {
 					note = 'Ø';
 				}
-
 				return (
 					<article className="articleCar" data-id={profil.id} onClick={() => handleClick(profil.id)}>
 						<div className="reserveCarDiv" hidden>
@@ -93,7 +95,8 @@ export const Carpool = () => {
 					</article>
 				);
 			})}
-			<ButtonAdd /> 
+			<ButtonAdd onClick={() => setPopup()} />
+			</div>
 		</div>
 	);
 };

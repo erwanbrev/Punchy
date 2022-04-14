@@ -2,18 +2,21 @@ import img from '../../public/assets/img/routeDuRock.jpg';
 import user from '../../public/assets/img/user.png';
 import { IoStar, IoLogoEuro, IoTimeOutline, IoPerson} from 'react-icons/io5';
 import '../../public/assets/css/accueil.css';
+import { ButtonAdd } from '../components/buttonAdd';
 
 
 export const Accueil = () => {
 
     let profil = {
         prix: 53,
-        amis: 13
+        amis: 13,
+        activite: 'Festival'
     }
 
     return (
         <div className="accueil">
             <div className="card">
+                <div className="absolute">{profil.activite}</div>
                 <img className='acAffiche' src={img} alt="affiche de l'évènement" />
                 <div className="row1">
                     <div className="gap">
@@ -37,6 +40,7 @@ export const Accueil = () => {
                     <button className='btnAdd'>Je participe</button>
                 </div>
             </div>
+            <ButtonAdd />
             <div className="card">
                 <img className='acAffiche' src={img} alt="affiche de l'évènement" />
                 <div className="row1">
