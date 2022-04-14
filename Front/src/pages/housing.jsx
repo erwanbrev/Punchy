@@ -24,27 +24,22 @@ export const Housing = () => {
                 {/* Barre de filtres */}
                 <form id="filterBarH">
                     <label>Trier</label>
-                    <select name="n-localization">
-                        <option value="institutD">Localisation</option>
-                        {/* entrer une localisation */}
-                    </select>
-                    <select name="n-surface" >
-                        <option value="iut">Surface</option>
-                        {/* entrer une surface */}
-                    </select>
+                    <input placeholder="Localisation" type="text" />
+                    <input placeholder="Surface m²" type="number" />
                     <select name="n-price" >
                         <option value="maritime">Prix</option>
                         {/* intervalle de prix */}
                     </select>
                     <select name="n-content" >
-                        <option value="maupertuis">Meublé</option>
-                        <option value="maupertuis">Non meublé</option>
+                        <option value="content">Meublé</option>
+                        <option value="no-content">Non meublé</option>
                     </select>
                     <select name="n-type" >
-                        <option value="institPro">Type</option>
+                        <option value="type">Type</option>
                         <option value="flat">Appartement</option>
                         <option value="home">Maison</option>
                     </select>
+
                     <label>Score Punchy</label>
                     <div id="scoreUp">
                         <MdNorth />

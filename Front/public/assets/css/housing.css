@@ -1,11 +1,13 @@
 :root {
     --orange: #FF7A00;
     --bgArt-Hou: #E5E0FF;
+    --linear-two: #434C9B;
 }
 
 /* Barres de filtres et recherche */
 #filterBarH,
-#filterBarH select {
+#filterBarH select,
+#filterBarH input {
     border-radius: 50rem;
 }
 
@@ -36,9 +38,9 @@
     padding-left: 1rem;
 }
 
-#filterBarH select {
+#filterBarH select,
+#filterBarH input {
     padding: 0.2rem;
-    border: 1px var(--linear-two) solid;
     margin: 0 .8rem;
     border: 3px white solid;
     text-align: center;
@@ -49,6 +51,10 @@
     background-color: var(--linear-two);
     border-radius: 3rem;
     padding: 0.5rem;
+}
+
+#filterBarH input {
+    width: 12%;
 }
 
 .contain-house,
@@ -79,6 +85,7 @@
     color: var(--linear-two);
     cursor: pointer;
     border-radius: 5px;
+    outline: 5px solid #fff;
 }
 
 .art-Housing:nth-child(2),
