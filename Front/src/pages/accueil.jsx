@@ -24,7 +24,7 @@ export const Accueil = () => {
 	}, []);
 
 	const moreInfos = () => {
-		navigate('/carpool', { replace: true });
+		navigate('/event', { replace: true });
 	};
 
 	return (
