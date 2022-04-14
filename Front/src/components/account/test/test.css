@@ -28,7 +28,6 @@ body{
 	width: 98%;
 }
 .container:before{
-	background: url('http://tfgms.com/sandbox/dailyui/bg-1.jpg') center no-repeat;
 	background-size: cover;
 	content: '';
 	-webkit-filter: blur(10px);

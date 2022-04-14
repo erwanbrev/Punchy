@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoBeer, IoCarSharp, IoBusiness, IoPersonAdd, IoPersonCircle } from "react-icons/io5";
-import { Link, NavLink, NavNavLink } from "react-router-dom";
+import { Link, NavLink, NavNavLink, useNavigate } from "react-router-dom";
+import { Authentification } from "./account/auth";
 import logo from "./../../public/assets/img/svg/logo.svg";
 import "../../public/assets/css/main.css"
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+    const navigate = useNavigate()
+
+
+    useEffect(() => {
+        console.log('authMenu', Authentification.isAuthenticated())
+    }, [navigate])
 
     const leftMenu = () => {
         const a = document.querySelector('.leftMenu');
@@ -35,16 +42,24 @@ export const Navbar = () => {
                 </div>
                 <div className="min-compte">
 
-                    <NavLink to="/profil" className="nameNav">
-                        <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Profil</span>
-                    </NavLink>
-
-                    <NavLink to="/login" className="nameNav">
-                        <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Connexion</span>
-                    </NavLink>
-                    <NavLink to="/register" className="nameNav">
-                        <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Inscription</span>
-                    </NavLink>
+                    {Authentification.isAuthenticated() ?
+                        // Si authentifier affiche btn profil
+                        <>
+                            <NavLink to="/profil" className="nameNav">
+                                <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Profil</span>
+                            </NavLink>
+                        </>
+                        // sinon affiche inscription/connexion
+                        :
+                        <>
+                            <NavLink to="/login" className="nameNav">
+                                <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Connexion</span>
+                            </NavLink>
+                            <NavLink to="/register" className="nameNav">
+                                <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Inscription</span>
+                            </NavLink>
+                        </>
+                    }
                 </div>
             </nav >
 
