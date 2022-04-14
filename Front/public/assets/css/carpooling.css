@@ -1,7 +1,7 @@
 .containerCar {
 	display: flex;
-	justify-content: flex-start;
-	padding: 50px;
+	justify-content: center;
+	padding: 2rem;
 	gap: 2rem;
 	min-width: 80%;
 	max-width: calc(100% - 2em);
@@ -14,7 +14,7 @@
 .articleCar {
 	display: flex;
 	flex-direction: column;
-	width: 17rem;
+	width: 19rem;
 	background-color: #e5e0ff;
 	height: 23rem;
 	outline: 5px solid #fff;
@@ -24,6 +24,7 @@
 	font-weight: 400;
 	color: var(--linear-two);
 	cursor: pointer;
+	z-index: 200;
 }
 
 .articleCar .imgCar {
@@ -46,6 +47,10 @@
 	align-items: center;
 	margin-top: -3.2rem;
 }
+	.name {
+		font-family: 'Lobster';
+		font-size: 1.3rem;
+	}
 
 .articleCar .userImage {
 	object-fit: cover;
@@ -59,7 +64,8 @@
 
 .space {
 	display: flex;
-	gap: 1rem;
+	align-items: center;
+	gap: .5rem;
 }
 
 .line {
@@ -82,14 +88,15 @@
 .parcour {
 	display: flex;
 	flex-direction: column;
-	margin-top: 5px;
 	align-items: center;
+	margin-top: .1rem;
 }
 
 .hDepart {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	text-align: center;
+	gap: .5rem;
 }
 
 .hDepart span {
@@ -97,7 +104,10 @@
 	border: 1px solid #424c9b;
 	border-radius: 5px;
 	background-color: #424c9b44;
-	font-size: 12px;
+	font-size: 15px;
+}
+.long {
+	text-align: center;
 }
 
 .prixCar {
@@ -115,8 +125,10 @@
 .time {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: .5rem;
 	font-size: 18px;
-	padding: 0.313rem;
+	padding: 0.3rem;
 	border: 1px solid var(--linear-two);
 	border-radius: 0.313rem;
 }
