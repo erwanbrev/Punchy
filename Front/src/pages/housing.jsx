@@ -1,14 +1,15 @@
 import React from "react";
 import "../../public/assets/css/housing.css"
 import picHouse from "../../public/assets/img/dinan-yannick-dufils-bN7Ae_grzZw-unsplash.jpeg"
-import { IoStar, IoLogoEuro, IoLocationSharp, IoPieChart, IoPodium, IoStorefront } from "react-icons/io5";
+import loopImg from "../../public/assets/img/loop.png";
+import { IoLogoEuro, IoLocationSharp, IoPieChart, IoPodium, IoStorefront } from "react-icons/io5";
+import { MdSouth, MdNorth } from "react-icons/md";
 import { ButtonAdd } from "../components/buttonAdd";
 
 export const Housing = () => {
 
     let contentHouse = {
         name: 'Quentin',
-        stars: 5,
         localization: 'Dinan',
         surface: '9m2',
         price: '450',
@@ -16,17 +17,47 @@ export const Housing = () => {
         content: 'Meublé',
         type: 'Appartement'
     }
-    function followNavbar(){
-        
-    }
 
     return (
         <div>
-            {/* 1er article */}
             <div className="contain-house">
-                <header className="housing-title">
-                    <h1>Logement</h1>
-                </header>
+                {/* Barre de filtres */}
+                <form id="filterBarH">
+                    <label>Trier</label>
+                    <select name="n-localization">
+                        <option value="institutD">Localisation</option>
+                        {/* entrer une localisation */}
+                    </select>
+                    <select name="n-surface" >
+                        <option value="iut">Surface</option>
+                        {/* entrer une surface */}
+                    </select>
+                    <select name="n-price" >
+                        <option value="maritime">Prix</option>
+                        {/* intervalle de prix */}
+                    </select>
+                    <select name="n-content" >
+                        <option value="maupertuis">Meublé</option>
+                        <option value="maupertuis">Non meublé</option>
+                    </select>
+                    <select name="n-type" >
+                        <option value="institPro">Type</option>
+                        <option value="flat">Appartement</option>
+                        <option value="home">Maison</option>
+                    </select>
+                    <label>Score Punchy</label>
+                    <div id="scoreUp">
+                        <MdNorth />
+                    </div>
+                    <div id="scoreDown">
+                        <MdSouth />
+                    </div>
+
+                    <button type="submit">
+                        <img className="loop" src={loopImg} alt="loupe"></img>
+                    </button>
+                </form>
+                {/* 1er article */}
                 <article className="art-Housing">
                     <img className="img-housing" src={picHouse} alt="Photo de Yannick Dufils sur Unsplash" />
                     {/* between est l'espace entre la colonne de gauche et de droite */}
