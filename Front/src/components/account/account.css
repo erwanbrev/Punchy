@@ -25,6 +25,7 @@
 span.label-text {
 	font-family: 'Futura', 'Open Sans', 'sans-serif';
 	margin-bottom: .5rem;
+	margin-right: 1rem;
 }
 
 .registration-form .btnAdd{
@@ -32,7 +33,6 @@ span.label-text {
 }
 
 .registration-form label{
-	border-bottom: 1px solid #333;
 	display: block;
 	font-size: 1.25em;
 	margin-bottom: 0.5em;
@@ -51,27 +51,12 @@ span.label-text {
 	padding-left: 1rem;
 }
 
-.registration-form label input:focus{
-	outline: none;
-}
-.registration-form label input:-webkit-autofill{
-	background-color: transparent !important;
-}
 .registration-form label span.label-text{
 	display: block;
 	font-size: 1rem;
 	font-weight: bold;
 }
-.registration-form label.checkbox{
-	border-bottom: 0;
-	text-align: center;
-}
-.registration-form label.checkbox input{
-	display: none;
-}
-.registration-form label.checkbox span{
-	font-size: 0.5em;
-}
+
 .registration-form label.checkbox span:before{
 	content: '\e157';
 	display: inline-block;
@@ -81,33 +66,6 @@ span.label-text {
 	position: relative;
 		top: 1px;
 }
-.registration-form label.checkbox input:checked + span:before{content: '\e067';}
-.registration-form label.invalid{border-color: #c0392b !important;}
-.registration-form label.invalid span.label-text{color: #c0392b;}
-.registration-form label.password{position: relative;}
-.registration-form label.password button.toggle-visibility{
-	background: none;
-	border: none;
-	cursor: pointer;
-	font-size: 0.75em;
-	line-height: 1em;
-	position: absolute;
-		top: 50%;
-		right: 0.5em;
-	text-align: center;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	-webkit-transition: all 0.25s;
-	transition: all 0.25s;
-}
-.registration-form label.password button.toggle-visibility:hover,
-.registration-form label.password button.toggle-visibility:focus,
-.registration-form label.password button.toggle-visibility:active{
-	color: #000;
-	outline: none;
-}
-.registration-form label.password button.toggle-visibility span{vertical-align: middle;}
 
 .h1-register{
 	font-size: 3em;
@@ -125,4 +83,8 @@ html{
 
 .text-center{
 	display: flex;
+}
+
+input[type="file"i] {
+	padding: .3rem;
 }

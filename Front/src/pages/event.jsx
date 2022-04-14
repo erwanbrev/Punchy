@@ -54,7 +54,7 @@ export const Event = () => {
 			.then(({ event }) => {
 				alert('Votre participation a bien été prise en compte');
 			})
-			.catch(alert);
+			.catch(alert('Vous n\'êtes pas connecté !'));
 	};
 
 	useEffect(() => {
@@ -94,7 +94,7 @@ export const Event = () => {
 				</div>
 			</div>
 			{events[1].map((event, index) => {
-				return <div className={'clairPerso sombrePerso sombrePerso' + index}></div>;
+				return <div className={'clairPerso sombrePerso sombrePerso' + index} onClick={() => clairPerso(index)}></div>;
 			})}
 			<div className="eventPersocontainer">
 				<div className="EventPerso">

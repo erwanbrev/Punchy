@@ -11,7 +11,7 @@ export const ReserveCar = ({ informations }) => {
 	const day = startDate.getDate();
 	const month = startDate.getMonth() + 1;
 	const hours = startDate.getHours();
-	const minutes = startDate.getMinutes();
+	let minutes = startDate.getMinutes();
 	if (minutes < 10) {
 		minutes = '0' + minutes;
 	}
@@ -26,12 +26,12 @@ export const ReserveCar = ({ informations }) => {
 	const navigate = useNavigate();
 
 	const participate = () => {
-		if (!localStorage.getItem('access_token')) {
+		if (!localStorage.getItem('token')) {
 			return navigate('/login', { replace: true });
 		}
 		fetch(`http://localhost:5000/carpooling/${informations.id}/participate`, {
 			headers: {
-				Authorization: 'Bearer ' + localStorage.getItem('access_token')
+				Authorization: 'Bearer ' + localStorage.getItem('token')
 			}
 		})
 			.then(response => {

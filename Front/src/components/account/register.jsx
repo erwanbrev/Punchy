@@ -77,6 +77,10 @@ export const Register = () => {
                 <span className="label-text">Téléphone</span>
                 <input type="text" required value={phone} onChange={(e) => {setPhone(e.target.value)}} />
             </label>
+            <label htmlFor="">
+                <span className="label-text">Photo de profil</span>
+                <input type="file" className="file" onChange={e => setFile(e.target.files[0])} placeholder="bonjour" /> 
+            </label>
             <label>
                 <span className="label-text">Ecole</span>
                 <select required value={school} onChange={handleChange}  style={{width: "100%"}}>
@@ -90,9 +94,8 @@ export const Register = () => {
 
                 </select>
             </label>
-            <input type="file" onChange={e => setFile(e.target.files[0])} />
             <div className="text-center">
-                <button type="submit" className="btnAdd" name="register">Sign Me Up</button>
+                <button type="submit" className="btnAdd" name="register">S'inscrire</button>
             </div>
         </form>
 
