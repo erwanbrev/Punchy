@@ -47,7 +47,13 @@ export const Carpool = () => {
 
 					const time = new Date(profil.endTime).getTime() - new Date(profil.startTime).getTime();
 					let hoursTime = Math.floor(time / (1000 * 60 * 60));
+					if (hoursTime < 10) {
+						hoursTime = '0' + hoursTime;
+					}
 					let minutesTime = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+					if (minutesTime < 10) {
+						minutesTime = '0' + minutesTime;
+					}
 					const timeCarpooling = hoursTime + 'h' + minutesTime;
 
 					if (minutesTime < 10) {
@@ -69,7 +75,7 @@ export const Carpool = () => {
 								<div className="vertical">
 									<div className="profil">
 										<img className="userImage" src={profil.driver.profilePicture} alt="image de profil" />
-										<span className='name'>{profil.driver.fName}</span>
+										<span className="name">{profil.driver.fName}</span>
 										<div className="space">
 											<span>{note}</span>
 											<IoStar color="#FF7A00" />
@@ -86,9 +92,9 @@ export const Carpool = () => {
 								</div>
 								<div className="vertical">
 									<div className="parcour">
-										<span className='long'>{profil.startLocalisation}</span>
+										<span className="long">{profil.startLocalisation}</span>
 										<img className="line" src={line} alt="" />
-										<span className='long'>{profil.endLocalisation}</span>
+										<span className="long">{profil.endLocalisation}</span>
 									</div>
 									<div className="time">
 										<IoTimeOutline />
