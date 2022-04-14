@@ -24,7 +24,6 @@
 	font-weight: 400;
 	color: var(--linear-two);
 	cursor: pointer;
-	z-index: 200;
 }
 
 .articleCar .imgCar {

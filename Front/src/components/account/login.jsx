@@ -29,19 +29,19 @@ export const Login = () => {
     return (
         <div className="main-container">
         <div className="container-register">
-            <h1 className="text-center h1-register">Login</h1>
+            <h1 className="text-center h1-register">Connexion</h1>
             <form className="registration-form" onSubmit={handleSubmit}>
-            <label>
-                <span className="label-text">Email</span>
-                <input type="email" required value={identifier} onChange={(e) => {setIdentifier(e.target.value)}}/>
-            </label>
-            <label className="password">
-                <span className="label-text">Password</span>
-                <input type="password" required value={password} onChange={(e) => {setPassword(e.target.value)}} />
-            </label>
-            <div className="text-center">
-                <button type="submit" className="submit">Login</button>
-            </div>
+                <label>
+                    <span className="label-text">Email</span>
+                    <input type="email" required value={identifier} onChange={(e) => {setIdentifier(e.target.value)}}/>
+                </label>
+                <label className="password">
+                    <span className="label-text">Password</span>
+                    <input type="password" required value={password} onChange={(e) => {setPassword(e.target.value)}} />
+                </label>
+                <div className="text-center">
+                    <button type="submit" className="btnAdd">Je me connecte !</button>
+                </div>
             </form>  
         </div>
     </div>
