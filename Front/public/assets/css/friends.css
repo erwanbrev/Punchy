@@ -6,7 +6,7 @@
   margin-left: 20%;
   font-size: 16px;
   font-weight: 400;
-  width:80vw;  
+  width: 80vw;
 }
 
 /* .page-title {
@@ -55,8 +55,8 @@
   color: var(--linear-two);
 }
 
-#scoreBox{
-    display:flex;
+#scoreBox {
+  display: flex;
 }
 
 #scoreDown,
@@ -97,7 +97,7 @@
 #friendsList {
   display: flex;
   flex-wrap: wrap;
-  margin-left:15%;
+  margin-left: 15%;
   margin-bottom: 5rem;
 }
 
@@ -191,22 +191,20 @@
 }
 
 
-
 /* Version mobile*/
 @media screen and (max-width: 600px) {
-    main {
-        display:flex;
-        flex-direction: column;
-        width:100vw;
-    }
-  
-    #filterBar {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  #filterBar {
     display: flex;
     flex-direction: column;
     height: 15rem;
-    margin: 2rem;
+    margin: 1rem;
     border-radius: 2rem;
-    width: 60vw;
   }
 
   #filterBar select,
@@ -214,8 +212,8 @@
     margin: 0.5rem;
   }
 
-  #friendsList{
-    margin:0;
+  #friendsList {
+    margin: 0;
   }
 
   .friendBlock {
@@ -230,36 +228,36 @@
     font-size: 90%;
   }
 
-  .friendImg{
-      padding:0;
-      align-self: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin:0.5rem 0 0 0 ;
+  .friendImg {
+    padding: 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 0 0;
   }
 
-  .friendImg img{
-      height:6rem;
-      padding:0.5rem;
+  .friendImg img {
+    height: 6rem;
+    padding: 0.5rem;
   }
- 
-  .infosList li{
-      padding:0.2rem;
-      margin:0;
+
+  .infosList li {
+    padding: 0.2rem;
+    margin: 0;
   }
 
   .punchiesNumber {
-      margin:0.5rem;
+    margin: 0.5rem;
   }
 
-  .profileButton{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom:1rem;
-      padding:0.3rem;
-      width:50%;
-      
+  .profileButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    width: 50%;
   }
+
 }
