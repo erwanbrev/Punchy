@@ -13,6 +13,7 @@ import { Friends } from "./pages/friends";
 import { Register } from "./components/account/register";
 import { Navbar } from "./components/menu";
 import { Article } from "./components/article";
+import { ReserveCar } from "./components/reserveCar";
 
 
 const Main = () => {
