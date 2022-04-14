@@ -54,7 +54,7 @@ export const Event = () => {
 			.then(({ event }) => {
 				alert('Votre participation a bien été prise en compte');
 			})
-			.catch(alert);
+			.catch(alert('Vous n\'êtes pas connecté !'));
 	};
 
 	useEffect(() => {
