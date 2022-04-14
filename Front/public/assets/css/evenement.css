@@ -58,7 +58,7 @@
 }
 
 .evenement p:hover, .evenementPerso p:hover{
-    color:#E5E0FF;
+    color: #B17585;
 }
 
 .evenement p, .evenementPerso p{
@@ -85,6 +85,8 @@
     margin-left: 20px;
     margin-top: 5px;
     height: 35px;
+    font-family: 'Lobster';
+    font-size: 30px;
 }
 
 .euro{
@@ -252,10 +254,15 @@
         margin-top: -1px;
         color: #454D9A;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         width: 200px;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
     }
 
+    li{
+        list-style-type: none;
+    }
     .catParticipation{
         grid-row: 7;
         grid-column: 4;
@@ -343,7 +350,7 @@
         position: absolute;
         padding: 10px;
         margin-left: 45px;
-        margin-top: 0px;
+        margin-top: 12px;
     }
 
     #catPersoParticipant{
@@ -399,4 +406,8 @@
 
 .showtexte{
     visibility: visible;
+}
+
+.titreEvent{
+    margin-left: 15vh;
 }

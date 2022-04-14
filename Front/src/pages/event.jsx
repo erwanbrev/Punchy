@@ -134,7 +134,7 @@ export const Event = () => {
         datedebut: '15 Janvier 2022',
         datefin: '21 Janvier 2022',
         lieu: '11 rue de la république, St Malo 35400',
-        participant : ['Bruce Willis ', 'Phillipe Poutou ', 'Jean Dujardin ', 'Homer Simpson ', 'Pierre Lemonnier ', 'Antoine Mounier ', 'Quentin Seurt ', 'Mathieu Peran ']
+        participant : ['Bruce Willis ', 'Phillipe Poutou ', 'Jean Dujardin ', 'Homer Simpson ', 'Pierre Lemonnier ', 'Antoine Mounier ', 'Quentin Seurt ', 'Mathieu Peran '],
     }
 
     let eventPerso = {
@@ -145,6 +145,7 @@ export const Event = () => {
         lieu: 'Cinedol, place du Foirail, 35120 Dol-de-Bretagne',
         participant : ['Johnny Hallyday ', 'Emmanuel Macron ', 'Jean Lassale ', 'Mathieu Peran ', 'Alexandre Touchet ', 'Erwan Brevault ', 'Jean Naymar ', 'Archibald Theobald ']
     }
+    console.log(event.participant.length);
 
     
     return (
@@ -258,17 +259,23 @@ export const Event = () => {
 
             <div className="hide" id="detailevent">
                 <img className="imageDetail" src={image} alt="" srcset="" />
-                <span className="catNom grisTexte">Nom :</span><span className="detailtitre">{event.titre}</span>
-                <span className="catLieu grisTexte">Lieu :</span><span className="detaillieu">{event.lieu}</span>
-                <span className="catDebut grisTexte">Début :</span><span className="detaildebut">{event.datedebut}</span>
-                <span className="catFin grisTexte">Fin :</span><span className="detailfin">{event.datefin}</span>
-                <span className="catPrix grisTexte">Prix :</span><span className="detailprix">{event.prix} €</span>
+                <span className="titreEvent catNom grisTexte">Nom :</span><span className="detailtitre">{event.titre}</span>
+                <span className="titreEvent catLieu grisTexte">Lieu :</span><span className="detaillieu">{event.lieu}</span>
+                <span className="titreEvent catDebut grisTexte">Début :</span><span className="detaildebut">{event.datedebut}</span>
+                <span className="titreEvent catFin grisTexte">Fin :</span><span className="detailfin">{event.datefin}</span>
+                <span className="titreEvent catPrix grisTexte">Prix :</span><span className="detailprix">{event.prix} €</span>
                 <span id="catParticipant">Participants</span>
                 <button className="catParticipation">Je participe</button>
-                <span class="hidetexte" id="ParticipantsImportants">{event.participant}</span>
-
-
-
+                <span class="hidetexte" id="ParticipantsImportants"><ul>
+                <p>{event.participant.length} participants dont :</p><br/>
+                <li>{event.participant[0]}</li>
+                <li>{event.participant[1]}</li>
+                <li>{event.participant[2]}</li>
+                <li>{event.participant[3]}</li>
+                <li>{event.participant[4]}</li>
+                <li>{event.participant[5]}</li>
+                </ul>
+                </span>
             </div>
 
             <div className="hide" id="detaileventPerso">
@@ -280,7 +287,15 @@ export const Event = () => {
                 <span className="catPersoPrix grisTexte">Prix :</span><span className="titrePerso detailPersoprix">{eventPerso.prix} €</span>
                 <span className="catTop" id="catPersoParticipant">Participants</span>
                 <button className="catTop catPersoParticipation">Je participe</button>
-                <span class="hidetexte" id="ParticipantsPerso">{eventPerso.participant}</span>
+                <span class="hidetexte" id="ParticipantsPerso"><ul>
+                <p>{eventPerso.participant.length} participants dont :</p>
+                <li>{eventPerso.participant[0]}</li>
+                <li>{eventPerso.participant[1]}</li>
+                <li>{eventPerso.participant[2]}</li>
+                <li>{eventPerso.participant[3]}</li>
+                <li>{eventPerso.participant[4]}</li>
+                <li>{eventPerso.participant[5]}</li>
+                </ul></span>
             </div>
             <ButtonAdd />
         </div>            

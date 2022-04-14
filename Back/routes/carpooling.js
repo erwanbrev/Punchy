@@ -35,13 +35,13 @@ router.get('/', async (req, res) => {
 	);
 
 	console.log(response);
-	return res.status(200).send(response);
+	return res.status(200).send({ error: true, response });
 });
 router.post('/', authorize, async (req, res) => {
 	const schema = require('../schemas/carpooling');
 	const { error } = schema.validate(req.body);
 	if (error) {
-		return res.status(400).send(error.details[0].message);
+		return res.status(400).send({ error: true, message: error.details[0].message });
 	}
 
 	try {
@@ -62,28 +62,27 @@ router.post('/', authorize, async (req, res) => {
 
 		const carpoolingData = await carpooling.save();
 
-		return res
-			.status(201)
-			.send(
-				_.pick(carpoolingData, [
-					'_id',
-					'startLocalisation',
-					'endLocalisation',
-					'startTime',
-					'endTime',
-					'repeat',
-					'peopleNumber',
-					'price',
-					'driver',
-					'event',
-					'smoker',
-					'carType',
-					'carColor'
-				])
-			);
+		return res.status(201).send({
+			error: false,
+			carpooling: _.pick(carpoolingData, [
+				'_id',
+				'startLocalisation',
+				'endLocalisation',
+				'startTime',
+				'endTime',
+				'repeat',
+				'peopleNumber',
+				'price',
+				'driver',
+				'event',
+				'smoker',
+				'carType',
+				'carColor'
+			])
+		});
 	} catch (err) {
 		console.log(err.message);
-		return res.status(500).send(err.message);
+		return res.status(500).send({ error: true, message: err.message });
 	}
 });
 
@@ -113,7 +112,7 @@ router.get('/:id', async (req, res) => {
 		carColor: carpooling.carColor
 	};
 
-	return res.status(200).send(response);
+	return res.status(200).send({ error: true, carpooling: response });
 });
 
 router.get('/:id/participate', authorize, async (req, res) => {
@@ -124,28 +123,28 @@ router.get('/:id/participate', authorize, async (req, res) => {
 	);
 
 	if (!carpooling) {
-		return res.status(404).send('Carpooling not found, already full or you are the driver');
+		return res.status(404).send({ error: true, message: 'Carpooling not found, already full or you are the driver' });
 	}
 	await User.findOneAndUpdate(req.user, { $addToSet: { 'history.carpooling': carpooling._id } });
 
-	return res.status(201).send(carpooling);
+	return res.status(201).send({ error: false, carpooling });
 });
 
 router.get('/:id/:note', authorize, async (req, res) => {
 	const carpooling = await Carpooling.findOne({ _id: { $eq: req.params.id }, endTime: { $gt: Date.now() } });
 
 	if (!carpooling) {
-		return res.status(404).send('Carpooling not found or not finished');
+		return res.status(404).send({ error: true, message: 'Carpooling not found or not finished' });
 	}
 
 	if (!carpooling.participants.includes(req.user._id.toString())) {
-		return res.status(403).send('You are not participating in this carpooling');
+		return res.status(403).send({ error: true, message: 'You are not participating in this carpooling' });
 	}
 
 	const carNote = await CarNote.findOne({ carpooling: carpooling._id, user: req.user._id.toString() });
 
 	if (carNote) {
-		return res.status(403).send('You already have a note for this carpooling');
+		return res.status(403).send({ error: true, message: 'You already have a note for this carpooling' });
 	}
 
 	const note = new CarNote({
@@ -156,7 +155,7 @@ router.get('/:id/:note', authorize, async (req, res) => {
 
 	const noteData = await note.save();
 
-	return res.status(201).send(_.pick(noteData, ['note', 'transport', 'user']));
+	return res.status(201).send({ error: false, carpooling: _.pick(noteData, ['note', 'transport', 'user']) });
 });
 
 module.exports = router;
