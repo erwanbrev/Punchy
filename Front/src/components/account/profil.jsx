@@ -4,7 +4,7 @@ import '../../../public/assets/css/Pprofil.css'
 
 
 export const Profil = () => {
-    const [body, setBody]=React.useState()
+    const [body, setBody]=React.useState([])
 
     React.useEffect(() => {
         (async() => {
@@ -21,8 +21,8 @@ export const Profil = () => {
             if(res.ok) {
                 //stocker la response de l'api
                 const body = await res.json()
-                setBody(body)
-                console.log(body);
+                setBody(body.user)
+                console.log(body.user);
             }
         })()
     }, [])
@@ -33,9 +33,9 @@ export const Profil = () => {
             <div className="between">
                 <div className="vertical">
                     <div className="profil">
-                        <img className="userImage" src={body.user.profilePicture} alt="image de profil" />
+                        <img className="userImage" src={body.profilePicture} alt="image de profil" />
                         <p>Name :</p>
-                        <span>{body.user.fName}</span>
+                        <span>{body.fName}</span>
                         <div className="space">
                             <span>NOTE</span>
                             <IoStar color="#FF7A00" />
@@ -43,7 +43,7 @@ export const Profil = () => {
                     </div>
                     <div className="parcour">
                         <p>School:</p>
-                        <span>{body.user.school}</span>
+                        <span>{body.school}</span>
                     </div>
                 </div>
             </div>
