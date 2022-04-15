@@ -11,6 +11,8 @@ import { AddPunchyCar } from '../components/addPunchyCar';
 
 export const Carpool = () => {
 	let [data, setData] = useState([]);
+	let [showPopup, setShowPopup] = useState(false);
+	let [popupInfos, setPopupInfos] = useState([false, { driver: { notation: [] } }]);
 
 	useEffect(() => {
 		fetch('http://localhost:5000/carpooling')
@@ -24,10 +26,15 @@ export const Carpool = () => {
 	}, []);
 
 	const handleClick = e => {
-		console.log(e);
-		const a = document.querySelector(`article[data-id="${e}"] .reserveCarDiv`);
-		console.log(a);
-		a.hidden = !a.hidden;
+		setPopupInfos([!popupInfos[0], e]);
+		const sombreDiv = document.querySelector('#sombre');
+		sombreDiv.classList.toggle('sombre');
+	};
+
+	const setPopup = () => {
+		setShowPopup(!showPopup);
+		const sombreDiv = document.querySelector('#sombre');
+		sombreDiv.classList.toggle('sombre');
 	};
 
 	return (
@@ -67,10 +74,7 @@ export const Carpool = () => {
 						note = 'Ø';
 					}
 					return (
-						<article className="articleCar" data-id={profil.id} onClick={() => handleClick(profil.id)}>
-							<div className="reserveCarDiv" hidden>
-								<ReserveCar informations={profil} />
-							</div>
+						<article className="articleCar" data-id={profil.id} onClick={() => handleClick(profil)}>
 							<img className="imgCar" src={imageCar} alt="affiche de voiture" />
 							<div className="between">
 								<div className="vertical">
@@ -106,7 +110,19 @@ export const Carpool = () => {
 						</article>
 					);
 				})}
-				<ButtonAdd onClick={() => setPopup()} />
+				<div className="reserveCarDiv">{popupInfos[0] && <ReserveCar informations={popupInfos[1]} />}</div>
+				<div onClick={() => setPopup()}>
+					<ButtonAdd />
+				</div>
+				<div
+					id="sombre"
+					onClick={() => {
+						setShowPopup(false);
+						setPopupInfos([false, { driver: { notation: [] } }]);
+						document.querySelector('#sombre').classList.toggle('sombre');
+					}}
+				></div>
+				{showPopup && <AddPunchyCar></AddPunchyCar>}
 			</div>
 		</div>
 	);

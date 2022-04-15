@@ -6,7 +6,8 @@ import line from '../../public/assets/img/svg/lineReserve.svg';
 import { IoStar, IoLogoEuro, IoTimeOutline, IoPerson } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 
-export const ReserveCar = ({ informations }) => {
+export const ReserveCar = ({informations}) => {
+	console.log(informations);
 	const startDate = new Date(informations.startTime);
 	const day = startDate.getDate();
 	const month = startDate.getMonth() + 1;
