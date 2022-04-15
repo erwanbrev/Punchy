@@ -15,7 +15,7 @@ export const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const res = await Authentification.login(identifier, password)
-        if (Authentification.isAuthenticated()) {
+        if (Authentification.checkAuthentication()) {
             navigate('/', { replace: true })
         }
     }

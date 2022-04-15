@@ -8,15 +8,6 @@ import { Authentification } from "./components/account/auth";
 
 
 export const Layout = () => {
-    const navigate = useNavigate()
-    useEffect(() => {
-        console.log('authLayout', Authentification.isAuthenticated());
-        if(!localStorage.getItem('token')) {
-            Authentification.authenticated = false
-        }
-        
-    }, [navigate])
-
     return (
         <div>
             <Navbar />
