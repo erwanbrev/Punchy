@@ -36,6 +36,8 @@ export const Friends = () => {
 			});
 	});
 
+	
+
 	return (
 		<div className="main">
 			{/* <h1 className="page-title">Amis</h1> */}
