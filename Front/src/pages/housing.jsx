@@ -1,11 +1,9 @@
 import React from "react";
 import "../../public/assets/css/housing.css"
 import picHouse from "../../public/assets/img/dinan-yannick-dufils-bN7Ae_grzZw-unsplash.jpeg"
-import loopImg from "../../public/assets/img/loop.png";
 import { IoLogoEuro, IoLocationSharp, IoPieChart, IoPodium, IoStorefront } from "react-icons/io5";
-import { MdSouth, MdNorth } from "react-icons/md";
 import { ButtonAdd } from "../components/buttonAdd";
-
+import { SearchBarHouse } from "../components/searchBarHouse";
 export const Housing = () => {
 
     let contentHouse = {
@@ -22,36 +20,7 @@ export const Housing = () => {
         <div>
             <div className="contain-house">
                 {/* Barre de filtres */}
-                <form id="filterBarH">
-                    <label>Trier</label>
-                    <input placeholder="Localisation" type="text" />
-                    <input placeholder="Surface m²" type="number" />
-                    <select name="n-price" >
-                        <option value="maritime">Prix</option>
-                        {/* intervalle de prix */}
-                    </select>
-                    <select name="n-content" >
-                        <option value="content">Meublé</option>
-                        <option value="no-content">Non meublé</option>
-                    </select>
-                    <select name="n-type" >
-                        <option value="type">Type</option>
-                        <option value="flat">Appartement</option>
-                        <option value="home">Maison</option>
-                    </select>
-
-                    <label>Score Punchy</label>
-                    <div id="scoreUp">
-                        <MdNorth />
-                    </div>
-                    <div id="scoreDown">
-                        <MdSouth />
-                    </div>
-
-                    <button type="submit">
-                        <img className="loop" src={loopImg} alt="loupe"></img>
-                    </button>
-                </form>
+                <SearchBarHouse />
                 {/* 1er article */}
                 <article className="art-Housing">
                     <img className="img-housing" src={picHouse} alt="Photo de Yannick Dufils sur Unsplash" />
