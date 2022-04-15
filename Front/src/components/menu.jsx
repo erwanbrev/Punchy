@@ -52,6 +52,9 @@ export const Navbar = (props) => {
                             <NavLink to="/profil" className="nameNav">
                                 <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Profil</span>
                             </NavLink>
+                            <NavLink to="" className="nameNav">
+                                <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Déconnexion</span>
+                            </NavLink>
                         </>
                         // sinon affiche inscription/connexion
                         :
@@ -62,6 +65,7 @@ export const Navbar = (props) => {
                             <NavLink to="/register" className="nameNav">
                                 <IoPersonCircle className="iconMenu" color="#FFF" size='20' /> <span className="event">Inscription</span>
                             </NavLink>
+                           
                         </>
                     }
                 </div>
