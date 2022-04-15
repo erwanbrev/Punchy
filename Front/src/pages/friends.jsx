@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { icons } from 'react-icons';
-import euro from '../../public/assets/img/svg/prix.svg';
 import '../../public/assets/css/friends.css';
-import friendImg1 from '../../public/assets/img/friend1.jpg';
-import friendImg2 from '../../public/assets/img/friend2.jpg';
-import friendImg3 from '../../public/assets/img/friend3.jpg';
 import loopImg from '../../public/assets/img/loop.png';
-import downFleche from '../../public/assets/img/down.png';
-import upFleche from '../../public/assets/img/up.png';
 import punchie from '../../public/assets/img/punchie.png';
 import { FiUser } from 'react-icons/fi';
 import { MdOutlineSchool } from 'react-icons/md';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { MdNorth } from 'react-icons/md';
 import { MdSouth } from 'react-icons/md';
+
 
 export const Friends = () => {
 	const [users, setUsers] = useState([]);
@@ -40,8 +35,7 @@ export const Friends = () => {
 
 	return (
 		<div className="main">
-			{/* <h1 className="page-title">Amis</h1> */}
-
+			
 			{/* Barre de filtres */}
 			<form id="filterBar">
 				<label id="labelSchool">Établissement scolaire</label>
