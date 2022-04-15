@@ -46,7 +46,7 @@ export const Profil = () => {
 							13<img className="punch" src={punchie}></img>
 						</div>
                         <div className="parcour">
-                            <p>Ecole</p>
+                            <p className="eco">Ecole</p>
                             <span>{body.school}</span>
                         </div>
                     </div>

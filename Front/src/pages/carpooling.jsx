@@ -7,6 +7,7 @@ import { BouttonPlus, ButtonAdd } from '../components/buttonAdd';
 import { AddPunchy } from '../components/addPunchy';
 import { SearchBarCar } from '../components/searchBarCar';
 import { ReserveCar } from '../components/reserveCar';
+import { AddPunchyCar } from '../components/addPunchyCar';
 
 export const Carpool = () => {
 	let [data, setData] = useState([]);
