@@ -1,6 +1,7 @@
 import React from "react";
 import { IoStar } from 'react-icons/io5';
-import '../../../public/assets/css/Pprofil.css'
+import punchie from '../../../public/assets/img/punchie.png';
+import '../../../public/assets/css/Pprofil.css';
 
 
 export const Profil = () => {
@@ -22,33 +23,35 @@ export const Profil = () => {
                 //stocker la response de l'api
                 const body = await res.json()
                 setBody(body.user)
-                console.log(body.user);
             }
         })()
     }, [])
 
+
+
     return (
-        <div className="main-container">
-            <article className="articleCar Pprofil">
-            <div className="between">
-                <div className="vertical">
-                    <div className="profil">
-                        <img className="userImage" src={body.profilePicture} alt="image de profil" />
-                        <p>Name :</p>
-                        <span>{body.fName}</span>
-                        <div className="space">
-                            <span>NOTE</span>
-                            <IoStar color="#FF7A00" />
+        <div className="monProfil">
+            <article className=" Pprofil">
+                <div className="between">
+                    <div className="vertical">
+                        <div className="profil">
+                            <img className="userImage" src={body.profilePicture} alt="image de profil" />
+                            <span className="fName">{body.fName}</span>
+                            <div className="space">
+                                <span>{body.note}</span>
+                                <IoStar color="#FF7A00" />
+                            </div>
+                        </div>
+                        <div className="punchiesNumber">
+							13<img className="punch" src={punchie}></img>
+						</div>
+                        <div className="parcour">
+                            <p>Ecole</p>
+                            <span>{body.school}</span>
                         </div>
                     </div>
-                    <div className="parcour">
-                        <p>School:</p>
-                        <span>{body.school}</span>
-                    </div>
                 </div>
-            </div>
             </article>
-            
         </div>
 
     )
