@@ -6,11 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the Front & Back folder, you must run:
 ### `npm i`
 To install all necessary packages.
 
 ### If you are on Windows OS, remove "rm -rf ./dist &&" from one of the lines in the Package.json file.
+
+### The link between the front and the back must be made but for reasons of confidentiality, we do not expose certain access codes. 
 
 ### `npm start`
 
