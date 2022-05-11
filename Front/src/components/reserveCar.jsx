@@ -40,11 +40,11 @@ export const ReserveCar = ({informations}) => {
 			})
 			.then(result => {
 				console.log(result);
-				alert('Votre participation a bien été enregistrer');
+				//alert('Votre participation a bien été enregistrer');
 			})
 			.catch(err => {
 				console.log(err.message);
-				alert(err.message);
+				//alert(err.message);
 			});
 	};
 
@@ -52,16 +52,16 @@ export const ReserveCar = ({informations}) => {
 		<div className="reserveCar">
 			<img className="illustration" src={img} alt="illustration covoiturage" />
 			<div className="annonce">
-				<div className="row_">
+				{/* <div className="row_"> */}
 					<img className="pProfil" src={informations.driver.profilePicture} alt="photo de profil" />
 					<div className="monProfil">
 						<p>{informations.driver.fName}</p>
-						<div className="row_">
+						<div className="row_" id="reserveCarDivNote">
 							<span>{note}</span>
 							<IoStar color="FF7A00" size="35" />
 						</div>
 					</div>
-				</div>
+				{/* </div> */}
 				<div className="row_">
 					<p>{informations.startLocalisation}</p>
 					<img className="lineO" src={line} alt="ligne de trajet" />

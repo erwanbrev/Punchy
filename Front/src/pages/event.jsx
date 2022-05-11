@@ -52,9 +52,9 @@ export const Event = () => {
 				return response.json();
 			})
 			.then(({ event }) => {
-				alert('Votre participation a bien été prise en compte');
+				// alert('Votre participation a bien été prise en compte');
 			})
-			.catch(alert('Vous n\'êtes pas connecté !'));
+			// .catch(alert('Vous n\'êtes pas connecté !'));
 	};
 
 	useEffect(() => {

@@ -20,10 +20,10 @@ export const AddPunchyCar = () => {
 				const startDate = new Date(document.getElementById('startDate').value).getTime();
 				const endDate = new Date(document.getElementById('endDate').value).getTime();
 				if (startDate < Date.now()) {
-					return alert('La date de départ doit être supérieure à la date actuelle');
+					return //alert('La date de départ doit être supérieure à la date actuelle');
 				}
 				if (endDate < startDate) {
-					return alert('La date de fin doit être supérieure à la date de départ');
+					return //alert('La date de fin doit être supérieure à la date de départ');
 				}
 
 				const body = {

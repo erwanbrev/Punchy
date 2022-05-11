@@ -39,12 +39,20 @@
 }
 
 .row_ {
+    /* margin-left: 1rem; */
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
+
+#reserveCarDivNote {
+    padding-left: 1rem;
+}
+
+
     .pProfil {
+        aspect-ratio: 1;
         object-fit: cover;
         width: 8.125rem;
         height: 8.125rem;
